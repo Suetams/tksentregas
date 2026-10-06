@@ -1,0 +1,14 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '@fontsource/manrope/latin-800.css';
+import '@fontsource/manrope/latin-700.css';
+import '@fontsource/dm-sans/latin-400.css';
+import '@fontsource/dm-sans/latin-500.css';
+import '@fontsource/dm-sans/latin-600.css';
+import '@fontsource/dm-sans/latin-700.css';
+import '../styles/global.css';
+interface Props { title: string; description?: string; }
+const {title,description='Do documento à carga. Encontre uma solução e prepare sua solicitação de orçamento para a TKS Entregas.'}=Astro.props;
+---
+<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><meta name="robots" content="noindex,nofollow"/><meta name="theme-color" content="#0066ff"/><title>{title} | TKS Entregas</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"/></head><body><Header/><main id="conteudo"><slot/></main><Footer/></body></html>

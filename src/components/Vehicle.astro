@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import catalog from '../assets/fleet-catalog.png';
+interface Props { type?: string; hero?: boolean; }
+const { type = 'utilitario', hero = false } = Astro.props;
+// Each frame covers one vehicle in the generated photographic catalog.
+// Positioning preserves the complete vehicle without modifying the source artwork.
+const frames: Record<string, { start: number; width: number }> = {
+  moto: { start: 0, width: 500 },
+  utilitario: { start: 500, width: 500 },
+  'van-furgao': { start: 1000, width: 535 },
+  'caminhao-3-4': { start: 1535, width: 637 },
+};
+const frame = frames[type] ?? frames.utilitario;
+const scale = (catalog.width / frame.width) * 100;
+const offset = -(frame.start / frame.width) * 100;
+---
+<div class:list={['vehicle-art', 'vehicle-photo', { 'hero-art': hero }]} style={`--vehicle-scale: ${scale}%; --vehicle-offset: ${offset}%;`} aria-hidden="true">
+  <Image src={catalog} width={1800} format="webp" quality={82} alt="" loading="lazy" decoding="async" />
+</div>

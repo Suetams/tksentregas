@@ -1,0 +1,25 @@
+---
+import Icon from './Icon.astro';
+const path = Astro.url.pathname;
+const links = [['/servicos','Soluções'],['/frota','Frota'],['/para-empresas','Para empresas'],['/sobre','Sobre'],['/blog','Conteúdos'],['/contato','Contato']];
+---
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<div class="dev-strip">VERSÃO DE DESENVOLVIMENTO <span>• Conteúdo e imagens em validação</span></div>
+<header class="site-header">
+ <div class="container header-inner">
+  <a class="brand" href="/" aria-label="TKS Entregas — início"><span>TKS</span><small>ENTREGAS</small></a>
+  <nav class="desktop-nav" aria-label="Navegação principal">{links.map(([href,label]) => <a href={href} aria-current={path===href?'page':undefined}>{label}</a>)}</nav>
+  <a class="button compact header-cta" href="/orcamento">Solicitar orçamento <Icon name="arrow" size={18}/></a>
+  <button class="menu-button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu"><Icon name="menu"/></button>
+ </div>
+ <nav id="mobile-menu" class="mobile-nav" aria-label="Navegação mobile" hidden>{links.map(([href,label])=><a href={href}>{label}<Icon name="arrow" size={17}/></a>)}<a href="/orcamento">Solicitar orçamento <Icon name="arrow" size={17}/></a></nav>
+</header>
+<script>
+const toggle=document.querySelector<HTMLButtonElement>('.menu-button');
+const menu=document.querySelector<HTMLElement>('#mobile-menu');
+function close(){if(toggle&&menu){menu.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Abrir menu');}}
+toggle?.addEventListener('click',()=>{if(!menu)return;const open=toggle.getAttribute('aria-expanded')!=='true';menu.hidden=!open;toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');if(open)menu.querySelector<HTMLAnchorElement>('a')?.focus();});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&toggle?.getAttribute('aria-expanded')==='true'){close();toggle.focus();}});
+menu?.addEventListener('click',event=>{if((event.target as HTMLElement).closest('a'))close();});
+document.addEventListener('click',event=>{if(!(event.target as HTMLElement).closest('.site-header'))close();});
+</script>

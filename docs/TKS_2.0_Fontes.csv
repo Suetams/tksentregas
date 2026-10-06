@@ -1,0 +1,32 @@
+﻿ID,Fonte,URL,Método / estado,Referência de pesquisa,Data da consulta
+T01,TKS — Home,https://tksentregas.com.br/,Conteúdo oficial indexado,turn3search2,2026-10-06
+T02,TKS — Serviços,https://tksentregas.com.br/servicos,Conteúdo oficial indexado,turn4search0,2026-10-06
+T03,TKS — Sobre,https://tksentregas.com.br/sobre,Conteúdo oficial indexado,turn8search3,2026-10-06
+T04,TKS — Contato,https://tksentregas.com.br/contato,Conteúdo oficial indexado,turn3search3,2026-10-06
+T05,TKS — Blog,https://tksentregas.com.br/blog,Conteúdo oficial indexado,turn8search4,2026-10-06
+T06,TKS — Contratação de motoboy,https://tksentregas.com.br/blogmotoboy-em-campinas-regiao-e-grande-sao-paulo,Conteúdo oficial indexado,turn4search4,2026-10-06
+T07,TKS — Frete rápido empresarial,https://tksentregas.com.br/blogfrete-rapido-em-campinas-regiao-e-grande-sao-paulo,Conteúdo oficial indexado,turn3search6,2026-10-06
+T08,TKS — Entregas expressas,https://tksentregas.com.br/blogentregas-expressas-campinas-regiao-grande-sao-paulo,Conteúdo oficial indexado,turn4search7,2026-10-06
+T09,TKS — Logística urbana,https://tksentregas.com.br/bloglogistica-urbana-em-campinas-como-funciona,Conteúdo oficial indexado,turn3search11,2026-10-06
+T10,TKS — Fixo e avulso,https://tksentregas.com.br/blogmotoboy-fixo-ou-avulso-qual-vale-mais-a-pena,Conteúdo oficial indexado,turn4search1,2026-10-06
+T11,TKS — Custos de entregas,https://tksentregas.com.br/blogcomo-reduzir-custos-com-entregas-na-sua-empresa,Conteúdo oficial indexado,turn3search8,2026-10-06
+T12,TKS — Documentos,https://tksentregas.com.br/blogtransporte-de-documentos-seguranca-e-rapidez,Conteúdo oficial indexado,turn3search10,2026-10-06
+T13,TKS — Escolha de utilitário,https://tksentregas.com.br/blogfrete-com-utilitario-em-campinas-quando-usar-fiorino-van-ou-caminhonete,Conteúdo oficial indexado,turn4search6,2026-10-06
+T14,TKS — Entrega no mesmo dia,https://tksentregas.com.br/blogentrega-no-mesmo-dia-em-campinas-como-funciona,Conteúdo oficial indexado,turn3search5,2026-10-06
+T15,TKS — Escolha de fornecedor,https://tksentregas.com.br/blogcomo-escolher-empresa-de-entregas-confiavel,Conteúdo oficial indexado,turn4search3,2026-10-06
+C01,K.L Transporte Express,https://kltransporteexpress.com.br/,Página oficial acessada,turn5view0,2026-10-06
+C02,Campress,https://campress.com.br/inicio,Página oficial acessada,turn5view1,2026-10-06
+C03,DVL Logística,https://dvllogistica.com.br/,Conteúdo oficial indexado; abertura direta expirou,turn2search0,2026-10-06
+C04,GiroFlex,https://www.giroflextransportes.com/,Página oficial acessada,turn5view3,2026-10-06
+C05,Brulezzi Transportes,https://motoboycampinas24h.com/,Página oficial acessada,turn6view0,2026-10-06
+C06,LV Motoboy,https://www.lvmotoboy.com.br/,Página oficial acessada,turn6view1,2026-10-06
+D01,Google — Migrações de URLs,https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes?hl=pt-BR,Documentação primária,turn9view0,2026-10-06
+D02,web.dev — Core Web Vitals,https://web.dev/articles/defining-core-web-vitals-thresholds,Documentação primária,turn10view0,2026-10-06
+D03,W3C — Formulários em etapas,https://www.w3.org/WAI/tutorials/forms/multi-page/,Documentação primária,turn10view1,2026-10-06
+D04,Astro — Rotas e pré-renderização,https://docs.astro.build/en/reference/routing-reference/,Documentação primária,turn10view3,2026-10-06
+D05,Google — Empresa local,https://developers.google.com/search/docs/appearance/structured-data/local-business,Documentação primária,turn10view2,2026-10-06
+D06,WhatsApp — Clique para conversa,https://faq.whatsapp.com/5913398998672934,Documentação primária,turn11search0,2026-10-06
+D07,Google — Avaliações e resultados por estrelas,https://developers.google.com/search/docs/appearance/structured-data/review-snippet?hl=pt-br,Documentação primária,turn11search4,2026-10-06
+E01,Teste direto da Home,https://tksentregas.com.br/,Observação neste ambiente: 502; falha de validação de certificado,Browser e requisições HTTP,2026-10-06
+E02,Teste direto de robots.txt,https://tksentregas.com.br/robots.txt,Observação neste ambiente: 502; conteúdo não recuperado,Requisição HTTP,2026-10-06
+E03,Teste direto de sitemap.xml,https://tksentregas.com.br/sitemap.xml,Observação neste ambiente: 502; conteúdo não recuperado,Requisição HTTP,2026-10-06

@@ -1,0 +1,6 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import {company} from '../data/site';
+---
+<Layout title="Contato"><section class="page-intro container"><span class="eyebrow">Atendimento</span><h1>Vamos conversar<br/><em>sobre sua entrega?</em></h1><p>Prepare os detalhes da solicitação ou consulte os canais registrados no levantamento.</p><a class="button" href="/orcamento">Preparar orçamento <Icon name="arrow"/></a></section><section class="container page-section feature-grid"><article class="info-card"><Icon name="phone"/><h2>Telefones registrados</h2><a href="tel:+5519989997866">(19) 98999-7866</a><br/><a href="tel:+5519993009547">(19) 99300-9547</a><p>Vigência e função dos números aguardam confirmação. Nenhum foi selecionado como WhatsApp de orçamento.</p></article><article class="info-card"><Icon name="mail"/><h2>E-mail registrado</h2><a href={`mailto:${company.email}`}>{company.email}</a><p>{company.contactStatus}</p></article><article class="info-card"><Icon name="pin"/><h2>Endereço registrado</h2><p>Rua José Paulino, 347<br/>Centro, Campinas — SP</p><p>Endereço e horários aguardam aprovação. Não há confirmação de atendimento presencial.</p></article></section></Layout>

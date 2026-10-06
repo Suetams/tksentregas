@@ -1,0 +1,11 @@
+---
+import {services} from '../data/site';
+import Icon from './Icon.astro';
+import Vehicle from './Vehicle.astro';
+interface Props { all?: boolean; }
+const list=Astro.props.all ? services : services.slice(0,6);
+---
+<div class="service-grid">{list.map((service,index)=><a class="service-card" href={`/servicos/${service.id}`}>
+ <div class:list={['service-visual',`visual-${index%3}`]}><Vehicle type={service.vehicle}/><span class="visual-tag">{'Imagem ilustrativa'}</span></div>
+ <div class="service-content"><h3>{service.title}</h3><div><p>{service.short}</p><span class="circle-arrow"><Icon name="arrow" size={17}/></span></div></div>
+</a>)}</div>

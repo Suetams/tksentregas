@@ -1,0 +1,17 @@
+---
+import {fleet} from '../data/site';
+import Icon from './Icon.astro';
+import Vehicle from './Vehicle.astro';
+---
+<section class="fleet-section section"><div class="container"><div class="section-heading"><span class="eyebrow">Nossa frota · categorias em validação</span><h2>Do pequeno volume à carga.</h2><p>Diferentes veículos para diferentes necessidades.</p></div>
+ <div class="fleet-layout"><div class="fleet-tabs" role="tablist" aria-label="Categorias de veículo">{fleet.map((v,i)=><button id={`tab-${v.id}`} role="tab" aria-selected={i===0?'true':'false'} aria-controls={v.id} tabindex={i===0?0:-1} data-fleet={v.id}><Icon name={v.icon}/>{v.title}<Icon name="arrow" size={16}/></button>)}</div>
+ <div class="fleet-panels">{fleet.map((v,i)=><div id={v.id} role="tabpanel" aria-labelledby={`tab-${v.id}`} hidden={i!==0} tabindex="0"><div class="fleet-image"><Vehicle type={v.id}/><small>Imagem gerada por IA · ilustrativa</small></div><div class="fleet-detail"><h3>{v.title}</h3><p>{v.desc}</p><span class="detail-note">Capacidade e disponibilidade sujeitas à avaliação.</span><a class="button" href={`/orcamento?necessidade=${v.id==='moto'?'documentos':v.id==='caminhao-3-4'?'carga':'mercadorias'}`}>Solicitar orçamento <Icon name="arrow" size={18}/></a></div></div>)}</div>
+ <aside class="fleet-help"><Icon name="help"/><h3>Não sabe qual veículo precisa?</h3><p>Conte o que deseja transportar. A escolha pode ser avaliada pelo atendimento.</p><a class="button outline" href="/orcamento?necessidade=orientacao">Encontrar minha solução <Icon name="arrow" size={18}/></a></aside></div>
+ <noscript><p>Sem JavaScript: conheça as categorias e informe sua necessidade no orçamento.</p>{fleet.map(v=><div><h3>{v.title}</h3><p>{v.desc}</p></div>)}</noscript>
+</div></section>
+<script>
+const tabs=Array.from(document.querySelectorAll<HTMLButtonElement>('[data-fleet]'));
+function select(tab: HTMLButtonElement){for(const item of tabs){const active=item===tab;item.setAttribute('aria-selected',String(active));item.tabIndex=active?0:-1;const panel=document.getElementById(item.getAttribute('aria-controls')||'');if(panel)panel.hidden=!active;}}
+for(const tab of tabs){tab.addEventListener('click',()=>select(tab));tab.addEventListener('keydown',event=>{const i=tabs.indexOf(tab);let next:number|undefined;if(event.key==='ArrowDown'||event.key==='ArrowRight')next=(i+1)%tabs.length;if(event.key==='ArrowUp'||event.key==='ArrowLeft')next=(i-1+tabs.length)%tabs.length;if(event.key==='Home')next=0;if(event.key==='End')next=tabs.length-1;if(next!==undefined){event.preventDefault();select(tabs[next]);tabs[next].focus();}});}
+const id=location.hash.slice(1);const initial=tabs.find(t=>t.dataset.fleet===id);if(initial)select(initial);
+</script>
