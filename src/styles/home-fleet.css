@@ -1,0 +1,329 @@
+.hf-section {
+  padding-block: 88px;
+  background: #f4f5f4;
+}
+
+.hf-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 32px;
+  margin-bottom: 42px;
+}
+
+.hf-heading h2 {
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  line-height: 1.13;
+  letter-spacing: -.045em;
+  max-width: 680px;
+}
+
+.hf-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding-block: 12px;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: .9rem;
+  white-space: nowrap;
+}
+
+.hf-all-link svg {
+  transition: transform .2s ease;
+}
+
+.hf-all-link:hover svg {
+  transform: translateX(4px);
+}
+
+.hf-tabs {
+  display: flex;
+  gap: 36px;
+  border-bottom: 1px solid #d6dce0;
+}
+
+.hf-tabs button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 60px;
+  padding: 12px 4px 18px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color .2s ease;
+}
+
+.hf-tabs button::after {
+  position: absolute;
+  content: '';
+  inset: auto 0 -1px;
+  height: 2px;
+  background: var(--blue);
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.hf-tabs button:hover,
+.hf-tabs button[aria-selected='true'] {
+  color: var(--ink);
+}
+
+.hf-tabs button[aria-selected='true']::after {
+  opacity: 1;
+}
+
+.hf-tabs button[aria-selected='true'] svg {
+  color: var(--blue);
+}
+
+.hf-panels {
+  margin-top: 30px;
+}
+
+.hf-panel {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+  min-height: 430px;
+}
+
+.hf-panel .hf-visual { animation: hf-fade-in .25s ease both; }
+
+.hf-visual {
+  align-self: center;
+  width: 100%;
+  aspect-ratio: 1.25;
+  mix-blend-mode: multiply;
+  mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
+}
+
+.hf-visual .vehicle-photo {
+  aspect-ratio: 1.25;
+  border-radius: 0;
+  background: transparent;
+  mask-image: linear-gradient(180deg, transparent, #000 8%, #000 94%, transparent);
+}
+
+.hf-visual .vehicle-photo img {
+  transform: translateY(-50%);
+}
+
+#hf-panel-moto .vehicle-photo img {
+  transform: translateY(-54%);
+}
+
+.hf-detail {
+  padding-block: 16px;
+  max-width: 435px;
+}
+
+.hf-capacity-label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+.hf-detail h3 {
+  font-size: clamp(2rem, 3vw, 2.85rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -.04em;
+}
+
+.hf-description {
+  min-height: 4.65em;
+  margin-top: 19px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.hf-applications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 0;
+  min-height: 2.9em;
+  list-style: none;
+  margin: 17px 0 25px;
+  padding: 0;
+  font-size: .8rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.hf-applications li:not(:last-child)::after {
+  display: inline-block;
+  content: '·';
+  margin-inline: 9px;
+  color: var(--muted);
+}
+
+.hf-note {
+  max-width: 900px;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: .72rem;
+  line-height: 1.5;
+}
+
+.hf-no-script {
+  margin-top: 10px;
+  font-size: .85rem;
+}
+
+.hf-no-script a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+@keyframes hf-fade-in {
+  from { opacity: .3; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 1000px) {
+  .hf-heading {
+    align-items: start;
+  }
+
+  .hf-all-link {
+    white-space: normal;
+    max-width: 200px;
+  }
+
+  .hf-panel .hf-visual {
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hf-tabs {
+    gap: 22px;
+  }
+
+  .hf-tabs button {
+    gap: 8px;
+    font-size: .9rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hf-section {
+    padding-block: 56px;
+  }
+
+  .hf-heading {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .hf-heading h2 {
+    font-size: clamp(1.9rem, 6.7vw, 2.65rem);
+  }
+
+  .hf-desktop-break {
+    display: none;
+  }
+
+  .hf-all-link {
+    max-width: none;
+    margin-top: 16px;
+    padding-block: 8px;
+    font-size: .85rem;
+  }
+
+  .hf-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 16px;
+    border-bottom: 0;
+  }
+
+  .hf-tabs button {
+    justify-content: start;
+    min-height: 52px;
+    padding: 12px 0;
+    border-bottom: 1px solid #d6dce0;
+    font-size: .84rem;
+  }
+
+  .hf-tabs button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hf-panels {
+    margin-top: 20px;
+  }
+
+  .hf-panel {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    min-height: 0;
+  }
+
+  .hf-visual,
+  .hf-visual .vehicle-photo {
+    aspect-ratio: 1.25;
+  }
+
+  .hf-detail {
+    max-width: none;
+    padding-block: 15px 0;
+  }
+
+  .hf-capacity-label {
+    font-size: .75rem;
+  }
+
+  .hf-detail h3 {
+    font-size: 2.25rem;
+  }
+
+  .hf-description {
+    min-height: 4.65em;
+    margin-top: 14px;
+    font-size: .94rem;
+    max-width: 540px;
+  }
+
+  .hf-applications {
+    margin: 15px 0 22px;
+    font-size: .76rem;
+  }
+
+  .hf-quote {
+    width: 100%;
+    min-height: 52px;
+  }
+
+  .hf-note {
+    margin-top: 25px;
+    font-size: .67rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hf-panel {
+    animation: none;
+  }
+
+  .hf-tabs button,
+  .hf-tabs button::after,
+  .hf-all-link svg {
+    transition: none;
+  }
+
+  .hf-all-link:hover svg {
+    transform: none;
+  }
+}
