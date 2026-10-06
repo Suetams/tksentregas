@@ -1,0 +1,82 @@
+/* TKS foundations. Local variable fonts, restrained geometry and shared rhythm. */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url('@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url('@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2') format('woff2');
+}
+:root {
+  --color-brand: #0066ff;
+  --color-brand-hover: #0054d6;
+  --color-brand-on-dark: #398eff;
+  --color-navy: #071723;
+  --color-text: #101820;
+  --color-muted: #637080;
+  --color-surface: #f3f4f3;
+  --color-border: #dce3e0;
+  --color-on-dark: #f7f8fa;
+  --font-display: 'Manrope', Arial, sans-serif;
+  --font-body: 'DM Sans', Arial, sans-serif;
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-section: clamp(4rem, 7.5vw, 7rem);
+  --space-section-mobile: var(--space-section);
+  --radius-small: 3px;
+  --radius-medium: 7px;
+  --radius-large: 12px;
+  --shadow-subtle: 0 4px 16px #07172305;
+  --shadow-nav: 0 1px 0 #07172312;
+  --container-max: 1280px;
+  --container-gutter: max(4.5vw, calc((100vw - var(--container-max)) / 2));
+  --container-reading: 42rem;
+  --transition-fast: 220ms cubic-bezier(.2,.65,.3,1);
+  --transition-base: var(--transition-fast);
+  --transition-image: 420ms cubic-bezier(.2,.65,.3,1);
+  /* Existing pages retain their original variable names and layouts. */
+  --blue: var(--color-brand);
+  --blue-dark: var(--color-brand-hover);
+  --navy: var(--color-navy);
+  --ink: var(--color-text);
+  --muted: var(--color-muted);
+}
+.home-v3 .container {
+  width: calc(100% - var(--container-gutter) * 2);
+  max-width: var(--container-max);
+}
+.home-v3 {
+  font-family: var(--font-body);
+}
+.home-v3 h1, .home-v3 h2, .home-v3 h3 {
+  font-family: var(--font-display);
+}
+.home-v3 .button {
+  border-radius: var(--radius-small);
+}
+.home-v3 a {
+  transition: color var(--transition-fast);
+}
+@media (max-width: 700px) {
+  :root {
+    --container-gutter: 24px;
+  }
+}
+@media (max-width: 370px) {
+  :root {
+    --container-gutter: 20px;
+  }
+}

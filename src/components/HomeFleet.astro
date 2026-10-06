@@ -1,0 +1,113 @@
+---
+import { Image } from 'astro:assets';
+import Arrow from './Arrow.astro';
+import { homeFleet } from '../data/home-fleet';
+import { homeMedia, homeFleetMediaFrames } from '../data/home-media';
+import '../styles/home-fleet.css';
+---
+
+<section class="hf-section" aria-labelledby="hf-heading" data-home-fleet>
+  <div class="container">
+    <div class="hf-heading">
+      <h2 id="hf-heading">Uma solução para<br class="hf-desktop-break" /> cada entrega.</h2>
+      <a class="hf-all-link" href="/servicos">Conhecer todas as soluções <Arrow diagonal /></a>
+    </div>
+
+    <div class="hf-showcase">
+      <div class="hf-tabs" role="tablist" aria-label="Escolha uma categoria de transporte" aria-orientation="vertical">
+        {homeFleet.map((category, index) => (
+          <button
+            type="button"
+            id={`hf-tab-${category.id}`}
+            role="tab"
+            aria-selected={index === 0 ? 'true' : 'false'}
+            aria-controls={`hf-panel-${category.id}`}
+            tabindex={index === 0 ? 0 : -1}
+            data-hf-tab={category.id}
+          >
+            <span class="hf-tab-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <span class="hf-tab-name">{category.label}</span>
+            <span class="hf-tab-arrow"><Arrow diagonal /></span>
+          </button>
+        ))}
+      </div>
+
+      <div class="hf-panels">
+        {homeFleet.map((category, index) => (
+          <div
+            class="hf-panel"
+            id={`hf-panel-${category.id}`}
+            role="tabpanel"
+            aria-labelledby={`hf-tab-${category.id}`}
+            tabindex="0"
+            hidden={index !== 0}
+          >
+            <div class="hf-visual" role="img" aria-label={`Representação da categoria ${category.label}`} data-hf-image style={`--hf-image-left: ${homeFleetMediaFrames[category.id].left}; --hf-image-top: ${homeFleetMediaFrames[category.id].top};`}>
+              <Image src={homeMedia.fleet} width={1536} format="webp" quality={82} alt="" loading="lazy" decoding="async" />
+            </div>
+            <div class="hf-detail">
+              <div class="hf-title">
+                <h3>{category.label}</h3>
+                <p class="hf-capacity" data-hf-capacity><span>Até</span> {category.capacityKg.toLocaleString('pt-BR')} <span>kg</span></p>
+              </div>
+              <div class="hf-copy">
+                <p class="hf-description">{category.description}</p>
+                <ul class="hf-applications" aria-label="Aplicações típicas">
+                  {category.applications.map(application => <li>{application}</li>)}
+                </ul>
+                <a class="hf-quote" href={`/orcamento?necessidade=${category.need}`}>
+                  Solicitar orçamento <Arrow diagonal />
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <p class="hf-note">A escolha do veículo considera os detalhes de cada transporte.</p>
+    <noscript><p class="hf-no-script">Conheça as categorias Moto, Utilitário, Van / Furgão e Caminhão 3/4 em <a href="/frota">nossa frota</a>.</p></noscript>
+  </div>
+</section>
+
+<script>
+  for (const section of document.querySelectorAll<HTMLElement>('[data-home-fleet]')) {
+    const tablist = section.querySelector<HTMLElement>('[role="tablist"]');
+    const tabs = Array.from(section.querySelectorAll<HTMLButtonElement>('[data-hf-tab]'));
+    const desktop = window.matchMedia('(min-width: 901px)');
+    const updateOrientation = () => tablist?.setAttribute('aria-orientation', desktop.matches ? 'vertical' : 'horizontal');
+    updateOrientation();
+    desktop.addEventListener('change', updateOrientation);
+
+    const select = (tab: HTMLButtonElement) => {
+      for (const item of tabs) {
+        const active = item === tab;
+        item.setAttribute('aria-selected', String(active));
+        item.tabIndex = active ? 0 : -1;
+        const panel = section.querySelector<HTMLElement>(`#${item.getAttribute('aria-controls')}`);
+        if (panel) panel.hidden = !active;
+      }
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => select(tab));
+      tab.addEventListener('keydown', event => {
+        let next: number | undefined;
+        const forward = desktop.matches ? 'ArrowDown' : 'ArrowRight';
+        const backward = desktop.matches ? 'ArrowUp' : 'ArrowLeft';
+        if (event.key === forward) next = (index + 1) % tabs.length;
+        if (event.key === backward) next = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        if (next === undefined) return;
+        event.preventDefault();
+        const selected = tabs[next];
+        select(selected);
+        selected.focus({ preventScroll: true });
+        if (!desktop.matches) {
+          selected.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' });
+        }
+      });
+    });
+  }
+</script>
