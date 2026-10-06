@@ -16,6 +16,7 @@ Use o checkout existente. Cada tarefa cloud já é isolada; não crie worktrees 
 
 ```sh
 npm run check
+npm run lint
 npm run build
 npm test
 ```
@@ -24,7 +25,7 @@ Os testes iniciam `astro preview` automaticamente na porta 4321, desde que estej
 
 ## O que foi implementado
 
-- Home V2: Hero fotográfico, quatro caminhos que preenchem o orçamento, seção editorial unindo soluções e categorias de transporte, bloco empresarial, confiança e encerramento comercial. O processo e o formulário completo ficam em `/orcamento`.
+- Home V3: Hero editorial integrado, quatro necessidades em lista, showcase de uma categoria de transporte por vez, composição empresarial, marco tipográfico 2010 e encerramento comercial. Tipografia variável local e tokens próprios da TKS. O processo e o formulário completo ficam em `/orcamento`.
 - Hub `/servicos` e oito páginas de serviço; `/frota`, `/para-empresas`, `/sobre`, `/contato`, `/area-de-atuacao`, `/blog`, `/privacidade`, `/orcamento` e 404.
 - Header sticky sem mudar de altura, menu mobile com foco e Escape, footer reduzido e seletores acessíveis por teclado. A Home respeita movimento reduzido e mantém conteúdo útil sem JavaScript.
 - Orçamento em quatro etapas: carga, trajeto, contato e revisão. Validação, voltar/editar, recorrência, múltiplos destinos, data no fuso America/Sao_Paulo, resumo completo e cópia com alternativa manual.
@@ -54,12 +55,14 @@ Esta versão está com `noindex,nofollow` e `robots.txt` bloqueando rastreamento
 
 Documentos e CSVs originais do pacote estão em `docs/`. A autorização para antecipar a implementação não encerra a auditoria e não aprova os dados operacionais.
 
-A direção visual, os arquivos e os controles internos da Home V2 estão em `docs/HOME_V2.md`. Capacidades da seção editorial são editáveis em `src/data/home-fleet.ts`; fatos e necessidades da Home estão em `src/data/home.ts`. Os avisos de desenvolvimento foram retirados da Home, header e footer, preservando as pendências na documentação e nesses dados internos.
+A direção visual, os arquivos e os controles internos atuais estão em `docs/HOME_V3.md`; `docs/HOME_V2.md` mantém o registro histórico da rodada anterior. Capacidades são editáveis em `src/data/home-fleet.ts`; fatos e necessidades em `src/data/home.ts`; imagens conceituais e enquadramentos em `src/data/home-media.ts`. Os avisos de desenvolvimento ficam na documentação e nos controles internos, fora da composição pública da Home.
 
 ## Prévia online para revisão
 
 O arquivo netlify.toml prepara um deploy estático de desenvolvimento: npm run build, saída dist, Node 24.19.0 e X-Robots-Tag noindex/nofollow. Não há regras de fallback que transformem rotas inexistentes em 200.
 
-Depois de o código ser enviado ao GitHub com autorização do usuário, ele pode criar conta na Netlify pelo navegador, conectar o GitHub e importar Suetams/tksentregas. A prévia receberá um endereço .netlify.app. Essa etapa não foi executada; não há URL pública criada. Não configure o domínio tksentregas.com.br para esta prévia.
+O código da rodada atual é entregue na branch `preview/home-v3`. Para uma prévia pública, a hospedagem de revisão precisa estar conectada ao repositório e selecionar essa branch. Não há hospedagem conectada nem URL pública gerada neste ambiente. O acesso à API GitHub também está bloqueado pela política de saída. Não configure o domínio tksentregas.com.br para esta prévia.
+
+As instruções propostas para a configuração cloud estão em `docs/CLOUD_SETUP.md`. A tentativa de atualizar o rascunho de configuração retornou `draft_not_editable`; sua persistência no painel não foi confirmada. A instalação e a validação locais foram concluídas independentemente disso.
 
 Não compartilhe senhas ou tokens no chat. O número de orçamento ainda precisa ser confirmado; fotos e logo oficiais e a migração dos artigos seguem pendentes.

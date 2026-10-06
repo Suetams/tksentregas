@@ -1,10 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Icon from '../components/Icon.astro';
+import Arrow from '../components/Arrow.astro';
 import HomeFleet from '../components/HomeFleet.astro';
 import { Image } from 'astro:assets';
-import heroImage from '../assets/transport-hero.png';
-import warehouseImage from '../assets/warehouse.png';
+import { homeMedia } from '../data/home-media';
 import { homeNeeds, homeContentReview } from '../data/home';
 import '../styles/home.css';
 ---
@@ -12,40 +11,34 @@ import '../styles/home.css';
 <Layout title="Do documento à carga" home>
   <section class="home-hero" aria-labelledby="hero-title">
     <div class="home-hero-image" aria-hidden="true">
-      <Image src={heroImage} widths={[960, 1440, 1942]} sizes="100vw" format="webp" quality={80} alt="" loading="eager" fetchpriority="high" />
+      <Image src={homeMedia.hero} widths={[640, 960, 1280, 1672]} sizes="(max-width: 700px) 720px, 100vw" format="webp" quality={82} alt="" loading="eager" fetchpriority="high" />
     </div>
     <div class="container home-hero-inner">
       <div class="home-hero-copy">
-        <span class="home-overline">TKS Entregas</span>
-        <h1 id="hero-title"><span>Do documento à carga.</span><em>A TKS entrega.</em></h1>
-        <p>Soluções de transporte para necessidades pontuais ou operações recorrentes.</p>
+        <p class="home-hero-origin">Desde {homeContentReview.companySince.value} <span>·</span> {homeContentReview.companyLocation.value}</p>
+        <h1 id="hero-title"><span>Do documento</span><span>à carga.</span><em>A TKS entrega.</em></h1>
+        <p class="home-hero-description">Soluções de transporte para necessidades pontuais ou operações recorrentes.</p>
         <div class="home-hero-actions">
-          <a class="button" href="/orcamento">Solicitar orçamento <Icon name="arrow" size={20} /></a>
-          <a class="button home-button-ghost" href="/contato">Falar com a TKS <Icon name="arrow" size={20} /></a>
+          <a class="button" href="/orcamento">Solicitar orçamento <Arrow size={20} /></a>
+          <a class="home-link home-link-light" href="/contato">Falar com a TKS <Arrow size={18} /></a>
         </div>
-        <ul class="home-hero-facts" aria-label="Sobre a TKS">
-          <li>Desde {homeContentReview.companySince.value}</li>
-          <li>Atendimento próximo</li>
-          <li>Diferentes soluções</li>
-        </ul>
       </div>
     </div>
-    <p class="sr-only">Composição visual conceitual de transporte. Os veículos ilustrados não identificam a frota real da empresa.</p>
+    <p class="sr-only">Composição conceitual de transporte. Não retrata veículos comprovadamente pertencentes à TKS.</p>
   </section>
 
-  <section class="home-needs home-section" aria-labelledby="needs-title">
-    <div class="container" data-reveal>
-      <div class="home-section-heading">
-        <span class="eyebrow">Seu ponto de partida</span>
-        <h2 id="needs-title">O que você precisa transportar?</h2>
+  <section class="home-needs" aria-labelledby="needs-title">
+    <div class="container home-needs-layout" data-reveal>
+      <div class="home-needs-intro">
+        <h2 id="needs-title">O que vai daqui<br/><em>até lá?</em></h2>
         <p>Conte sua necessidade. A TKS ajuda a encontrar a solução adequada.</p>
       </div>
       <div class="home-paths">
         {homeNeeds.map((need, index) => (
-          <a class="home-path" href={`/orcamento?necessidade=${need.id}`} data-need-path={need.id}>
-            <div class="home-path-top"><Icon name={need.icon} size={27} /><span>0{index + 1}</span></div>
+          <a class="home-path" href={'/orcamento?necessidade=' + need.id} data-need-path={need.id}>
+            <span class="home-path-index" aria-hidden="true">0{index + 1}</span>
             <h3>{need.title}</h3>
-            <div class="home-path-bottom"><p>{need.text}</p><Icon name="arrow" size={21} /></div>
+            <span class="home-path-arrow"><Arrow size={24} /></span>
           </a>
         ))}
       </div>
@@ -56,42 +49,39 @@ import '../styles/home.css';
 
   <section class="home-business" aria-labelledby="business-title">
     <div class="home-business-image" aria-hidden="true">
-      <Image src={warehouseImage} widths={[800, 1280, 1600]} sizes="(max-width: 700px) 100vw, 75vw" format="webp" quality={78} alt="" loading="lazy" decoding="async" />
+      <Image src={homeMedia.operation} widths={[640, 960, 1440]} sizes="(max-width: 700px) 100vw, 50vw" format="webp" quality={80} alt="" loading="lazy" decoding="async" />
     </div>
-    <div class="container home-business-inner">
+    <div class="container home-business-layout">
       <div class="home-business-copy" data-reveal>
-        <span class="home-overline">Para empresas</span>
-        <h2 id="business-title">Sua operação<br/>não precisa parar.</h2>
+        <span class="home-label">Para empresas</span>
+        <h2 id="business-title">Sua operação<br/>não precisa<br class="business-break"/> parar.</h2>
         <p>Soluções de transporte que acompanham as necessidades da rotina da sua empresa.</p>
         <ul class="home-business-topics" aria-label="Soluções empresariais">
           <li>Distribuição</li><li>Rotas programadas</li><li>E-commerce</li><li>Operações recorrentes</li>
         </ul>
-        <a class="button home-button-ghost" href="/para-empresas">Conhecer soluções para empresas <Icon name="arrow" size={19} /></a>
+        <a class="home-link home-link-light" href="/para-empresas">Conhecer soluções para empresas <Arrow size={20} /></a>
       </div>
     </div>
-    <p class="sr-only">Representação conceitual de uma operação logística, sem retratar instalações ou colaboradores reais da TKS.</p>
+    <p class="sr-only">Representação conceitual de logística. Não retrata instalações ou colaboradores comprovadamente pertencentes à TKS.</p>
   </section>
 
-  <section class="home-trust home-section" aria-labelledby="trust-title">
-    <div class="container home-trust-inner" data-reveal>
-      <div class="home-section-heading"><span class="eyebrow">Por que TKS</span><h2 id="trust-title">Transporte começa<br/>com confiança.</h2></div>
-      <div class="home-trust-points">
-        {[
-          ['calendar', `Desde ${homeContentReview.companySince.value}`, 'Uma história construída no transporte.'],
-          ['people', 'Atendimento próximo', 'Uma conversa para entender sua necessidade.'],
-          ['route', 'Diferentes soluções', 'Do documento a volumes maiores.'],
-          ['repeat', 'Pontual ou recorrente', 'Para pessoas e empresas.'],
-        ].map(([icon, title, text]) => (
-          <div class="home-trust-point"><Icon name={icon} size={24}/><div><h3>{title}</h3><p>{text}</p></div></div>
-        ))}
+  <section class="home-history" aria-labelledby="history-title">
+    <div class="container home-history-layout" data-reveal>
+      <p class="home-history-year">{homeContentReview.companySince.value}</p>
+      <div class="home-history-copy">
+        <h2 id="history-title">É desde lá que a TKS<br/>está na estrada.</h2>
+        <p>Desde 2010, soluções de transporte para pessoas e empresas.</p>
+        <ul class="home-history-points">
+          <li>Atendimento próximo</li><li>Diferentes soluções</li><li>Pontual ou recorrente</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section class="home-closing" aria-labelledby="closing-title">
     <div class="container home-closing-inner" data-reveal>
-      <div><span class="eyebrow">Vamos encontrar seu próximo caminho</span><h2 id="closing-title">Conte o que precisa transportar.</h2><p>A TKS ajuda a encontrar o caminho.</p></div>
-      <a class="button" href="/orcamento">Solicitar orçamento <Icon name="arrow" size={20}/></a>
+      <h2 id="closing-title">Tem algo para<br/>transportar?</h2>
+      <a class="home-link home-link-light" href="/orcamento">Solicitar orçamento <Arrow size={32}/></a>
     </div>
   </section>
 </Layout>
@@ -105,16 +95,15 @@ import '../styles/home.css';
         entry.target.classList.add('is-revealed');
         observer.unobserve(entry.target);
       }
-    }, { threshold: 0.08 });
+    }, { threshold: 0.06 });
     for (const element of document.querySelectorAll<HTMLElement>('[data-reveal]')) {
       element.classList.add('reveal-ready');
       observer.observe(element);
     }
     reducedMotion.addEventListener('change', event => {
-      if (event.matches) {
-        observer.disconnect();
-        document.querySelectorAll('.reveal-ready').forEach(element => element.classList.add('is-revealed'));
-      }
+      if (!event.matches) return;
+      observer.disconnect();
+      document.querySelectorAll('.reveal-ready').forEach(element => element.classList.add('is-revealed'));
     });
   }
 </script>

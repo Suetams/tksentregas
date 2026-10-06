@@ -1,329 +1,274 @@
 .hf-section {
-  padding-block: 88px;
-  background: #f4f5f4;
+  padding-block: var(--space-section, 104px);
+  background: var(--color-surface, #f5f6f5);
+  overflow: clip;
 }
 
 .hf-heading {
   display: flex;
-  justify-content: space-between;
   align-items: end;
-  gap: 32px;
-  margin-bottom: 42px;
+  justify-content: space-between;
+  gap: var(--space-8, 32px);
+  margin-bottom: clamp(40px, 5.5vw, 80px);
 }
 
 .hf-heading h2 {
-  font-size: clamp(2rem, 3.5vw, 3.25rem);
-  line-height: 1.13;
-  letter-spacing: -.045em;
-  max-width: 680px;
+  max-width: 780px;
+  font-size: clamp(2.5rem, 4.2vw, 4.25rem);
+  line-height: 1.06;
+  letter-spacing: -.055em;
 }
 
-.hf-all-link {
+.hf-all-link,
+.hf-quote {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding-block: 12px;
-  color: var(--ink);
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 44px;
+  color: var(--color-text, #101820);
   font-weight: 600;
-  font-size: .9rem;
-  white-space: nowrap;
+  font-size: .85rem;
+  line-height: 1.4;
 }
 
-.hf-all-link svg {
-  transition: transform .2s ease;
+.hf-all-link { white-space: nowrap; }
+
+.hf-all-link svg,
+.hf-quote svg {
+  transition: transform var(--transition-base, 250ms ease);
 }
 
-.hf-all-link:hover svg {
-  transform: translateX(4px);
+.hf-all-link:hover svg,
+.hf-quote:hover svg { transform: translate(3px, -3px); }
+
+.hf-showcase {
+  display: grid;
+  grid-template-columns: minmax(190px, 23%) minmax(0, 1fr);
+  gap: clamp(36px, 5vw, 76px);
+  align-items: start;
 }
 
-.hf-tabs {
-  display: flex;
-  gap: 36px;
-  border-bottom: 1px solid #d6dce0;
-}
+.hf-tabs { padding-top: clamp(20px, 4vw, 60px); }
 
 .hf-tabs button {
-  position: relative;
-  display: inline-flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) 22px;
+  gap: 14px;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  min-height: 60px;
-  padding: 12px 4px 18px;
+  min-height: 74px;
+  padding: 18px 0;
+  text-align: left;
   border: 0;
+  border-bottom: 1px solid var(--color-border, #dce3e9);
   border-radius: 0;
   background: transparent;
-  color: var(--muted);
-  font-size: 1rem;
-  font-weight: 600;
-  white-space: nowrap;
-  transition: color .2s ease;
+  color: var(--color-muted, #637080);
+  transition: color var(--transition-base, 250ms ease);
 }
 
-.hf-tabs button::after {
-  position: absolute;
-  content: '';
-  inset: auto 0 -1px;
-  height: 2px;
-  background: var(--blue);
+.hf-tab-index {
+  font-size: .62rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.hf-tab-name {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+  transition: transform var(--transition-base, 250ms ease);
+}
+
+.hf-tab-arrow {
+  justify-self: end;
   opacity: 0;
-  transition: opacity .2s ease;
+  transform: translate(-4px, 4px);
+  transition: opacity var(--transition-base, 250ms ease), transform var(--transition-base, 250ms ease);
 }
 
 .hf-tabs button:hover,
-.hf-tabs button[aria-selected='true'] {
-  color: var(--ink);
-}
-
-.hf-tabs button[aria-selected='true']::after {
-  opacity: 1;
-}
-
-.hf-tabs button[aria-selected='true'] svg {
-  color: var(--blue);
-}
-
-.hf-panels {
-  margin-top: 30px;
-}
-
-.hf-panel {
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: clamp(32px, 5vw, 72px);
-  align-items: center;
-  min-height: 430px;
-}
-
-.hf-panel .hf-visual { animation: hf-fade-in .25s ease both; }
+.hf-tabs button[aria-selected='true'] { color: var(--color-text, #101820); }
+.hf-tabs button:hover .hf-tab-name { transform: translateX(3px); }
+.hf-tabs button[aria-selected='true'] { border-bottom-color: var(--color-text, #101820); }
+.hf-tabs button[aria-selected='true'] .hf-tab-index { color: var(--color-brand-hover, #0054d6); }
+.hf-tabs button[aria-selected='true'] .hf-tab-arrow,
+.hf-tabs button:hover .hf-tab-arrow { opacity: 1; transform: none; }
+.hf-panels,
+.hf-panel { min-width: 0; }
 
 .hf-visual {
-  align-self: center;
   width: 100%;
-  aspect-ratio: 1.25;
-  mix-blend-mode: multiply;
-  mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
+  aspect-ratio: 3 / 2;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  animation: hf-image-enter 350ms ease-out both;
 }
 
-.hf-visual .vehicle-photo {
-  aspect-ratio: 1.25;
-  border-radius: 0;
-  background: transparent;
-  mask-image: linear-gradient(180deg, transparent, #000 8%, #000 94%, transparent);
-}
-
-.hf-visual .vehicle-photo img {
-  transform: translateY(-50%);
-}
-
-#hf-panel-moto .vehicle-photo img {
-  transform: translateY(-54%);
+.hf-visual img {
+  position: absolute;
+  left: var(--hf-image-left);
+  top: var(--hf-image-top);
+  width: 200%;
+  height: 200%;
+  max-width: none;
+  object-fit: fill;
+  display: block;
 }
 
 .hf-detail {
-  padding-block: 16px;
-  max-width: 435px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(24px, 3vw, 42px);
+  padding-top: 36px;
+  min-height: 260px;
 }
 
-.hf-capacity-label {
-  display: block;
-  margin-bottom: 9px;
-  color: var(--muted);
-  font-size: .8rem;
-}
-
-.hf-detail h3 {
-  font-size: clamp(2rem, 3vw, 2.85rem);
+.hf-title h3 {
+  font-size: clamp(2.4rem, 3.3vw, 3.8rem);
+  line-height: 1.06;
   font-weight: 700;
+  letter-spacing: -.055em;
+}
+
+.hf-capacity {
+  margin-top: 18px;
+  font-size: clamp(1.65rem, 2.5vw, 2.25rem);
   line-height: 1.2;
-  letter-spacing: -.04em;
+  letter-spacing: -.045em;
+  font-weight: 500;
+  color: var(--color-text, #101820);
+}
+
+.hf-capacity span {
+  font-size: .8rem;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: var(--color-muted, #637080);
 }
 
 .hf-description {
-  min-height: 4.65em;
-  margin-top: 19px;
-  color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.55;
+  color: var(--color-muted, #637080);
+  font-size: .95rem;
+  line-height: 1.65;
+  min-height: 4.95em;
 }
 
 .hf-applications {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px 0;
+  gap: 6px 0;
   min-height: 2.9em;
   list-style: none;
-  margin: 17px 0 25px;
+  margin: 18px 0 14px;
   padding: 0;
-  font-size: .8rem;
-  line-height: 1.45;
-  color: var(--ink);
+  font-size: .71rem;
+  line-height: 1.5;
+  color: var(--color-text, #101820);
 }
 
 .hf-applications li:not(:last-child)::after {
   display: inline-block;
-  content: '·';
+  content: '/';
   margin-inline: 9px;
-  color: var(--muted);
+  color: var(--color-muted, #637080);
 }
 
+.hf-quote { width: 100%; border-bottom: 1px solid var(--color-text, #101820); }
+
 .hf-note {
-  max-width: 900px;
-  margin-top: 24px;
-  color: var(--muted);
-  font-size: .72rem;
+  margin-top: 26px;
+  margin-left: calc(23% + clamp(36px, 5vw, 76px));
+  color: var(--color-muted, #637080);
+  font-size: .67rem;
   line-height: 1.5;
 }
 
-.hf-no-script {
-  margin-top: 10px;
-  font-size: .85rem;
-}
+.hf-no-script { margin-top: 16px; color: var(--color-muted, #637080); font-size: .8rem; }
+.hf-no-script a { color: var(--color-brand, #0066ff); text-decoration: underline; }
 
-.hf-no-script a {
-  color: var(--blue);
-  text-decoration: underline;
-}
-
-@keyframes hf-fade-in {
-  from { opacity: .3; }
+@keyframes hf-image-enter {
+  from { opacity: .45; }
   to { opacity: 1; }
 }
 
-@media (max-width: 1000px) {
-  .hf-heading {
-    align-items: start;
-  }
-
-  .hf-all-link {
-    white-space: normal;
-    max-width: 200px;
-  }
-
-  .hf-panel .hf-visual {
-    gap: 30px;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .hf-tabs {
-    gap: 22px;
-  }
-
-  .hf-tabs button {
-    gap: 8px;
-    font-size: .9rem;
-  }
+@media (max-width: 1100px) {
+  .hf-heading { gap: 20px; }
+  .hf-all-link { max-width: 175px; white-space: normal; }
+  .hf-showcase { gap: 32px; }
+  .hf-tabs button { column-gap: 8px; }
+  .hf-tab-name { font-size: .7rem; }
+  .hf-detail { gap: 24px; }
+  .hf-description { font-size: .88rem; }
+  .hf-note { margin-left: calc(23% + 32px); }
 }
 
-@media (max-width: 700px) {
-  .hf-section {
-    padding-block: 56px;
-  }
-
-  .hf-heading {
-    display: block;
-    margin-bottom: 25px;
-  }
-
-  .hf-heading h2 {
-    font-size: clamp(1.9rem, 6.7vw, 2.65rem);
-  }
-
-  .hf-desktop-break {
-    display: none;
-  }
-
-  .hf-all-link {
-    max-width: none;
-    margin-top: 16px;
-    padding-block: 8px;
-    font-size: .85rem;
-  }
-
+@media (max-width: 900px) {
+  .hf-showcase { display: block; }
   .hf-tabs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 16px;
-    border-bottom: 0;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 28px;
+    padding: 0 0 4px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border, #dce3e9) transparent;
   }
-
   .hf-tabs button {
-    justify-content: start;
+    width: auto;
+    flex-shrink: 0;
+    display: flex;
+    gap: 9px;
     min-height: 52px;
-    padding: 12px 0;
-    border-bottom: 1px solid #d6dce0;
-    font-size: .84rem;
+    padding: 14px 0;
+    white-space: nowrap;
   }
+  .hf-tab-name { font-size: .72rem; }
+  .hf-tab-arrow { display: none; }
+  .hf-visual { aspect-ratio: 3 / 2; }
+  .hf-detail { padding-top: 26px; min-height: 240px; gap: 40px; }
+  .hf-title h3 { font-size: clamp(2.4rem, 5.2vw, 3.7rem); }
+  .hf-note { margin-left: 0; }
+}
 
-  .hf-tabs button svg {
-    width: 20px;
-    height: 20px;
+@media (max-width: 600px) {
+  .hf-section { padding-block: var(--space-section-mobile, 64px); }
+  .hf-heading { display: block; margin-bottom: 30px; }
+  .hf-heading h2 { font-size: clamp(2rem, 8.3vw, 2.8rem); }
+  .hf-desktop-break { display: none; }
+  .hf-all-link { margin-top: 18px; max-width: none; font-size: .78rem; }
+  .hf-tabs {
+    gap: 26px;
+    margin-right: calc(-1 * var(--container-gutter, 24px));
+    padding-right: var(--container-gutter, 24px);
+    margin-bottom: 24px;
   }
-
-  .hf-panels {
-    margin-top: 20px;
-  }
-
-  .hf-panel {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    min-height: 0;
-  }
-
-  .hf-visual,
-  .hf-visual .vehicle-photo {
-    aspect-ratio: 1.25;
-  }
-
-  .hf-detail {
-    max-width: none;
-    padding-block: 15px 0;
-  }
-
-  .hf-capacity-label {
-    font-size: .75rem;
-  }
-
-  .hf-detail h3 {
-    font-size: 2.25rem;
-  }
-
-  .hf-description {
-    min-height: 4.65em;
-    margin-top: 14px;
-    font-size: .94rem;
-    max-width: 540px;
-  }
-
-  .hf-applications {
-    margin: 15px 0 22px;
-    font-size: .76rem;
-  }
-
-  .hf-quote {
-    width: 100%;
-    min-height: 52px;
-  }
-
-  .hf-note {
-    margin-top: 25px;
-    font-size: .67rem;
-  }
+  .hf-tab-index { font-size: .59rem; }
+  .hf-tab-name { font-size: .67rem; }
+  .hf-visual { aspect-ratio: 3 / 2; }
+  .hf-detail { grid-template-columns: 1fr; padding-top: 24px; gap: 24px; min-height: 0; align-content: start; }
+  .hf-title { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 14px 24px; }
+  .hf-title h3 { font-size: clamp(2rem, 8vw, 2.65rem); max-width: 100%; }
+  .hf-capacity { margin-top: 0; font-size: 1.55rem; white-space: nowrap; }
+  .hf-capacity span { font-size: .68rem; }
+  .hf-description { font-size: .91rem; min-height: 0; }
+  .hf-applications { margin-top: 18px; margin-bottom: 15px; min-height: 0; font-size: .68rem; }
+  .hf-quote { min-height: 50px; font-size: .8rem; }
+  .hf-note { margin-top: 18px; font-size: .62rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hf-panel {
-    animation: none;
-  }
-
+  .hf-visual { animation: none; }
   .hf-tabs button,
-  .hf-tabs button::after,
-  .hf-all-link svg {
-    transition: none;
-  }
-
-  .hf-all-link:hover svg {
-    transform: none;
-  }
+  .hf-tab-name,
+  .hf-tab-arrow,
+  .hf-all-link svg,
+  .hf-quote svg { transition: none; }
+  .hf-all-link:hover svg,
+  .hf-quote:hover svg,
+  .hf-tabs button:hover .hf-tab-name { transform: none; }
 }

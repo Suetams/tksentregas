@@ -9,7 +9,6 @@ export interface HomeFleetCategory {
   description: string;
   applications: string[];
   need: QuoteNeed;
-  icon: string;
 }
 
 // Internal content control: capacities were transcribed from the existing
@@ -30,7 +29,6 @@ export const homeFleet: HomeFleetCategory[] = [
     description: 'Documentos, malotes e pequenos itens em uma solução leve de transporte.',
     applications: ['Documentos e contratos', 'Malotes', 'Pequenos volumes'],
     need: 'documentos',
-    icon: 'bike',
   },
   {
     id: 'utilitario',
@@ -39,7 +37,6 @@ export const homeFleet: HomeFleetCategory[] = [
     description: 'Mais espaço para transportar mercadorias, caixas, peças e equipamentos.',
     applications: ['Caixas e mercadorias', 'Peças e equipamentos', 'Coletas pontuais'],
     need: 'mercadorias',
-    icon: 'van',
   },
   {
     id: 'van-furgao',
@@ -48,7 +45,6 @@ export const homeFleet: HomeFleetCategory[] = [
     description: 'Para volumes maiores, distribuição e entregas que fazem parte da rotina da sua empresa.',
     applications: ['Volumes maiores', 'Distribuição', 'Entregas recorrentes'],
     need: 'mercadorias',
-    icon: 'van',
   },
   {
     id: 'caminhao-3-4',
@@ -57,6 +53,5 @@ export const homeFleet: HomeFleetCategory[] = [
     description: 'Uma categoria para cargas maiores, escolhida a partir dos detalhes de cada transporte.',
     applications: ['Cargas maiores', 'Mercadorias em volume', 'Operações empresariais'],
     need: 'carga',
-    icon: 'truck',
   },
 ];

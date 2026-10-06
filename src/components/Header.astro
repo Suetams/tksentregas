@@ -1,9 +1,10 @@
 ---
-import Icon from './Icon.astro';
+import Arrow from './Arrow.astro';
 import { hasOfficialLogo, officialLogoPath } from '../data/brand';
 import '../styles/navigation.css';
 
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isHome = path === '/';
 const links = [
   ['/servicos', 'Soluções'],
   ['/frota', 'Frota'],
@@ -16,7 +17,7 @@ const isActive = (href: string) => path === href || path.startsWith(`${href}/`);
 ---
 
 <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
-<header class="site-header">
+<header class:list={['site-header', { 'is-home': isHome }]}>
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="TKS Entregas — início">
       {hasOfficialLogo ? <img src={officialLogoPath} width="200" height="70" alt="TKS Entregas" decoding="async" /> : <span class="brand-fallback">TKS Entregas</span>}
@@ -24,15 +25,15 @@ const isActive = (href: string) => path === href || path.startsWith(`${href}/`);
     <nav class="desktop-nav" aria-label="Navegação principal">
       {links.map(([href, label]) => <a href={href} aria-current={isActive(href) ? 'page' : undefined}>{label}</a>)}
     </nav>
-    <a class="button header-cta" href="/orcamento">Solicitar orçamento <Icon name="arrow" size={17}/></a>
+    <a class="header-cta" href="/orcamento">Solicitar orçamento <Arrow size={18}/></a>
     <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
-      <Icon name="menu" size={23}/>
+      <span class="menu-lines" aria-hidden="true"><span></span><span></span></span>
     </button>
   </div>
   <nav id="mobile-menu" class="mobile-nav" aria-label="Navegação mobile" hidden>
     <div class="container mobile-nav-inner">
-      {links.map(([href, label]) => <a href={href} aria-current={isActive(href) ? 'page' : undefined}>{label}<Icon name="arrow" size={18}/></a>)}
-      <a class="mobile-quote" href="/orcamento">Solicitar orçamento <Icon name="arrow" size={18}/></a>
+      {links.map(([href, label]) => <a href={href} aria-current={isActive(href) ? 'page' : undefined}>{label}<Arrow size={18}/></a>)}
+      <a class="mobile-quote" href="/orcamento">Solicitar orçamento <Arrow size={18}/></a>
     </div>
   </nav>
 </header>

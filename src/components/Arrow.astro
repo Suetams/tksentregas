@@ -1,0 +1,5 @@
+---
+interface Props { size?: number; diagonal?: boolean; }
+const { size = 22, diagonal = false } = Astro.props;
+---
+<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={diagonal ? 'M5 19 19 5M5 5h14v14' : 'M4 12h16m-6-6 6 6-6 6'}/></svg>

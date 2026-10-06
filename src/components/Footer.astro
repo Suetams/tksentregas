@@ -1,5 +1,5 @@
 ---
-import Icon from './Icon.astro';
+import Arrow from './Arrow.astro';
 import { hasOfficialLogo, officialLogoPath } from '../data/brand';
 ---
 
@@ -11,22 +11,22 @@ import { hasOfficialLogo, officialLogoPath } from '../data/brand';
       </a>
       <p class="footer-slogan">Do documento à carga.<br/>A TKS entrega.</p>
     </div>
-    <div class="footer-column">
+    <nav class="footer-column" aria-label="Soluções no rodapé">
       <h2>Soluções</h2>
       <a href="/servicos">Todas as soluções</a>
       <a href="/frota">Frota</a>
       <a href="/para-empresas">Para empresas</a>
-    </div>
-    <div class="footer-column">
+    </nav>
+    <nav class="footer-column" aria-label="Empresa no rodapé">
       <h2>Empresa</h2>
       <a href="/sobre">Sobre a TKS</a>
       <a href="/blog">Conteúdos</a>
-    </div>
-    <div class="footer-column footer-contact">
+    </nav>
+    <nav class="footer-column footer-contact" aria-label="Contato no rodapé">
       <h2>Contato</h2>
-      <a href="/contato">Falar com a TKS <Icon name="arrow" size={16}/></a>
-      <a href="/orcamento">Solicitar orçamento <Icon name="arrow" size={16}/></a>
-    </div>
+      <a href="/contato">Falar com a TKS <Arrow size={16}/></a>
+      <a href="/orcamento">Solicitar orçamento <Arrow size={16}/></a>
+    </nav>
   </div>
   <div class="container footer-bottom">
     <span>© {new Date().getFullYear()} TKS Entregas</span>
