@@ -30,6 +30,8 @@ Capturas e resultados de laboratório são gerados fora do código publicado, em
 
 Resultado desta rodada: checagem Astro/TypeScript sem erros ou avisos, build de 19 páginas concluído, 42 testes Playwright aprovados incluindo a análise axe A/AA. Capturas revisadas em 360, 390, 768, 1024 e 1440 px sem overflow ou imagens quebradas. Foram corrigidos o contraste dos índices de necessidades, a transparência de texto durante revelação e o enquadramento de veículos para excluir as categorias vizinhas do catálogo.
 
+Laboratório final: Chromium com cache frio, CPU 4×, rede de 1,6 Mbps e latência de 150 ms, três rodadas por viewport. LCP mobile 1,608–1,612 s, desktop 1,608–1,620 s; CLS máximo 0,001246. Event Timing de toques/cliques reais no seletor entre 16–48 ms, sem equivaler a INP de campo. Transferência inicial de aproximadamente 282 KB; JavaScript da Home embutido de 2,4 KB, sem dependências novas. Três tarefas de inicialização entre 128–162 ms ocorreram nas seis amostras sob CPU 4×. Nenhum 404 foi observado. Resultados completos no artefato `performance-lab.json`.
+
 ## Arquivos desta rodada
 
 - `src/pages/index.astro`
