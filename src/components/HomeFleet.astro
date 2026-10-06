@@ -1,0 +1,99 @@
+---
+import Icon from './Icon.astro';
+import Vehicle from './Vehicle.astro';
+import { homeFleet } from '../data/home-fleet';
+import '../styles/home-fleet.css';
+---
+
+<section class="hf-section" aria-labelledby="hf-heading" data-home-fleet>
+  <div class="container">
+    <div class="hf-heading">
+      <div>
+        <span class="eyebrow">Soluções que se adaptam</span>
+        <h2 id="hf-heading">Uma solução para<br class="hf-desktop-break" /> cada entrega.</h2>
+      </div>
+      <a class="hf-all-link" href="/servicos">Conhecer todas as soluções <Icon name="arrow" size={20} /></a>
+    </div>
+
+    <div class="hf-tabs" role="tablist" aria-label="Escolha uma categoria de transporte" aria-orientation="horizontal">
+      {homeFleet.map((category, index) => (
+        <button
+          type="button"
+          id={`hf-tab-${category.id}`}
+          role="tab"
+          aria-selected={index === 0 ? 'true' : 'false'}
+          aria-controls={`hf-panel-${category.id}`}
+          tabindex={index === 0 ? 0 : -1}
+          data-hf-tab={category.id}
+        >
+          <Icon name={category.icon} size={22} />
+          <span>{category.label}</span>
+        </button>
+      ))}
+    </div>
+
+    <div class="hf-panels">
+      {homeFleet.map((category, index) => (
+        <div
+          class="hf-panel"
+          id={`hf-panel-${category.id}`}
+          role="tabpanel"
+          aria-labelledby={`hf-tab-${category.id}`}
+          tabindex="0"
+          hidden={index !== 0}
+        >
+          <div class="hf-visual" role="img" aria-label={`Representação da categoria ${category.label}`}>
+            <Vehicle type={category.id} />
+          </div>
+          <div class="hf-detail">
+            <span class="hf-capacity-label">Capacidade de referência</span>
+            <h3>Até <span>{category.capacityKg.toLocaleString('pt-BR')}</span> kg</h3>
+            <p class="hf-description">{category.description}</p>
+            <ul class="hf-applications" aria-label="Aplicações típicas">
+              {category.applications.map(application => <li>{application}</li>)}
+            </ul>
+            <a class="button hf-quote" href={`/orcamento?necessidade=${category.need}`}>
+              Solicitar orçamento <Icon name="arrow" size={20} />
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <p class="hf-note">Imagens conceituais de transporte. Capacidades de referência, sujeitas à confirmação conforme volume, acondicionamento e acesso.</p>
+    <noscript><p class="hf-no-script">Conheça as categorias Moto, Utilitário, Van / Furgão e Caminhão 3/4 em <a href="/frota">nossa frota</a>.</p></noscript>
+  </div>
+</section>
+
+<script>
+  for (const section of document.querySelectorAll<HTMLElement>('[data-home-fleet]')) {
+    const tabs = Array.from(section.querySelectorAll<HTMLButtonElement>('[data-hf-tab]'));
+
+    const select = (tab: HTMLButtonElement) => {
+      for (const item of tabs) {
+        const active = item === tab;
+        item.setAttribute('aria-selected', String(active));
+        item.tabIndex = active ? 0 : -1;
+        const panel = section.querySelector<HTMLElement>(`#${item.getAttribute('aria-controls')}`);
+        if (panel) panel.hidden = !active;
+      }
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => select(tab));
+      tab.addEventListener('keydown', event => {
+        let next: number | undefined;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        if (next === undefined) return;
+        event.preventDefault();
+        const selected = tabs[next];
+        select(selected);
+        selected.focus({ preventScroll: true });
+        selected.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' });
+      });
+    });
+  }
+</script>

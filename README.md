@@ -24,9 +24,9 @@ Os testes iniciam `astro preview` automaticamente na porta 4321, desde que estej
 
 ## O que foi implementado
 
-- Home responsiva inspirada na composição enviada: hero, necessidades, soluções, seletor de frota, bloco empresarial, processo e entrada para orçamento.
+- Home V2: Hero fotográfico, quatro caminhos que preenchem o orçamento, seção editorial unindo soluções e categorias de transporte, bloco empresarial, confiança e encerramento comercial. O processo e o formulário completo ficam em `/orcamento`.
 - Hub `/servicos` e oito páginas de serviço; `/frota`, `/para-empresas`, `/sobre`, `/contato`, `/area-de-atuacao`, `/blog`, `/privacidade`, `/orcamento` e 404.
-- Menu mobile com foco e Escape; seletor de frota com teclado e âncoras de categoria.
+- Header sticky sem mudar de altura, menu mobile com foco e Escape, footer reduzido e seletores acessíveis por teclado. A Home respeita movimento reduzido e mantém conteúdo útil sem JavaScript.
 - Orçamento em quatro etapas: carga, trajeto, contato e revisão. Validação, voltar/editar, recorrência, múltiplos destinos, data no fuso America/Sao_Paulo, resumo completo e cópia com alternativa manual.
 - Rascunho somente em memória. Sem banco, analytics, armazenamento local, envio automático ou confirmação falsa de pedido.
 - HTML estático legível sem JavaScript e alternativa de contato para o formulário.
@@ -53,6 +53,8 @@ Esta versão está com `noindex,nofollow` e `robots.txt` bloqueando rastreamento
 - Completar validação em aparelhos reais, leitores de tela, desempenho e revisão comercial. Os testes axe automatizados não certificam acessibilidade integral.
 
 Documentos e CSVs originais do pacote estão em `docs/`. A autorização para antecipar a implementação não encerra a auditoria e não aprova os dados operacionais.
+
+A direção visual, os arquivos e os controles internos da Home V2 estão em `docs/HOME_V2.md`. Capacidades da seção editorial são editáveis em `src/data/home-fleet.ts`; fatos e necessidades da Home estão em `src/data/home.ts`. Os avisos de desenvolvimento foram retirados da Home, header e footer, preservando as pendências na documentação e nesses dados internos.
 
 ## Prévia online para revisão
 
