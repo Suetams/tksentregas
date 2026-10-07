@@ -51,7 +51,7 @@ test('required widths retain legibility, touch targets, fixed navigation and saf
     const header = await page.locator('[data-home-header]').boundingBox();
     expect(header!.y).toBe(0);
     if (width < 1180) {
-      const menu = page.getByRole('button', { name: 'Abrir menu', exact: true });
+      const menu = page.locator('[data-home-menu] summary');
       await menu.click();
       await expect(page.locator('main')).toHaveAttribute('inert', '');
       await page.keyboard.press('Escape');

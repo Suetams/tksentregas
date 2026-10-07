@@ -9,7 +9,8 @@
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview --host 0.0.0.0",
     "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
     "lint": "eslint src --max-warnings 0",
-    "test": "playwright test"
+    "test": "playwright test",
+    "test:home-contract": "node --experimental-strip-types --test tests/home-contract.test.mjs"
   },
   "dependencies": {
     "astro": "^5.14.0"
