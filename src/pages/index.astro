@@ -15,7 +15,7 @@ const kg = (value: number) => value.toLocaleString('pt-BR');
       <div class="h6-eyebrow h6-hero-kicker"><span>TKS Entregas · Desde {homeContentReview.companySince.value}</span><span>{homeContentReview.companyLocation.value}</span></div>
       <h1 id="home-title"><span class="h6-hero-line h6-hero-intro"><span>Do</span> documento</span><span class="h6-hero-line h6-hero-cargo">à carga.</span><span class="h6-hero-line h6-hero-signature">A TKS <span>entrega.</span></span></h1>
       <div class="h6-hero-bottom">
-        <div class="h6-hero-actions"><a class="h6-primary h6-safe-action" href="/orcamento">Solicitar orçamento <span aria-hidden="true">↗</span></a><a class="h6-text-link h6-safe-action" href={homeContactHref}>Fale com a TKS <span aria-hidden="true">↗</span></a></div>
+        <div class="h6-hero-actions"><a class="h6-primary h6-safe-action" href="/orcamento"><span>Solicitar orçamento</span><span aria-hidden="true">↗</span></a><a class="h6-text-link h6-safe-action" href={homeContactHref}><span>Fale com a TKS</span><span aria-hidden="true">↗</span></a></div>
         <p class="h6-hero-copy">Cada entrega começa com uma necessidade.<br/> Vamos encontrar a solução para a sua.</p>
       </div>
       <a class="h6-discover" href="#sua-entrega">Explore as possibilidades</a>
@@ -28,7 +28,7 @@ const kg = (value: number) => value.toLocaleString('pt-BR');
       <div class="h6-needs-composition">
         <div class="h6-needs-list">
           {experienceNeeds.map((need, i) => <div class="h6-need-row"><button type="button" data-need-select={need.id} aria-pressed={i === 0} aria-controls="need-photo-window"><span class="h6-need-index" aria-hidden="true">{String(i+1).padStart(2,'0')}</span><span class="h6-need-title">{need.title}</span></button><a class="h6-need-quote h6-safe-action" href={`/orcamento?necessidade=${need.id}`} aria-label={`Solicitar orçamento: ${need.title}`}><span aria-hidden="true">↗</span></a></div>)}
-          <p class="h6-needs-note">Não sabe qual opção escolher?<br/><a class="h6-text-link h6-safe-action" href="/orcamento?necessidade=orientacao">Conte o que precisa <span aria-hidden="true">↗</span></a></p>
+          <p class="h6-needs-note">Não sabe qual opção escolher?<br/><a class="h6-text-link h6-safe-action" href="/orcamento?necessidade=orientacao"><span>Conte o que precisa</span><span aria-hidden="true">↗</span></a></p>
         </div>
         <div class="h6-needs-window" id="need-photo-window" aria-live="polite" aria-atomic="true">
           {experienceNeeds.map((need, i) => <figure data-need-photo={need.id} hidden={i !== 0} style={`--photo-position:${need.position}`}><Image src={need.photo} alt={need.alt} widths={[480,800,1200]} sizes="(max-width: 700px) calc(100vw - 44px), 46vw" format="webp" quality={82} loading="lazy"/><figcaption><span aria-hidden="true">{String(i+1).padStart(2,'0')}</span><span>{need.caption}</span></figcaption></figure>)}
@@ -39,7 +39,7 @@ const kg = (value: number) => value.toLocaleString('pt-BR');
 
   <section class="h6-fleet" aria-labelledby="fleet-title" data-fleet-experience data-active-scale="0">
     <div class="h6-container">
-      <div class="h6-section-heading"><p class="h6-eyebrow">02 / A escala muda. O cuidado continua.</p><h2 id="fleet-title">Do pequeno volume.<span>À carga maior.</span></h2><a class="h6-text-link" href="/frota">Conheça as categorias <span aria-hidden="true">↗</span></a></div>
+      <div class="h6-section-heading"><p class="h6-eyebrow">02 / A escala muda. O cuidado continua.</p><h2 id="fleet-title">Do pequeno volume.<span>À carga maior.</span></h2><a class="h6-text-link" href="/frota"><span>Conheça as categorias</span><span aria-hidden="true">↗</span></a></div>
       <div class="h6-scale-tabs" role="tablist" aria-label="Categorias de transporte">
         {homeFleet.map((category, i) => <button type="button" role="tab" id={`scale-tab-${category.id}`} aria-controls={`scale-panel-${category.id}`} aria-selected={i === 0} tabindex={i === 0 ? 0 : -1} data-scale-tab={category.id}><span class="h6-scale-label">{category.label}</span><span class="h6-scale-capacity">{kg(category.capacityKg)} <small>kg</small></span></button>)}
       </div>
@@ -48,7 +48,7 @@ const kg = (value: number) => value.toLocaleString('pt-BR');
       </div>
       <div hidden>{homeFleet.map(category => <span data-scale-quote-value={`/orcamento?necessidade=${category.need}`}></span>)}</div>
       <noscript><div class="h6-noscript-fleet">{homeFleet.map(category => <a href={`/orcamento?necessidade=${category.need}`}>{category.label} · {kg(category.capacityKg)} kg</a>)}</div></noscript>
-      <div class="h6-fleet-action"><p>Capacidades de referência. Peso, volume, acondicionamento e trajeto ajudam a definir a categoria para cada transporte.</p><a class="h6-primary h6-safe-action" href={`/orcamento?necessidade=${homeFleet[0].need}`} data-scale-quote>Encontrar a solução para minha entrega <span aria-hidden="true">↗</span></a></div>
+      <div class="h6-fleet-action"><p>Capacidades de referência. Peso, volume, acondicionamento e trajeto ajudam a definir a categoria para cada transporte.</p><a class="h6-primary h6-safe-action" href={`/orcamento?necessidade=${homeFleet[0].need}`} data-scale-quote><span>Encontrar a solução para minha entrega</span><span aria-hidden="true">↗</span></a></div>
     </div>
   </section>
 
@@ -56,13 +56,13 @@ const kg = (value: number) => value.toLocaleString('pt-BR');
     <div class="h6-container">
       <div class="h6-since-line"><p class="h6-eyebrow">03 / Uma história em movimento</p><span>Desde</span></div>
       <h2 id="company-title" class="h6-year" style={`--year-photo:url('${yearPhoto.src}')`}>{homeContentReview.companySince.value}</h2>
-      <div class="h6-year-caption"><p>Conectando caminhos.<br/>Movendo entregas.</p><a class="h6-text-link" href="/sobre">Sobre a TKS <span aria-hidden="true">↗</span></a></div>
+      <div class="h6-year-caption"><p>Conectando caminhos.<br/>Movendo entregas.</p><a class="h6-text-link" href="/sobre"><span>Sobre a TKS</span><span aria-hidden="true">↗</span></a></div>
       <div class="h6-business">
         <figure class="h6-business-window"><Image src={media.warehouse} alt="Pessoa com prancheta em um armazém, em fotografia editorial de operação logística." widths={[480,800,1200]} sizes="(max-width: 700px) calc(100vw - 44px), 45vw" format="webp" quality={82} loading="lazy"/></figure>
-        <div class="h6-business-copy"><p class="h6-eyebrow">Para empresas</p><h2>Sua operação<br/>tem uma rotina.<br/>A entrega também.</h2><p>Conte com a TKS para avaliar o transporte que faz parte do dia a dia da sua empresa.</p><dl><div><dt>Distribuição</dt><dd>Mercadorias com vários destinos.</dd></div><div><dt>Rotas programadas</dt><dd>Coletas e entregas planejadas.</dd></div><div><dt>E-commerce</dt><dd>Produtos a caminho de quem comprou.</dd></div><div><dt>Operações recorrentes</dt><dd>Transporte que acompanha sua rotina.</dd></div></dl><a class="h6-text-link h6-safe-action" href="/para-empresas">Conheça as soluções para empresas <span aria-hidden="true">↗</span></a></div>
+        <div class="h6-business-copy"><p class="h6-eyebrow">Para empresas</p><h2>Sua operação<br/>tem uma rotina.<br/>A entrega também.</h2><p>Conte com a TKS para avaliar o transporte que faz parte do dia a dia da sua empresa.</p><dl><div><dt>Distribuição</dt><dd>Mercadorias com vários destinos.</dd></div><div><dt>Rotas programadas</dt><dd>Coletas e entregas planejadas.</dd></div><div><dt>E-commerce</dt><dd>Produtos a caminho de quem comprou.</dd></div><div><dt>Operações recorrentes</dt><dd>Transporte que acompanha sua rotina.</dd></div></dl><a class="h6-text-link h6-safe-action" href="/para-empresas"><span>Conheça as soluções para empresas</span><span aria-hidden="true">↗</span></a></div>
       </div>
     </div>
   </section>
 
-  <section class="h6-closing" aria-labelledby="closing-title"><div class="h6-container"><p class="h6-eyebrow">O próximo movimento começa aqui.</p><h2 id="closing-title"><span>Conte para a TKS</span><span>o que precisa</span><span>transportar.</span></h2><div class="h6-closing-actions"><a class="h6-primary h6-safe-action" href="/orcamento">Solicitar orçamento <span aria-hidden="true">↗</span></a><a class="h6-text-link h6-safe-action" href={homeContactHref}>Fale com a TKS <span aria-hidden="true">↗</span></a></div></div></section>
+  <section class="h6-closing" aria-labelledby="closing-title"><div class="h6-container"><p class="h6-eyebrow">O próximo movimento começa aqui.</p><h2 id="closing-title"><span>Conte para a TKS</span><span>o que precisa</span><span>transportar.</span></h2><div class="h6-closing-actions"><a class="h6-primary h6-safe-action" href="/orcamento"><span>Solicitar orçamento</span><span aria-hidden="true">↗</span></a><a class="h6-text-link h6-safe-action" href={homeContactHref}><span>Fale com a TKS</span><span aria-hidden="true">↗</span></a></div></div></section>
 </HomeExperience>
