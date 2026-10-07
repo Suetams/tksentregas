@@ -1,0 +1,5204 @@
+{
+  "testedAt": "2026-10-07T01:49:59.264Z",
+  "url": "http://127.0.0.1:4321/",
+  "method": {
+    "runsPerProfile": 3,
+    "coldCache": true,
+    "cpuSlowdown": 4,
+    "network": {
+      "latencyMs": 150,
+      "downloadBitsPerSecond": 1600000,
+      "uploadBitsPerSecond": 750000
+    },
+    "notes": "Synthetic localhost preview, chromium, fresh browser contexts and disabled cache. Interaction durations are lab event timings, not field INP.",
+    "browserVersion": "151.0.7922.173"
+  },
+  "runs": [
+    {
+      "profile": "mobile",
+      "run": 1,
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "lcp": {
+        "time": 1552,
+        "renderTime": 1552,
+        "loadTime": 1536.8000000044703,
+        "size": 114608,
+        "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_1nuzPN.webp",
+        "element": "IMG",
+        "class": ""
+      },
+      "cls": 0,
+      "shifts": [],
+      "fcp": 676,
+      "navigation": {
+        "name": "http://127.0.0.1:4321/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 2329.4000000059605,
+        "navigationId": 7133,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 1.5,
+        "domainLookupStart": 1.5,
+        "domainLookupEnd": 1.5,
+        "connectStart": 1.5,
+        "secureConnectionStart": 0,
+        "connectEnd": 1.5,
+        "requestStart": 3,
+        "responseStart": 7.600000001490116,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 7.600000001490116,
+        "responseEnd": 185.30000000447035,
+        "transferSize": 5031,
+        "encodedBodySize": 4731,
+        "decodedBodySize": 21394,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 233.20000000298023,
+        "domContentLoadedEventStart": 612.4000000059605,
+        "domContentLoadedEventEnd": 613.2000000029802,
+        "domComplete": 2329.4000000059605,
+        "loadEventStart": 2329.4000000059605,
+        "loadEventEnd": 2329.4000000059605,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Bold.DWhCF9JI.woff2",
+          "type": "link",
+          "transferSize": 28012,
+          "encodedBodySize": 27712,
+          "duration": 504
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 7362,
+          "encodedBodySize": 7062,
+          "duration": 284.19999999552965
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 3710,
+          "encodedBodySize": 3410,
+          "duration": 239.79999999701977
+        },
+        {
+          "url": "http://127.0.0.1:4321/brand/TKS_compacto_azul.svg",
+          "type": "img",
+          "transferSize": 1260,
+          "encodedBodySize": 960,
+          "duration": 178.10000000149012
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_1nuzPN.webp",
+          "type": "img",
+          "transferSize": 99322,
+          "encodedBodySize": 99022,
+          "duration": 1325
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Regular.XWHP5tHX.woff2",
+          "type": "css",
+          "transferSize": 27220,
+          "encodedBodySize": 26920,
+          "duration": 538.7999999970198
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-vehicles.Cmh4PxqO_5uOSr.webp",
+          "type": "img",
+          "transferSize": 221912,
+          "encodedBodySize": 221612,
+          "duration": 1682.5
+        },
+        {
+          "url": "http://127.0.0.1:4321/favicon.ico",
+          "type": "other",
+          "transferSize": 6399,
+          "encodedBodySize": 6099,
+          "duration": 183.5
+        }
+      ],
+      "inlineScriptBytes": 3111,
+      "longTasks": [
+        {
+          "time": 496.1000000014901,
+          "duration": 112
+        }
+      ],
+      "clickToTwoFrames": [
+        {
+          "category": "utilitario",
+          "duration": 39
+        },
+        {
+          "category": "van-furgao",
+          "duration": 41.79999999701977
+        },
+        {
+          "category": "caminhao-3-4",
+          "duration": 44.399999998509884
+        },
+        {
+          "category": "moto",
+          "duration": 44.80000000447035
+        }
+      ],
+      "labInteractionEvents": [
+        {
+          "name": "mouseover",
+          "time": 6716.10000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mousedown",
+          "time": 6716.10000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseup",
+          "time": 6716.10000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "click",
+          "time": 6716.10000000149,
+          "duration": 32,
+          "interactionId": 1796,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseout",
+          "time": 7130.30000000447,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseover",
+          "time": 7130.30000000447,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mousedown",
+          "time": 7130.30000000447,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseup",
+          "time": 7130.30000000447,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "click",
+          "time": 7130.30000000447,
+          "duration": 32,
+          "interactionId": 1803,
+          "target": ""
+        },
+        {
+          "name": "pointerover",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerenter",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerdown",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 1810,
+          "target": ""
+        },
+        {
+          "name": "touchstart",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "gotpointercapture",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerup",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 1810,
+          "target": ""
+        },
+        {
+          "name": "lostpointercapture",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerout",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerleave",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "touchend",
+          "time": 7544.60000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseout",
+          "time": 7544.60000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseover",
+          "time": 7544.60000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mousedown",
+          "time": 7544.60000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseup",
+          "time": 7544.60000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "click",
+          "time": 7544.60000000149,
+          "duration": 32,
+          "interactionId": 1810,
+          "target": ""
+        },
+        {
+          "name": "pointerover",
+          "time": 7977.30000000447,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerenter",
+          "time": 7977.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7977.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7977.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7977.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7977.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7977.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7977.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7977.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7977.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerdown",
+          "time": 7977.30000000447,
+          "duration": 16,
+          "interactionId": 1817,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "touchstart",
+          "time": 7977.30000000447,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "gotpointercapture",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerup",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 1817,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "lostpointercapture",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerout",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerleave",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "touchend",
+          "time": 7977.5,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mouseout",
+          "time": 7977.5,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseover",
+          "time": 7977.5,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mousedown",
+          "time": 7977.5,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mouseup",
+          "time": 7977.5,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "click",
+          "time": 7977.5,
+          "duration": 32,
+          "interactionId": 1817,
+          "target": "hf-tab-moto"
+        }
+      ],
+      "finalResources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Bold.DWhCF9JI.woff2",
+          "type": "link",
+          "transferSize": 28012,
+          "encodedBodySize": 27712,
+          "duration": 504
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 7362,
+          "encodedBodySize": 7062,
+          "duration": 284.19999999552965
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 3710,
+          "encodedBodySize": 3410,
+          "duration": 239.79999999701977
+        },
+        {
+          "url": "http://127.0.0.1:4321/brand/TKS_compacto_azul.svg",
+          "type": "img",
+          "transferSize": 1260,
+          "encodedBodySize": 960,
+          "duration": 178.10000000149012
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_1nuzPN.webp",
+          "type": "img",
+          "transferSize": 99322,
+          "encodedBodySize": 99022,
+          "duration": 1325
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Regular.XWHP5tHX.woff2",
+          "type": "css",
+          "transferSize": 27220,
+          "encodedBodySize": 26920,
+          "duration": 538.7999999970198
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-vehicles.Cmh4PxqO_5uOSr.webp",
+          "type": "img",
+          "transferSize": 221912,
+          "encodedBodySize": 221612,
+          "duration": 1682.5
+        },
+        {
+          "url": "http://127.0.0.1:4321/favicon.ico",
+          "type": "other",
+          "transferSize": 6399,
+          "encodedBodySize": 6099,
+          "duration": 183.5
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "duration": 9.700000002980232
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "duration": 9.700000002980232
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/warehouse.BIQFmoLm_tcp7w.webp",
+          "type": "img",
+          "transferSize": 46484,
+          "encodedBodySize": 46184,
+          "duration": 386.1000000014901
+        }
+      ],
+      "documentOverflow": false,
+      "fonts": "loaded",
+      "fontValidation": {
+        "status": "loaded",
+        "regularChecked": true,
+        "boldChecked": true,
+        "faces": [
+          {
+            "family": "Rubik",
+            "weight": "400",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "family": "Rubik",
+            "weight": "700",
+            "style": "normal",
+            "status": "loaded"
+          }
+        ],
+        "computed": {
+          "headline": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "700"
+          },
+          "signature": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "400"
+          },
+          "bodyCopy": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "400"
+          }
+        },
+        "renderedFonts": {
+          "headline": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Bold",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ],
+          "signature": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Regular",
+              "isCustomFont": true,
+              "glyphCount": 14
+            }
+          ],
+          "bodyCopy": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Regular",
+              "isCustomFont": true,
+              "glyphCount": 74
+            }
+          ]
+        },
+        "actualRubikRendered": true,
+        "correctRubikWeights": true
+      },
+      "responseErrors": [],
+      "failedRequests": []
+    },
+    {
+      "profile": "mobile",
+      "run": 2,
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "lcp": {
+        "time": 1548,
+        "renderTime": 1548,
+        "loadTime": 1524.8999999985099,
+        "size": 114608,
+        "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_1nuzPN.webp",
+        "element": "IMG",
+        "class": ""
+      },
+      "cls": 0,
+      "shifts": [],
+      "fcp": 700,
+      "navigation": {
+        "name": "http://127.0.0.1:4321/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 2332.39999999851,
+        "navigationId": 8935,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.7999999970197678,
+        "domainLookupStart": 0.7999999970197678,
+        "domainLookupEnd": 0.7999999970197678,
+        "connectStart": 0.7999999970197678,
+        "secureConnectionStart": 0,
+        "connectEnd": 0.7999999970197678,
+        "requestStart": 1.5999999940395355,
+        "responseStart": 6.0999999940395355,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 6.0999999940395355,
+        "responseEnd": 179.89999999850988,
+        "transferSize": 5031,
+        "encodedBodySize": 4731,
+        "decodedBodySize": 21394,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 247,
+        "domContentLoadedEventStart": 633.0999999940395,
+        "domContentLoadedEventEnd": 633.1999999955297,
+        "domComplete": 2331.89999999851,
+        "loadEventStart": 2332.2999999970198,
+        "loadEventEnd": 2332.39999999851,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Bold.DWhCF9JI.woff2",
+          "type": "link",
+          "transferSize": 28012,
+          "encodedBodySize": 27712,
+          "duration": 506.40000000596046
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 7362,
+          "encodedBodySize": 7062,
+          "duration": 285.20000000298023
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 3710,
+          "encodedBodySize": 3410,
+          "duration": 246.40000000596046
+        },
+        {
+          "url": "http://127.0.0.1:4321/brand/TKS_compacto_azul.svg",
+          "type": "img",
+          "transferSize": 1260,
+          "encodedBodySize": 960,
+          "duration": 171.59999999403954
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_1nuzPN.webp",
+          "type": "img",
+          "transferSize": 99322,
+          "encodedBodySize": 99022,
+          "duration": 1309.6000000014901
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Regular.XWHP5tHX.woff2",
+          "type": "css",
+          "transferSize": 27220,
+          "encodedBodySize": 26920,
+          "duration": 528.8999999985099
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-vehicles.Cmh4PxqO_5uOSr.webp",
+          "type": "img",
+          "transferSize": 221912,
+          "encodedBodySize": 221612,
+          "duration": 1664
+        },
+        {
+          "url": "http://127.0.0.1:4321/favicon.ico",
+          "type": "other",
+          "transferSize": 6399,
+          "encodedBodySize": 6099,
+          "duration": 183
+        }
+      ],
+      "inlineScriptBytes": 3111,
+      "longTasks": [
+        {
+          "time": 499.59999999403954,
+          "duration": 127
+        }
+      ],
+      "clickToTwoFrames": [
+        {
+          "category": "utilitario",
+          "duration": 39.69999999552965
+        },
+        {
+          "category": "van-furgao",
+          "duration": 41.400000005960464
+        },
+        {
+          "category": "caminhao-3-4",
+          "duration": 41.19999999552965
+        },
+        {
+          "category": "moto",
+          "duration": 42.900000005960464
+        }
+      ],
+      "labInteractionEvents": [
+        {
+          "name": "pointerover",
+          "time": 6703.89999999851,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerenter",
+          "time": 6703.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6703.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6703.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6703.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6703.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6703.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6703.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6703.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6703.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerdown",
+          "time": 6703.89999999851,
+          "duration": 16,
+          "interactionId": 8189,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "touchstart",
+          "time": 6703.89999999851,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "gotpointercapture",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerup",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 8189,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "lostpointercapture",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerout",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerleave",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "touchend",
+          "time": 6704,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseover",
+          "time": 6704,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mousedown",
+          "time": 6704,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseup",
+          "time": 6704,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "click",
+          "time": 6704,
+          "duration": 40,
+          "interactionId": 8189,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseout",
+          "time": 7135.5999999940395,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseover",
+          "time": 7135.5999999940395,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mousedown",
+          "time": 7135.5999999940395,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseup",
+          "time": 7135.5999999940395,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "click",
+          "time": 7135.5999999940395,
+          "duration": 32,
+          "interactionId": 8196,
+          "target": ""
+        },
+        {
+          "name": "pointerover",
+          "time": 7552.69999999553,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerenter",
+          "time": 7552.69999999553,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7552.69999999553,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7552.69999999553,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7552.69999999553,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7552.69999999553,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7552.69999999553,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7552.69999999553,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7552.69999999553,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7552.69999999553,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7552.69999999553,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerdown",
+          "time": 7552.69999999553,
+          "duration": 16,
+          "interactionId": 8203,
+          "target": ""
+        },
+        {
+          "name": "touchstart",
+          "time": 7552.69999999553,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "gotpointercapture",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerup",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 8203,
+          "target": ""
+        },
+        {
+          "name": "lostpointercapture",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerout",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerleave",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "touchend",
+          "time": 7552.89999999851,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseout",
+          "time": 7552.89999999851,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseover",
+          "time": 7552.89999999851,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mousedown",
+          "time": 7552.89999999851,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseup",
+          "time": 7552.89999999851,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "click",
+          "time": 7552.89999999851,
+          "duration": 32,
+          "interactionId": 8203,
+          "target": ""
+        },
+        {
+          "name": "pointerover",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerenter",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerdown",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 8210,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "touchstart",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "gotpointercapture",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerup",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 8210,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "lostpointercapture",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerout",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerleave",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "touchend",
+          "time": 7984.0999999940395,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mouseout",
+          "time": 7984.0999999940395,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseover",
+          "time": 7984.0999999940395,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mousedown",
+          "time": 7984.0999999940395,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mouseup",
+          "time": 7984.0999999940395,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "click",
+          "time": 7984.0999999940395,
+          "duration": 32,
+          "interactionId": 8210,
+          "target": "hf-tab-moto"
+        }
+      ],
+      "finalResources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Bold.DWhCF9JI.woff2",
+          "type": "link",
+          "transferSize": 28012,
+          "encodedBodySize": 27712,
+          "duration": 506.40000000596046
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 7362,
+          "encodedBodySize": 7062,
+          "duration": 285.20000000298023
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 3710,
+          "encodedBodySize": 3410,
+          "duration": 246.40000000596046
+        },
+        {
+          "url": "http://127.0.0.1:4321/brand/TKS_compacto_azul.svg",
+          "type": "img",
+          "transferSize": 1260,
+          "encodedBodySize": 960,
+          "duration": 171.59999999403954
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_1nuzPN.webp",
+          "type": "img",
+          "transferSize": 99322,
+          "encodedBodySize": 99022,
+          "duration": 1309.6000000014901
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Regular.XWHP5tHX.woff2",
+          "type": "css",
+          "transferSize": 27220,
+          "encodedBodySize": 26920,
+          "duration": 528.8999999985099
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-vehicles.Cmh4PxqO_5uOSr.webp",
+          "type": "img",
+          "transferSize": 221912,
+          "encodedBodySize": 221612,
+          "duration": 1664
+        },
+        {
+          "url": "http://127.0.0.1:4321/favicon.ico",
+          "type": "other",
+          "transferSize": 6399,
+          "encodedBodySize": 6099,
+          "duration": 183
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "duration": 7.199999995529652
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "duration": 8.400000005960464
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/warehouse.BIQFmoLm_tcp7w.webp",
+          "type": "img",
+          "transferSize": 46484,
+          "encodedBodySize": 46184,
+          "duration": 384
+        }
+      ],
+      "documentOverflow": false,
+      "fonts": "loaded",
+      "fontValidation": {
+        "status": "loaded",
+        "regularChecked": true,
+        "boldChecked": true,
+        "faces": [
+          {
+            "family": "Rubik",
+            "weight": "400",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "family": "Rubik",
+            "weight": "700",
+            "style": "normal",
+            "status": "loaded"
+          }
+        ],
+        "computed": {
+          "headline": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "700"
+          },
+          "signature": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "400"
+          },
+          "bodyCopy": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "400"
+          }
+        },
+        "renderedFonts": {
+          "headline": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Bold",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ],
+          "signature": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Regular",
+              "isCustomFont": true,
+              "glyphCount": 14
+            }
+          ],
+          "bodyCopy": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Regular",
+              "isCustomFont": true,
+              "glyphCount": 74
+            }
+          ]
+        },
+        "actualRubikRendered": true,
+        "correctRubikWeights": true
+      },
+      "responseErrors": [],
+      "failedRequests": []
+    },
+    {
+      "profile": "mobile",
+      "run": 3,
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "lcp": {
+        "time": 1548,
+        "renderTime": 1548,
+        "loadTime": 1533,
+        "size": 114608,
+        "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_1nuzPN.webp",
+        "element": "IMG",
+        "class": ""
+      },
+      "cls": 0,
+      "shifts": [],
+      "fcp": 628,
+      "navigation": {
+        "name": "http://127.0.0.1:4321/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 2316.60000000149,
+        "navigationId": 2802,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.5,
+        "domainLookupStart": 0.5,
+        "domainLookupEnd": 0.5,
+        "connectStart": 0.5,
+        "secureConnectionStart": 0,
+        "connectEnd": 0.5,
+        "requestStart": 1.4000000059604645,
+        "responseStart": 4.300000004470348,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 4.300000004470348,
+        "responseEnd": 181.20000000298023,
+        "transferSize": 5031,
+        "encodedBodySize": 4731,
+        "decodedBodySize": 21394,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 225.20000000298023,
+        "domContentLoadedEventStart": 589.8000000044703,
+        "domContentLoadedEventEnd": 589.9000000059605,
+        "domComplete": 2316.5,
+        "loadEventStart": 2316.60000000149,
+        "loadEventEnd": 2316.60000000149,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Bold.DWhCF9JI.woff2",
+          "type": "link",
+          "transferSize": 28012,
+          "encodedBodySize": 27712,
+          "duration": 493.6000000014901
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 7362,
+          "encodedBodySize": 7062,
+          "duration": 280.70000000298023
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 3710,
+          "encodedBodySize": 3410,
+          "duration": 235.89999999850988
+        },
+        {
+          "url": "http://127.0.0.1:4321/brand/TKS_compacto_azul.svg",
+          "type": "img",
+          "transferSize": 1260,
+          "encodedBodySize": 960,
+          "duration": 191.5
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_1nuzPN.webp",
+          "type": "img",
+          "transferSize": 99322,
+          "encodedBodySize": 99022,
+          "duration": 1328.3999999985099
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Regular.XWHP5tHX.woff2",
+          "type": "css",
+          "transferSize": 27220,
+          "encodedBodySize": 26920,
+          "duration": 544.8999999985099
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-vehicles.Cmh4PxqO_5uOSr.webp",
+          "type": "img",
+          "transferSize": 221912,
+          "encodedBodySize": 221612,
+          "duration": 1700.9000000059605
+        },
+        {
+          "url": "http://127.0.0.1:4321/favicon.ico",
+          "type": "other",
+          "transferSize": 6399,
+          "encodedBodySize": 6099,
+          "duration": 190.70000000298023
+        }
+      ],
+      "inlineScriptBytes": 3111,
+      "longTasks": [
+        {
+          "time": 484.20000000298023,
+          "duration": 100
+        }
+      ],
+      "clickToTwoFrames": [
+        {
+          "category": "utilitario",
+          "duration": 41
+        },
+        {
+          "category": "van-furgao",
+          "duration": 44.70000000298023
+        },
+        {
+          "category": "caminhao-3-4",
+          "duration": 43.79999999701977
+        },
+        {
+          "category": "moto",
+          "duration": 45.600000001490116
+        }
+      ],
+      "labInteractionEvents": [
+        {
+          "name": "pointerover",
+          "time": 6713.60000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerenter",
+          "time": 6713.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6713.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6713.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6713.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6713.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6713.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6713.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6713.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6713.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerdown",
+          "time": 6713.60000000149,
+          "duration": 16,
+          "interactionId": 7151,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "touchstart",
+          "time": 6713.60000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "gotpointercapture",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerup",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 7151,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "lostpointercapture",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerout",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerleave",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "touchend",
+          "time": 6713.70000000298,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseover",
+          "time": 6713.70000000298,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mousedown",
+          "time": 6713.70000000298,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseup",
+          "time": 6713.70000000298,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "click",
+          "time": 6713.70000000298,
+          "duration": 40,
+          "interactionId": 7151,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerover",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerenter",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerdown",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 7158,
+          "target": ""
+        },
+        {
+          "name": "touchstart",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "gotpointercapture",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerup",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 7158,
+          "target": ""
+        },
+        {
+          "name": "lostpointercapture",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerout",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerleave",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "touchend",
+          "time": 7142.10000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseout",
+          "time": 7142.10000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseover",
+          "time": 7142.10000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mousedown",
+          "time": 7142.10000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseup",
+          "time": 7142.10000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "click",
+          "time": 7142.10000000149,
+          "duration": 32,
+          "interactionId": 7158,
+          "target": ""
+        },
+        {
+          "name": "pointerover",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerenter",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerdown",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 7165,
+          "target": ""
+        },
+        {
+          "name": "touchstart",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "gotpointercapture",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerup",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 7165,
+          "target": ""
+        },
+        {
+          "name": "lostpointercapture",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerout",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "pointerleave",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "touchend",
+          "time": 7559.30000000447,
+          "duration": 16,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseout",
+          "time": 7559.30000000447,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseover",
+          "time": 7559.30000000447,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mousedown",
+          "time": 7559.30000000447,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseup",
+          "time": 7559.30000000447,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "click",
+          "time": 7559.30000000447,
+          "duration": 32,
+          "interactionId": 7165,
+          "target": ""
+        },
+        {
+          "name": "pointerover",
+          "time": 7991.5,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerenter",
+          "time": 7991.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7991.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7991.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7991.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7991.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7991.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7991.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7991.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 7991.5,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerdown",
+          "time": 7991.5,
+          "duration": 16,
+          "interactionId": 7172,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "touchstart",
+          "time": 7991.5,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "gotpointercapture",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerup",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 7172,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "lostpointercapture",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerout",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerleave",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerleave",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "touchend",
+          "time": 7991.60000000149,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mouseout",
+          "time": 7991.60000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": ""
+        },
+        {
+          "name": "mouseover",
+          "time": 7991.60000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mousedown",
+          "time": 7991.60000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mouseup",
+          "time": 7991.60000000149,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "click",
+          "time": 7991.60000000149,
+          "duration": 32,
+          "interactionId": 7172,
+          "target": "hf-tab-moto"
+        }
+      ],
+      "finalResources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Bold.DWhCF9JI.woff2",
+          "type": "link",
+          "transferSize": 28012,
+          "encodedBodySize": 27712,
+          "duration": 493.6000000014901
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 7362,
+          "encodedBodySize": 7062,
+          "duration": 280.70000000298023
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 3710,
+          "encodedBodySize": 3410,
+          "duration": 235.89999999850988
+        },
+        {
+          "url": "http://127.0.0.1:4321/brand/TKS_compacto_azul.svg",
+          "type": "img",
+          "transferSize": 1260,
+          "encodedBodySize": 960,
+          "duration": 191.5
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_1nuzPN.webp",
+          "type": "img",
+          "transferSize": 99322,
+          "encodedBodySize": 99022,
+          "duration": 1328.3999999985099
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Regular.XWHP5tHX.woff2",
+          "type": "css",
+          "transferSize": 27220,
+          "encodedBodySize": 26920,
+          "duration": 544.8999999985099
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-vehicles.Cmh4PxqO_5uOSr.webp",
+          "type": "img",
+          "transferSize": 221912,
+          "encodedBodySize": 221612,
+          "duration": 1700.9000000059605
+        },
+        {
+          "url": "http://127.0.0.1:4321/favicon.ico",
+          "type": "other",
+          "transferSize": 6399,
+          "encodedBodySize": 6099,
+          "duration": 190.70000000298023
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "duration": 6.799999997019768
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "duration": 5.799999997019768
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/warehouse.BIQFmoLm_tcp7w.webp",
+          "type": "img",
+          "transferSize": 46484,
+          "encodedBodySize": 46184,
+          "duration": 382
+        }
+      ],
+      "documentOverflow": false,
+      "fonts": "loaded",
+      "fontValidation": {
+        "status": "loaded",
+        "regularChecked": true,
+        "boldChecked": true,
+        "faces": [
+          {
+            "family": "Rubik",
+            "weight": "400",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "family": "Rubik",
+            "weight": "700",
+            "style": "normal",
+            "status": "loaded"
+          }
+        ],
+        "computed": {
+          "headline": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "700"
+          },
+          "signature": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "400"
+          },
+          "bodyCopy": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "400"
+          }
+        },
+        "renderedFonts": {
+          "headline": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Bold",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ],
+          "signature": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Regular",
+              "isCustomFont": true,
+              "glyphCount": 14
+            }
+          ],
+          "bodyCopy": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Regular",
+              "isCustomFont": true,
+              "glyphCount": 74
+            }
+          ]
+        },
+        "actualRubikRendered": true,
+        "correctRubikWeights": true
+      },
+      "responseErrors": [],
+      "failedRequests": []
+    },
+    {
+      "profile": "desktop",
+      "run": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "lcp": {
+        "time": 1012,
+        "renderTime": 1012,
+        "loadTime": 990.6000000014901,
+        "size": 446282,
+        "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_yfWSW.webp",
+        "element": "IMG",
+        "class": ""
+      },
+      "cls": 0.002338638485671725,
+      "shifts": [
+        {
+          "time": 735.5,
+          "value": 0.0021308211966306586,
+          "sources": [
+            {
+              "node": "SPAN",
+              "selector": "span",
+              "previousRect": {
+                "x": 72,
+                "y": 175.5,
+                "width": 1296,
+                "height": 147
+              },
+              "currentRect": {
+                "x": 72,
+                "y": 171.5,
+                "width": 1296,
+                "height": 147
+              }
+            },
+            {
+              "node": "SPAN",
+              "selector": "span",
+              "previousRect": {
+                "x": 72,
+                "y": 297.5625,
+                "width": 1296,
+                "height": 147
+              },
+              "currentRect": {
+                "x": 72,
+                "y": 293.5625,
+                "width": 1296,
+                "height": 147
+              }
+            },
+            {
+              "node": "NAV",
+              "selector": "nav.desktop-nav",
+              "previousRect": {
+                "x": 811.171875,
+                "y": 30,
+                "width": 386.34375,
+                "height": 44
+              },
+              "currentRect": {
+                "x": 802.390625,
+                "y": 30,
+                "width": 386.34375,
+                "height": 44
+              }
+            },
+            {
+              "node": "A",
+              "selector": "a.home-link",
+              "previousRect": {
+                "x": 330.046875,
+                "y": 641.5,
+                "width": 134.78125,
+                "height": 48
+              },
+              "currentRect": {
+                "x": 340.359375,
+                "y": 641.5,
+                "width": 134.78125,
+                "height": 48
+              }
+            },
+            {
+              "node": "A",
+              "selector": "a.header-cta",
+              "previousRect": {
+                "x": 1221.515625,
+                "y": 30,
+                "width": 146.484375,
+                "height": 44
+              },
+              "currentRect": {
+                "x": 1212.734375,
+                "y": 30,
+                "width": 155.265625,
+                "height": 44
+              }
+            }
+          ]
+        },
+        {
+          "time": 1054.9000000059605,
+          "value": 0.00020781728904106653,
+          "sources": [
+            {
+              "node": "P",
+              "selector": "p.home-hero-origin",
+              "previousRect": {
+                "x": 72,
+                "y": 138,
+                "width": 1296,
+                "height": 13
+              },
+              "currentRect": {
+                "x": 72,
+                "y": 137,
+                "width": 1296,
+                "height": 13
+              }
+            },
+            {
+              "node": "NAV",
+              "selector": "nav.desktop-nav",
+              "previousRect": {
+                "x": 802.390625,
+                "y": 30,
+                "width": 386.34375,
+                "height": 44
+              },
+              "currentRect": {
+                "x": 791.5,
+                "y": 30,
+                "width": 397.234375,
+                "height": 44
+              }
+            },
+            {
+              "node": "A",
+              "selector": "a",
+              "previousRect": {
+                "x": 1145.0625,
+                "y": 30,
+                "width": 44,
+                "height": 44
+              },
+              "currentRect": {
+                "x": 1141.671875,
+                "y": 30,
+                "width": 47.0625,
+                "height": 44
+              }
+            }
+          ]
+        }
+      ],
+      "fcp": 676,
+      "navigation": {
+        "name": "http://127.0.0.1:4321/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 2066.60000000149,
+        "navigationId": 7166,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.6000000014901161,
+        "domainLookupStart": 0.6000000014901161,
+        "domainLookupEnd": 0.6000000014901161,
+        "connectStart": 0.6000000014901161,
+        "secureConnectionStart": 0,
+        "connectEnd": 0.6000000014901161,
+        "requestStart": 1.6000000014901161,
+        "responseStart": 3.8000000044703484,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 3.8000000044703484,
+        "responseEnd": 177.40000000596046,
+        "transferSize": 5031,
+        "encodedBodySize": 4731,
+        "decodedBodySize": 21394,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 237.20000000298023,
+        "domContentLoadedEventStart": 625.1000000014901,
+        "domContentLoadedEventEnd": 625.3000000044703,
+        "domComplete": 2066.4000000059605,
+        "loadEventStart": 2066.5,
+        "loadEventEnd": 2066.60000000149,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Bold.DWhCF9JI.woff2",
+          "type": "link",
+          "transferSize": 28012,
+          "encodedBodySize": 27712,
+          "duration": 514.5
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 7362,
+          "encodedBodySize": 7062,
+          "duration": 302.1000000014901
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 3710,
+          "encodedBodySize": 3410,
+          "duration": 250
+        },
+        {
+          "url": "http://127.0.0.1:4321/brand/TKS_horizontal_azul.svg",
+          "type": "img",
+          "transferSize": 1743,
+          "encodedBodySize": 1443,
+          "duration": 227
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_yfWSW.webp",
+          "type": "img",
+          "transferSize": 49650,
+          "encodedBodySize": 49350,
+          "duration": 804.5
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Regular.XWHP5tHX.woff2",
+          "type": "css",
+          "transferSize": 27220,
+          "encodedBodySize": 26920,
+          "duration": 504.79999999701977
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-vehicles.Cmh4PxqO_5uOSr.webp",
+          "type": "img",
+          "transferSize": 221912,
+          "encodedBodySize": 221612,
+          "duration": 1411.7000000029802
+        },
+        {
+          "url": "http://127.0.0.1:4321/favicon.ico",
+          "type": "other",
+          "transferSize": 6399,
+          "encodedBodySize": 6099,
+          "duration": 184.70000000298023
+        }
+      ],
+      "inlineScriptBytes": 3111,
+      "longTasks": [
+        {
+          "time": 491.20000000298023,
+          "duration": 131
+        }
+      ],
+      "clickToTwoFrames": [
+        {
+          "category": "utilitario",
+          "duration": 28.099999994039536
+        },
+        {
+          "category": "van-furgao",
+          "duration": 26.899999998509884
+        },
+        {
+          "category": "caminhao-3-4",
+          "duration": 28.399999998509884
+        },
+        {
+          "category": "moto",
+          "duration": 27.299999997019768
+        }
+      ],
+      "labInteractionEvents": [
+        {
+          "name": "pointerover",
+          "time": 6436.80000000447,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerenter",
+          "time": 6436.80000000447,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6436.80000000447,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6436.80000000447,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6436.80000000447,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6436.80000000447,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6436.80000000447,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6436.80000000447,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6436.80000000447,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6436.80000000447,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "mouseover",
+          "time": 6436.80000000447,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerdown",
+          "time": 6436.9000000059605,
+          "duration": 40,
+          "interactionId": 7460,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mousedown",
+          "time": 6436.9000000059605,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerup",
+          "time": 6436.9000000059605,
+          "duration": 40,
+          "interactionId": 7460,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseup",
+          "time": 6436.9000000059605,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "click",
+          "time": 6436.9000000059605,
+          "duration": 40,
+          "interactionId": 7460,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerout",
+          "time": 6880.9000000059605,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerleave",
+          "time": 6880.9000000059605,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerover",
+          "time": 6880.9000000059605,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerenter",
+          "time": 6880.9000000059605,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "mouseout",
+          "time": 6880.9000000059605,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseover",
+          "time": 6880.9000000059605,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerdown",
+          "time": 6881.10000000149,
+          "duration": 24,
+          "interactionId": 7467,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "mousedown",
+          "time": 6881.10000000149,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerup",
+          "time": 6881.20000000298,
+          "duration": 24,
+          "interactionId": 7467,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "mouseup",
+          "time": 6881.20000000298,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "click",
+          "time": 6881.20000000298,
+          "duration": 24,
+          "interactionId": 7467,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerout",
+          "time": 7279.30000000447,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerleave",
+          "time": 7279.30000000447,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerover",
+          "time": 7279.30000000447,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerenter",
+          "time": 7279.30000000447,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "mouseout",
+          "time": 7279.30000000447,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "mouseover",
+          "time": 7279.30000000447,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerdown",
+          "time": 7279.4000000059605,
+          "duration": 24,
+          "interactionId": 7474,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "mousedown",
+          "time": 7279.4000000059605,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerup",
+          "time": 7279.60000000149,
+          "duration": 24,
+          "interactionId": 7474,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "mouseup",
+          "time": 7279.60000000149,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "click",
+          "time": 7279.60000000149,
+          "duration": 24,
+          "interactionId": 7474,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerout",
+          "time": 7697.20000000298,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerleave",
+          "time": 7697.20000000298,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerover",
+          "time": 7697.20000000298,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerenter",
+          "time": 7697.20000000298,
+          "duration": 16,
+          "interactionId": 0
+        },
+        {
+          "name": "mouseout",
+          "time": 7697.20000000298,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "mouseover",
+          "time": 7697.20000000298,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerdown",
+          "time": 7697.20000000298,
+          "duration": 16,
+          "interactionId": 7481,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mousedown",
+          "time": 7697.20000000298,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerup",
+          "time": 7697.4000000059605,
+          "duration": 16,
+          "interactionId": 7481,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mouseup",
+          "time": 7697.4000000059605,
+          "duration": 16,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "click",
+          "time": 7697.4000000059605,
+          "duration": 16,
+          "interactionId": 7481,
+          "target": "hf-tab-moto"
+        }
+      ],
+      "finalResources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Bold.DWhCF9JI.woff2",
+          "type": "link",
+          "transferSize": 28012,
+          "encodedBodySize": 27712,
+          "duration": 514.5
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 7362,
+          "encodedBodySize": 7062,
+          "duration": 302.1000000014901
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 3710,
+          "encodedBodySize": 3410,
+          "duration": 250
+        },
+        {
+          "url": "http://127.0.0.1:4321/brand/TKS_horizontal_azul.svg",
+          "type": "img",
+          "transferSize": 1743,
+          "encodedBodySize": 1443,
+          "duration": 227
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_yfWSW.webp",
+          "type": "img",
+          "transferSize": 49650,
+          "encodedBodySize": 49350,
+          "duration": 804.5
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Regular.XWHP5tHX.woff2",
+          "type": "css",
+          "transferSize": 27220,
+          "encodedBodySize": 26920,
+          "duration": 504.79999999701977
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-vehicles.Cmh4PxqO_5uOSr.webp",
+          "type": "img",
+          "transferSize": 221912,
+          "encodedBodySize": 221612,
+          "duration": 1411.7000000029802
+        },
+        {
+          "url": "http://127.0.0.1:4321/favicon.ico",
+          "type": "other",
+          "transferSize": 6399,
+          "encodedBodySize": 6099,
+          "duration": 184.70000000298023
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "duration": 6.600000001490116
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "duration": 7.100000001490116
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/warehouse.BIQFmoLm_Vi4lR.webp",
+          "type": "img",
+          "transferSize": 27642,
+          "encodedBodySize": 27342,
+          "duration": 293
+        }
+      ],
+      "documentOverflow": false,
+      "fonts": "loaded",
+      "fontValidation": {
+        "status": "loaded",
+        "regularChecked": true,
+        "boldChecked": true,
+        "faces": [
+          {
+            "family": "Rubik",
+            "weight": "400",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "family": "Rubik",
+            "weight": "700",
+            "style": "normal",
+            "status": "loaded"
+          }
+        ],
+        "computed": {
+          "headline": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "700"
+          },
+          "signature": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "400"
+          },
+          "bodyCopy": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "400"
+          }
+        },
+        "renderedFonts": {
+          "headline": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Bold",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ],
+          "signature": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Regular",
+              "isCustomFont": true,
+              "glyphCount": 14
+            }
+          ],
+          "bodyCopy": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Regular",
+              "isCustomFont": true,
+              "glyphCount": 74
+            }
+          ]
+        },
+        "actualRubikRendered": true,
+        "correctRubikWeights": true
+      },
+      "responseErrors": [],
+      "failedRequests": []
+    },
+    {
+      "profile": "desktop",
+      "run": 2,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "lcp": {
+        "time": 1008,
+        "renderTime": 1008,
+        "loadTime": 980.1000000014901,
+        "size": 446282,
+        "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_yfWSW.webp",
+        "element": "IMG",
+        "class": ""
+      },
+      "cls": 0.002338638485671725,
+      "shifts": [
+        {
+          "time": 732.5,
+          "value": 0.0021308211966306586,
+          "sources": [
+            {
+              "node": "SPAN",
+              "selector": "span",
+              "previousRect": {
+                "x": 72,
+                "y": 175.5,
+                "width": 1296,
+                "height": 147
+              },
+              "currentRect": {
+                "x": 72,
+                "y": 171.5,
+                "width": 1296,
+                "height": 147
+              }
+            },
+            {
+              "node": "SPAN",
+              "selector": "span",
+              "previousRect": {
+                "x": 72,
+                "y": 297.5625,
+                "width": 1296,
+                "height": 147
+              },
+              "currentRect": {
+                "x": 72,
+                "y": 293.5625,
+                "width": 1296,
+                "height": 147
+              }
+            },
+            {
+              "node": "NAV",
+              "selector": "nav.desktop-nav",
+              "previousRect": {
+                "x": 811.171875,
+                "y": 30,
+                "width": 386.34375,
+                "height": 44
+              },
+              "currentRect": {
+                "x": 802.390625,
+                "y": 30,
+                "width": 386.34375,
+                "height": 44
+              }
+            },
+            {
+              "node": "A",
+              "selector": "a.home-link",
+              "previousRect": {
+                "x": 330.046875,
+                "y": 641.5,
+                "width": 134.78125,
+                "height": 48
+              },
+              "currentRect": {
+                "x": 340.359375,
+                "y": 641.5,
+                "width": 134.78125,
+                "height": 48
+              }
+            },
+            {
+              "node": "A",
+              "selector": "a.header-cta",
+              "previousRect": {
+                "x": 1221.515625,
+                "y": 30,
+                "width": 146.484375,
+                "height": 44
+              },
+              "currentRect": {
+                "x": 1212.734375,
+                "y": 30,
+                "width": 155.265625,
+                "height": 44
+              }
+            }
+          ]
+        },
+        {
+          "time": 1052.8999999985099,
+          "value": 0.00020781728904106653,
+          "sources": [
+            {
+              "node": "P",
+              "selector": "p.home-hero-origin",
+              "previousRect": {
+                "x": 72,
+                "y": 138,
+                "width": 1296,
+                "height": 13
+              },
+              "currentRect": {
+                "x": 72,
+                "y": 137,
+                "width": 1296,
+                "height": 13
+              }
+            },
+            {
+              "node": "NAV",
+              "selector": "nav.desktop-nav",
+              "previousRect": {
+                "x": 802.390625,
+                "y": 30,
+                "width": 386.34375,
+                "height": 44
+              },
+              "currentRect": {
+                "x": 791.5,
+                "y": 30,
+                "width": 397.234375,
+                "height": 44
+              }
+            },
+            {
+              "node": "A",
+              "selector": "a",
+              "previousRect": {
+                "x": 1145.0625,
+                "y": 30,
+                "width": 44,
+                "height": 44
+              },
+              "currentRect": {
+                "x": 1141.671875,
+                "y": 30,
+                "width": 47.0625,
+                "height": 44
+              }
+            }
+          ]
+        }
+      ],
+      "fcp": 684,
+      "navigation": {
+        "name": "http://127.0.0.1:4321/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 2062.89999999851,
+        "navigationId": 4779,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 1.3999999985098839,
+        "domainLookupStart": 1.3999999985098839,
+        "domainLookupEnd": 1.3999999985098839,
+        "connectStart": 1.3999999985098839,
+        "secureConnectionStart": 0,
+        "connectEnd": 1.3999999985098839,
+        "requestStart": 3.899999998509884,
+        "responseStart": 7.899999998509884,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 7.899999998509884,
+        "responseEnd": 181.39999999850988,
+        "transferSize": 5031,
+        "encodedBodySize": 4731,
+        "decodedBodySize": 21394,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 212.39999999850988,
+        "domContentLoadedEventStart": 635.5,
+        "domContentLoadedEventEnd": 635.5,
+        "domComplete": 2062.7999999970198,
+        "loadEventStart": 2062.89999999851,
+        "loadEventEnd": 2062.89999999851,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Bold.DWhCF9JI.woff2",
+          "type": "link",
+          "transferSize": 28012,
+          "encodedBodySize": 27712,
+          "duration": 508.8999999985099
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 7362,
+          "encodedBodySize": 7062,
+          "duration": 296.69999999552965
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 3710,
+          "encodedBodySize": 3410,
+          "duration": 251.60000000149012
+        },
+        {
+          "url": "http://127.0.0.1:4321/brand/TKS_horizontal_azul.svg",
+          "type": "img",
+          "transferSize": 1743,
+          "encodedBodySize": 1443,
+          "duration": 221.10000000149012
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_yfWSW.webp",
+          "type": "img",
+          "transferSize": 49650,
+          "encodedBodySize": 49350,
+          "duration": 790.8999999985099
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Regular.XWHP5tHX.woff2",
+          "type": "css",
+          "transferSize": 27220,
+          "encodedBodySize": 26920,
+          "duration": 510.70000000298023
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-vehicles.Cmh4PxqO_5uOSr.webp",
+          "type": "img",
+          "transferSize": 221912,
+          "encodedBodySize": 221612,
+          "duration": 1398.2999999970198
+        },
+        {
+          "url": "http://127.0.0.1:4321/favicon.ico",
+          "type": "other",
+          "transferSize": 6399,
+          "encodedBodySize": 6099,
+          "duration": 184.20000000298023
+        }
+      ],
+      "inlineScriptBytes": 3111,
+      "longTasks": [
+        {
+          "time": 485,
+          "duration": 146
+        }
+      ],
+      "clickToTwoFrames": [
+        {
+          "category": "utilitario",
+          "duration": 26.5
+        },
+        {
+          "category": "van-furgao",
+          "duration": 27.69999999552965
+        },
+        {
+          "category": "caminhao-3-4",
+          "duration": 27.100000001490116
+        },
+        {
+          "category": "moto",
+          "duration": 26.200000002980232
+        }
+      ],
+      "labInteractionEvents": [
+        {
+          "name": "pointerover",
+          "time": 6417.5,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerenter",
+          "time": 6417.5,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6417.5,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6417.5,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6417.5,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6417.5,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6417.5,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6417.5,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6417.5,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6417.5,
+          "duration": 40,
+          "interactionId": 0
+        },
+        {
+          "name": "mouseover",
+          "time": 6417.5,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerdown",
+          "time": 6417.69999999553,
+          "duration": 40,
+          "interactionId": 8680,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mousedown",
+          "time": 6417.69999999553,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerup",
+          "time": 6417.69999999553,
+          "duration": 40,
+          "interactionId": 8680,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseup",
+          "time": 6417.69999999553,
+          "duration": 40,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "click",
+          "time": 6417.69999999553,
+          "duration": 40,
+          "interactionId": 8680,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerout",
+          "time": 6828.29999999702,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerleave",
+          "time": 6828.29999999702,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerover",
+          "time": 6828.29999999702,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerenter",
+          "time": 6828.29999999702,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "mouseout",
+          "time": 6828.29999999702,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseover",
+          "time": 6828.29999999702,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerdown",
+          "time": 6828.39999999851,
+          "duration": 24,
+          "interactionId": 8687,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "mousedown",
+          "time": 6828.39999999851,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerup",
+          "time": 6828.5,
+          "duration": 24,
+          "interactionId": 8687,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "mouseup",
+          "time": 6828.5,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "click",
+          "time": 6828.5,
+          "duration": 24,
+          "interactionId": 8687,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerout",
+          "time": 7244.79999999702,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerleave",
+          "time": 7244.79999999702,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerover",
+          "time": 7244.79999999702,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerenter",
+          "time": 7244.79999999702,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "mouseout",
+          "time": 7244.79999999702,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "mouseover",
+          "time": 7244.79999999702,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerdown",
+          "time": 7244.89999999851,
+          "duration": 24,
+          "interactionId": 8694,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "mousedown",
+          "time": 7244.89999999851,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerup",
+          "time": 7244.89999999851,
+          "duration": 24,
+          "interactionId": 8694,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "mouseup",
+          "time": 7244.89999999851,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "click",
+          "time": 7244.89999999851,
+          "duration": 24,
+          "interactionId": 8694,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerout",
+          "time": 7662.69999999553,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerleave",
+          "time": 7662.69999999553,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerover",
+          "time": 7662.69999999553,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerenter",
+          "time": 7662.69999999553,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "mouseout",
+          "time": 7662.69999999553,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "mouseover",
+          "time": 7662.69999999553,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerdown",
+          "time": 7662.79999999702,
+          "duration": 24,
+          "interactionId": 8701,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mousedown",
+          "time": 7662.79999999702,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerup",
+          "time": 7662.89999999851,
+          "duration": 24,
+          "interactionId": 8701,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mouseup",
+          "time": 7662.89999999851,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "click",
+          "time": 7662.89999999851,
+          "duration": 24,
+          "interactionId": 8701,
+          "target": "hf-tab-moto"
+        }
+      ],
+      "finalResources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Bold.DWhCF9JI.woff2",
+          "type": "link",
+          "transferSize": 28012,
+          "encodedBodySize": 27712,
+          "duration": 508.8999999985099
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 7362,
+          "encodedBodySize": 7062,
+          "duration": 296.69999999552965
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 3710,
+          "encodedBodySize": 3410,
+          "duration": 251.60000000149012
+        },
+        {
+          "url": "http://127.0.0.1:4321/brand/TKS_horizontal_azul.svg",
+          "type": "img",
+          "transferSize": 1743,
+          "encodedBodySize": 1443,
+          "duration": 221.10000000149012
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_yfWSW.webp",
+          "type": "img",
+          "transferSize": 49650,
+          "encodedBodySize": 49350,
+          "duration": 790.8999999985099
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Regular.XWHP5tHX.woff2",
+          "type": "css",
+          "transferSize": 27220,
+          "encodedBodySize": 26920,
+          "duration": 510.70000000298023
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-vehicles.Cmh4PxqO_5uOSr.webp",
+          "type": "img",
+          "transferSize": 221912,
+          "encodedBodySize": 221612,
+          "duration": 1398.2999999970198
+        },
+        {
+          "url": "http://127.0.0.1:4321/favicon.ico",
+          "type": "other",
+          "transferSize": 6399,
+          "encodedBodySize": 6099,
+          "duration": 184.20000000298023
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "duration": 6.799999997019768
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "duration": 6.100000001490116
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/warehouse.BIQFmoLm_Vi4lR.webp",
+          "type": "img",
+          "transferSize": 27642,
+          "encodedBodySize": 27342,
+          "duration": 290.80000000447035
+        }
+      ],
+      "documentOverflow": false,
+      "fonts": "loaded",
+      "fontValidation": {
+        "status": "loaded",
+        "regularChecked": true,
+        "boldChecked": true,
+        "faces": [
+          {
+            "family": "Rubik",
+            "weight": "400",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "family": "Rubik",
+            "weight": "700",
+            "style": "normal",
+            "status": "loaded"
+          }
+        ],
+        "computed": {
+          "headline": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "700"
+          },
+          "signature": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "400"
+          },
+          "bodyCopy": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "400"
+          }
+        },
+        "renderedFonts": {
+          "headline": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Bold",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ],
+          "signature": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Regular",
+              "isCustomFont": true,
+              "glyphCount": 14
+            }
+          ],
+          "bodyCopy": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Regular",
+              "isCustomFont": true,
+              "glyphCount": 74
+            }
+          ]
+        },
+        "actualRubikRendered": true,
+        "correctRubikWeights": true
+      },
+      "responseErrors": [],
+      "failedRequests": []
+    },
+    {
+      "profile": "desktop",
+      "run": 3,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "lcp": {
+        "time": 1020,
+        "renderTime": 1020,
+        "loadTime": 1001,
+        "size": 446282,
+        "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_yfWSW.webp",
+        "element": "IMG",
+        "class": ""
+      },
+      "cls": 0.002338638485671725,
+      "shifts": [
+        {
+          "time": 722.0999999940395,
+          "value": 0.0021308211966306586,
+          "sources": [
+            {
+              "node": "SPAN",
+              "selector": "span",
+              "previousRect": {
+                "x": 72,
+                "y": 175.5,
+                "width": 1296,
+                "height": 147
+              },
+              "currentRect": {
+                "x": 72,
+                "y": 171.5,
+                "width": 1296,
+                "height": 147
+              }
+            },
+            {
+              "node": "SPAN",
+              "selector": "span",
+              "previousRect": {
+                "x": 72,
+                "y": 297.5625,
+                "width": 1296,
+                "height": 147
+              },
+              "currentRect": {
+                "x": 72,
+                "y": 293.5625,
+                "width": 1296,
+                "height": 147
+              }
+            },
+            {
+              "node": "NAV",
+              "selector": "nav.desktop-nav",
+              "previousRect": {
+                "x": 811.171875,
+                "y": 30,
+                "width": 386.34375,
+                "height": 44
+              },
+              "currentRect": {
+                "x": 802.390625,
+                "y": 30,
+                "width": 386.34375,
+                "height": 44
+              }
+            },
+            {
+              "node": "A",
+              "selector": "a.home-link",
+              "previousRect": {
+                "x": 330.046875,
+                "y": 641.5,
+                "width": 134.78125,
+                "height": 48
+              },
+              "currentRect": {
+                "x": 340.359375,
+                "y": 641.5,
+                "width": 134.78125,
+                "height": 48
+              }
+            },
+            {
+              "node": "A",
+              "selector": "a.header-cta",
+              "previousRect": {
+                "x": 1221.515625,
+                "y": 30,
+                "width": 146.484375,
+                "height": 44
+              },
+              "currentRect": {
+                "x": 1212.734375,
+                "y": 30,
+                "width": 155.265625,
+                "height": 44
+              }
+            }
+          ]
+        },
+        {
+          "time": 1065.8999999985099,
+          "value": 0.00020781728904106653,
+          "sources": [
+            {
+              "node": "P",
+              "selector": "p.home-hero-origin",
+              "previousRect": {
+                "x": 72,
+                "y": 138,
+                "width": 1296,
+                "height": 13
+              },
+              "currentRect": {
+                "x": 72,
+                "y": 137,
+                "width": 1296,
+                "height": 13
+              }
+            },
+            {
+              "node": "NAV",
+              "selector": "nav.desktop-nav",
+              "previousRect": {
+                "x": 802.390625,
+                "y": 30,
+                "width": 386.34375,
+                "height": 44
+              },
+              "currentRect": {
+                "x": 791.5,
+                "y": 30,
+                "width": 397.234375,
+                "height": 44
+              }
+            },
+            {
+              "node": "A",
+              "selector": "a",
+              "previousRect": {
+                "x": 1145.0625,
+                "y": 30,
+                "width": 44,
+                "height": 44
+              },
+              "currentRect": {
+                "x": 1141.671875,
+                "y": 30,
+                "width": 47.0625,
+                "height": 44
+              }
+            }
+          ]
+        }
+      ],
+      "fcp": 656,
+      "navigation": {
+        "name": "http://127.0.0.1:4321/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 2064.2999999970198,
+        "navigationId": 7239,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.5,
+        "domainLookupStart": 0.5,
+        "domainLookupEnd": 0.5,
+        "connectStart": 0.5,
+        "secureConnectionStart": 0,
+        "connectEnd": 0.5,
+        "requestStart": 1.5999999940395355,
+        "responseStart": 4.399999998509884,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 4.399999998509884,
+        "responseEnd": 181.39999999850988,
+        "transferSize": 5031,
+        "encodedBodySize": 4731,
+        "decodedBodySize": 21394,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 217.29999999701977,
+        "domContentLoadedEventStart": 605.5999999940395,
+        "domContentLoadedEventEnd": 605.6999999955297,
+        "domComplete": 2064.1999999955297,
+        "loadEventStart": 2064.2999999970198,
+        "loadEventEnd": 2064.2999999970198,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Bold.DWhCF9JI.woff2",
+          "type": "link",
+          "transferSize": 28012,
+          "encodedBodySize": 27712,
+          "duration": 508.1000000014901
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 7362,
+          "encodedBodySize": 7062,
+          "duration": 288.70000000298023
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 3710,
+          "encodedBodySize": 3410,
+          "duration": 235.89999999850988
+        },
+        {
+          "url": "http://127.0.0.1:4321/brand/TKS_horizontal_azul.svg",
+          "type": "img",
+          "transferSize": 1743,
+          "encodedBodySize": 1443,
+          "duration": 220.20000000298023
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_yfWSW.webp",
+          "type": "img",
+          "transferSize": 49650,
+          "encodedBodySize": 49350,
+          "duration": 812.6000000014901
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Regular.XWHP5tHX.woff2",
+          "type": "css",
+          "transferSize": 27220,
+          "encodedBodySize": 26920,
+          "duration": 520.7000000029802
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-vehicles.Cmh4PxqO_5uOSr.webp",
+          "type": "img",
+          "transferSize": 221912,
+          "encodedBodySize": 221612,
+          "duration": 1425.6000000014901
+        },
+        {
+          "url": "http://127.0.0.1:4321/favicon.ico",
+          "type": "other",
+          "transferSize": 6399,
+          "encodedBodySize": 6099,
+          "duration": 190
+        }
+      ],
+      "inlineScriptBytes": 3111,
+      "longTasks": [
+        {
+          "time": 477.09999999403954,
+          "duration": 123
+        }
+      ],
+      "clickToTwoFrames": [
+        {
+          "category": "utilitario",
+          "duration": 25.799999997019768
+        },
+        {
+          "category": "van-furgao",
+          "duration": 27
+        },
+        {
+          "category": "caminhao-3-4",
+          "duration": 25.700000002980232
+        },
+        {
+          "category": "moto",
+          "duration": 28.900000005960464
+        }
+      ],
+      "labInteractionEvents": [
+        {
+          "name": "pointerover",
+          "time": 6423.19999999553,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerenter",
+          "time": 6423.19999999553,
+          "duration": 32,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6423.19999999553,
+          "duration": 32,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6423.19999999553,
+          "duration": 32,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6423.19999999553,
+          "duration": 32,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6423.19999999553,
+          "duration": 32,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6423.19999999553,
+          "duration": 32,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6423.19999999553,
+          "duration": 32,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6423.19999999553,
+          "duration": 32,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerenter",
+          "time": 6423.19999999553,
+          "duration": 32,
+          "interactionId": 0
+        },
+        {
+          "name": "mouseover",
+          "time": 6423.19999999553,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerdown",
+          "time": 6423.29999999702,
+          "duration": 32,
+          "interactionId": 7993,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mousedown",
+          "time": 6423.29999999702,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerup",
+          "time": 6423.29999999702,
+          "duration": 32,
+          "interactionId": 7993,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseup",
+          "time": 6423.29999999702,
+          "duration": 32,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "click",
+          "time": 6423.29999999702,
+          "duration": 32,
+          "interactionId": 7993,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerout",
+          "time": 6835,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "pointerleave",
+          "time": 6835,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerover",
+          "time": 6835,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerenter",
+          "time": 6835,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "mouseout",
+          "time": 6835,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-utilitario"
+        },
+        {
+          "name": "mouseover",
+          "time": 6835,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerdown",
+          "time": 6835.19999999553,
+          "duration": 24,
+          "interactionId": 8000,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "mousedown",
+          "time": 6835.19999999553,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerup",
+          "time": 6835.5,
+          "duration": 24,
+          "interactionId": 8000,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "mouseup",
+          "time": 6835.5,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "click",
+          "time": 6835.5,
+          "duration": 24,
+          "interactionId": 8000,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerout",
+          "time": 7253.39999999851,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "pointerleave",
+          "time": 7253.39999999851,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerover",
+          "time": 7253.39999999851,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerenter",
+          "time": 7253.39999999851,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "mouseout",
+          "time": 7253.39999999851,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-van-furgao"
+        },
+        {
+          "name": "mouseover",
+          "time": 7253.39999999851,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerdown",
+          "time": 7253.5,
+          "duration": 24,
+          "interactionId": 8007,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "mousedown",
+          "time": 7253.5,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerup",
+          "time": 7253.79999999702,
+          "duration": 24,
+          "interactionId": 8007,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "mouseup",
+          "time": 7253.79999999702,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "click",
+          "time": 7253.79999999702,
+          "duration": 24,
+          "interactionId": 8007,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerout",
+          "time": 7650.69999999553,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "pointerleave",
+          "time": 7650.69999999553,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "pointerover",
+          "time": 7650.69999999553,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerenter",
+          "time": 7650.69999999553,
+          "duration": 24,
+          "interactionId": 0
+        },
+        {
+          "name": "mouseout",
+          "time": 7650.69999999553,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-caminhao-3-4"
+        },
+        {
+          "name": "mouseover",
+          "time": 7650.69999999553,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerdown",
+          "time": 7650.89999999851,
+          "duration": 24,
+          "interactionId": 8014,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mousedown",
+          "time": 7650.89999999851,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "pointerup",
+          "time": 7651.0999999940395,
+          "duration": 24,
+          "interactionId": 8014,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "mouseup",
+          "time": 7651.0999999940395,
+          "duration": 24,
+          "interactionId": 0,
+          "target": "hf-tab-moto"
+        },
+        {
+          "name": "click",
+          "time": 7651.0999999940395,
+          "duration": 24,
+          "interactionId": 8014,
+          "target": "hf-tab-moto"
+        }
+      ],
+      "finalResources": [
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Bold.DWhCF9JI.woff2",
+          "type": "link",
+          "transferSize": 28012,
+          "encodedBodySize": 27712,
+          "duration": 508.1000000014901
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 7362,
+          "encodedBodySize": 7062,
+          "duration": 288.70000000298023
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 3710,
+          "encodedBodySize": 3410,
+          "duration": 235.89999999850988
+        },
+        {
+          "url": "http://127.0.0.1:4321/brand/TKS_horizontal_azul.svg",
+          "type": "img",
+          "transferSize": 1743,
+          "encodedBodySize": 1443,
+          "duration": 220.20000000298023
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-hero.BpM7ASQW_yfWSW.webp",
+          "type": "img",
+          "transferSize": 49650,
+          "encodedBodySize": 49350,
+          "duration": 812.6000000014901
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/Rubik-Regular.XWHP5tHX.woff2",
+          "type": "css",
+          "transferSize": 27220,
+          "encodedBodySize": 26920,
+          "duration": 520.7000000029802
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/home-v3-vehicles.Cmh4PxqO_5uOSr.webp",
+          "type": "img",
+          "transferSize": 221912,
+          "encodedBodySize": 221612,
+          "duration": 1425.6000000014901
+        },
+        {
+          "url": "http://127.0.0.1:4321/favicon.ico",
+          "type": "other",
+          "transferSize": 6399,
+          "encodedBodySize": 6099,
+          "duration": 190
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/area-de-atuacao.BnMyHm07.css",
+          "type": "link",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "duration": 5.600000001490116
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/index.CyMxOHFs.css",
+          "type": "link",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "duration": 6.200000002980232
+        },
+        {
+          "url": "http://127.0.0.1:4321/_astro/warehouse.BIQFmoLm_Vi4lR.webp",
+          "type": "img",
+          "transferSize": 27642,
+          "encodedBodySize": 27342,
+          "duration": 288.6000000014901
+        }
+      ],
+      "documentOverflow": false,
+      "fonts": "loaded",
+      "fontValidation": {
+        "status": "loaded",
+        "regularChecked": true,
+        "boldChecked": true,
+        "faces": [
+          {
+            "family": "Rubik",
+            "weight": "400",
+            "style": "normal",
+            "status": "loaded"
+          },
+          {
+            "family": "Rubik",
+            "weight": "700",
+            "style": "normal",
+            "status": "loaded"
+          }
+        ],
+        "computed": {
+          "headline": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "700"
+          },
+          "signature": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "400"
+          },
+          "bodyCopy": {
+            "fontFamily": "Rubik, Arial, sans-serif",
+            "fontWeight": "400"
+          }
+        },
+        "renderedFonts": {
+          "headline": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Bold",
+              "isCustomFont": true,
+              "glyphCount": 12
+            }
+          ],
+          "signature": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Regular",
+              "isCustomFont": true,
+              "glyphCount": 14
+            }
+          ],
+          "bodyCopy": [
+            {
+              "familyName": "Rubik",
+              "postScriptName": "Rubik-Regular",
+              "isCustomFont": true,
+              "glyphCount": 74
+            }
+          ]
+        },
+        "actualRubikRendered": true,
+        "correctRubikWeights": true
+      },
+      "responseErrors": [],
+      "failedRequests": []
+    }
+  ],
+  "build": {
+    "indexModifiedAt": "2026-10-07T01:47:51.713Z",
+    "indexSha256": "665e79fdf5990d04d0b5a89ef0f224164b329d93d8857825f71f0b4748633d20",
+    "indexSha256After": "665e79fdf5990d04d0b5a89ef0f224164b329d93d8857825f71f0b4748633d20",
+    "unchangedDuringMeasurement": true
+  },
+  "summary": {
+    "mobile": {
+      "lcpMs": {
+        "min": 1548,
+        "median": 1548,
+        "max": 1552
+      },
+      "maxCls": 0,
+      "observedInteractionMs": {
+        "min": 16,
+        "max": 40
+      },
+      "medianInitialTransferBytes": 400228,
+      "initialHttpErrors": [],
+      "failedRequests": [],
+      "actualRubikRenderedEveryRun": true,
+      "correctRubikWeightsEveryRun": true,
+      "overflow": false
+    },
+    "desktop": {
+      "lcpMs": {
+        "min": 1008,
+        "median": 1012,
+        "max": 1020
+      },
+      "maxCls": 0.002338638485671725,
+      "observedInteractionMs": {
+        "min": 16,
+        "max": 40
+      },
+      "medianInitialTransferBytes": 351039,
+      "initialHttpErrors": [],
+      "failedRequests": [],
+      "actualRubikRenderedEveryRun": true,
+      "correctRubikWeightsEveryRun": true,
+      "overflow": false
+    }
+  }
+}

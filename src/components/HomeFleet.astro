@@ -1,0 +1,111 @@
+---
+import { Image } from 'astro:assets';
+import Arrow from './Arrow.astro';
+import { homeFleet } from '../data/home-fleet';
+import { homeMedia, homeFleetMediaFrames, homeFleetPhotos } from '../data/home-media';
+import '../styles/home-fleet.css';
+---
+
+<section class="hf-section" aria-labelledby="hf-heading" data-home-fleet>
+  <div class="container">
+    <div class="hf-heading">
+      <h2 id="hf-heading">Uma solução para cada entrega.</h2>
+      <a class="hf-all-link" href="/servicos">Conhecer todas as soluções <Arrow diagonal /></a>
+    </div>
+
+    <div class="hf-showcase">
+      <div class="hf-tabs" role="tablist" aria-label="Escolha uma categoria de transporte" aria-orientation="horizontal">
+        {homeFleet.map((category, index) => (
+          <button
+            type="button"
+            id={`hf-tab-${category.id}`}
+            role="tab"
+            aria-selected={index === 0 ? 'true' : 'false'}
+            aria-controls={`hf-panel-${category.id}`}
+            tabindex={index === 0 ? 0 : -1}
+            data-hf-tab={category.id}
+          >
+            <span class="hf-tab-name">{category.label}</span>
+          </button>
+        ))}
+      </div>
+
+      <div class="hf-panels">
+        {homeFleet.map((category, index) => {
+          const photo = homeFleetPhotos[category.id];
+          const frame = homeFleetMediaFrames[category.id];
+          return (
+          <div
+            class="hf-panel"
+            id={`hf-panel-${category.id}`}
+            role="tabpanel"
+            aria-labelledby={`hf-tab-${category.id}`}
+            tabindex="0"
+            hidden={index !== 0}
+          >
+            <div
+              class:list={['hf-visual', { 'hf-visual-direct': Boolean(photo) }]}
+              role="img"
+              aria-label={photo?.alt ?? `Representação da categoria ${category.label}`}
+              data-hf-image
+              style={photo
+                ? `--hf-photo-position: ${photo.position ?? 'center'}; --hf-photo-position-mobile: ${photo.mobilePosition ?? photo.position ?? 'center'};`
+                : `--hf-image-left: ${frame.left}; --hf-image-top: ${frame.top};`}
+            >
+              {photo
+                ? <Image src={photo.src} widths={[640, 960, 1280]} sizes="(max-width: 700px) calc(100vw - 48px), 60vw" format="webp" quality={82} alt="" loading="lazy" decoding="async" />
+                : <Image src={homeMedia.fleet} widths={[960, 1536]} sizes="(max-width: 700px) calc(200vw - 96px), 120vw" format="webp" quality={82} alt="" loading="lazy" decoding="async" />}
+            </div>
+            <div class="hf-detail">
+              <div class="hf-title">
+                <h3>{category.label}</h3>
+                <p class="hf-capacity" data-hf-capacity><span>Até</span> {category.capacityKg.toLocaleString('pt-BR')} <span>kg</span></p>
+              </div>
+              <div class="hf-copy">
+                <p class="hf-description">{category.description}</p>
+                <a class="hf-quote" href={`/orcamento?necessidade=${category.need}`}>
+                  Solicitar orçamento <Arrow diagonal />
+                </a>
+              </div>
+            </div>
+          </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <noscript><p class="hf-no-script">Conheça as categorias Moto, Utilitário, Van / Furgão e Caminhão 3/4 em <a href="/frota">nossa frota</a>.</p></noscript>
+  </div>
+</section>
+
+<script>
+  for (const section of document.querySelectorAll<HTMLElement>('[data-home-fleet]')) {
+    const tabs = Array.from(section.querySelectorAll<HTMLButtonElement>('[data-hf-tab]'));
+
+    const select = (tab: HTMLButtonElement) => {
+      for (const item of tabs) {
+        const active = item === tab;
+        item.setAttribute('aria-selected', String(active));
+        item.tabIndex = active ? 0 : -1;
+        const panel = section.querySelector<HTMLElement>(`#${item.getAttribute('aria-controls')}`);
+        if (panel) panel.hidden = !active;
+      }
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => select(tab));
+      tab.addEventListener('keydown', event => {
+        let next: number | undefined;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        if (next === undefined) return;
+        event.preventDefault();
+        const selected = tabs[next];
+        select(selected);
+        selected.focus({ preventScroll: true });
+      });
+    });
+  }
+</script>
