@@ -1,6 +1,6 @@
 # TKS Home — revisão de design
 
-Entrega de 06/10/2026. Trabalho exclusivamente na Home, sobre a V4 existente. Páginas internas, componentes globais, stack, rotas, orçamento, integrações e dados operacionais foram preservados. Nenhum merge ou publicação em produção.
+Entrega de 07/10/2026. Trabalho exclusivamente na Home, sobre a V4 existente. Páginas internas, componentes globais, stack, rotas, orçamento, integrações e dados operacionais foram preservados. Nenhum merge ou publicação em produção.
 
 ## Entregáveis
 
@@ -14,7 +14,7 @@ Entrega de 06/10/2026. Trabalho exclusivamente na Home, sobre a V4 existente. P�
 | Ensaio fotográfico executável | [Shot list: oito tomadas, composição, luz, orientação e prioridade](HOME_SHOT_LIST.md) |
 | Mudanças, testes e pendências | Seções abaixo |
 | Medições e evidência responsiva | [Resumo de desempenho](review/home/performance-summary.md), [JSON de laboratório](review/home/performance-lab.json), [seis larguras e categorias](review/home/responsive-checks.json) |
-| Preview | PR 4: https://deploy-preview-4--resilient-baklava-3561ee.netlify.app/ — atualizar a branch da PR e confirmar o deploy correspondente antes de declarar a nova revisão publicada. |
+| Preview | [Home atualizada da PR 4](https://deploy-preview-4--resilient-baklava-3561ee.netlify.app/). Netlify confirmou **ready** para o commit `e61985da00c28bf38962d9cc7c0f958b88e91954`; [registro do deploy](https://app.netlify.com/projects/resilient-baklava-3561ee/deploys/6ac5a724d5006e000887f8c6), [evidência mínima](review/home/netlify-deploy.json). |
 
 ## Principais mudanças
 
@@ -69,7 +69,12 @@ Rubik Bold no H1 e Regular na assinatura/body comprovadas via CDP em 6/6 rodadas
 - Validar operacionalmente capacidades de 20 / 400 / 1.200 / 3.000 kg, dimensões, restrições e disponibilidade antes de produção. Os valores continuam em `src/data/home-fleet.ts`.
 - Confirmar canais comerciais/WhatsApp, cobertura, horários e informações legais já pendentes no projeto. Nada disso foi inventado nesta revisão.
 - Pesquisa externa de referências setoriais limitada pela rede. Foram consultadas três fontes oficiais de estúdios via GitHub; duas demos foram renderizadas em desktop/mobile. Não declarar inspeção dos sites públicos de automotivo/arquitetura que ficaram bloqueados.
-- Confirmar o novo deploy da revisão pela integração Netlify. Não montar um hostname a partir de uma branch ou assumir que push equivale a publicação.
+
+## Publicação da preview
+
+A branch de origem da PR 4, `preview/home-v4-download`, recebeu o commit validado `e61985da00c28bf38962d9cc7c0f958b88e91954`. O comentário atualizado do bot Netlify na PR foi consultado por HTTP 200 e confirmou **ready** para esse commit exato, com a URL pública acima. O endereço permanece igual, mas o deploy foi atualizado.
+
+A inspeção visual foi realizada no build local correspondente. O acesso HTTP direto ao hostname Netlify continua bloqueado pela política de rede do ambiente; a confirmação do deploy veio da integração na PR. `main` permanece em `8ca25a4b7a05103ca03c757e8bc4f11093d82b01`, sem merge ou promoção para produção. A confirmação documental posterior está na branch `preview/home-design-review` e não altera o código da Home publicado na preview.
 
 ## Próxima revisão
 

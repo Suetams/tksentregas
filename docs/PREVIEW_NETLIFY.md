@@ -6,6 +6,8 @@ Em 06/10/2026, o usuário forneceu a preview real <https://deploy-preview-4--res
 
 Portanto, a integração por **Deploy Preview da PR 4** é o caminho desta revisão. Um push validado para sua branch de origem atualiza a mesma URL de revisão. Conferir o novo commit e o resultado informado pela Netlify antes de declarar a revisão publicada. Não mudar `main`, fazer merge, promover deploy ou alterar domínio de produção. O hostname público da preview ainda está fora da política de rede do ambiente; status da integração e renderização local são evidências distintas.
 
+Em 07/10/2026, a integração confirmou **ready** para o commit exato `e61985da00c28bf38962d9cc7c0f958b88e91954`, enviado à branch da PR 4. O [novo registro de deploy](https://app.netlify.com/projects/resilient-baklava-3561ee/deploys/6ac5a724d5006e000887f8c6) e a URL pública foram retornados pelo bot Netlify na PR. [Evidência mínima](review/home/netlify-deploy.json). A preview está atualizada; nenhum merge ou deploy em produção foi feito.
+
 Relatório e capturas desta rodada: [HOME_DESIGN_REVIEW.md](HOME_DESIGN_REVIEW.md). O histórico abaixo registra as dificuldades anteriores de branch deploy e a entrega manual; não descreve uma falha atual da PR 4.
 
 ## Histórico anterior — branch deploy e entrega manual
