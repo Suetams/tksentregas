@@ -1,9 +1,38 @@
 ---
-import Icon from './Icon.astro';
+import Arrow from './Arrow.astro';
+import { brandAssets } from '../data/brand';
 ---
-<footer class="site-footer"><div class="container footer-grid">
- <div><a class="brand brand-light" href="/"><span>TKS</span><small>ENTREGAS</small></a><p class="footer-slogan">Do documento à carga.<br/>A TKS entrega.</p><p class="footer-small">Versão de desenvolvimento.<br/>Ilustrações conceituais, não fotos da frota.</p></div>
- <div><h2>Soluções</h2><a href="/servicos/motoboy-campinas">Motoboy</a><a href="/servicos/entregas-expressas">Entrega expressa</a><a href="/servicos/frete-utilitarios">Utilitário</a><a href="/servicos/transporte-de-cargas">Transporte de cargas</a><a href="/servicos/distribuicao-e-commerce">Distribuição</a></div>
- <div><h2>TKS</h2><a href="/sobre">Sobre</a><a href="/para-empresas">Para empresas</a><a href="/area-de-atuacao">Área de atuação</a><a href="/blog">Conteúdos</a><a href="/contato">Contato</a></div>
- <div><h2>Vamos conversar?</h2><p>Comece pelo que precisa transportar.<br/>Prepare sua solicitação em poucos passos.</p><a class="button" href="/orcamento">Solicitar orçamento <Icon name="arrow" size={18}/></a><p class="footer-small">Canal comercial aguardando confirmação.</p></div>
-</div><div class="container footer-bottom"><span>© {new Date().getFullYear()} TKS Entregas</span><a href="/privacidade">Privacidade</a><span>Feito para conectar caminhos.</span></div></footer>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="/" aria-label="TKS Entregas — início">
+        <picture>
+          <source media="(max-width: 700px)" srcset={brandAssets.compact.white} width="310" height="110" />
+          <img src={brandAssets.horizontal.white} width="613" height="110" alt="TKS Entregas" loading="lazy" decoding="async" />
+        </picture>
+      </a>
+      <p class="footer-slogan">Do documento à carga.<br/>A TKS entrega.</p>
+    </div>
+    <nav class="footer-column" aria-label="Soluções no rodapé">
+      <h2>Soluções</h2>
+      <a href="/servicos">Todas as soluções</a>
+      <a href="/frota">Frota</a>
+      <a href="/para-empresas">Para empresas</a>
+    </nav>
+    <nav class="footer-column" aria-label="TKS no rodapé">
+      <h2>TKS</h2>
+      <a href="/sobre">Sobre a TKS</a>
+      <a href="/blog">Conteúdos</a>
+    </nav>
+    <nav class="footer-column footer-contact" aria-label="Contato no rodapé">
+      <h2>Contato</h2>
+      <a href="/contato">Falar com a TKS <Arrow size={16} diagonal/></a>
+      <a href="/orcamento">Solicitar orçamento <Arrow size={16} diagonal/></a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <span>© {new Date().getFullYear()} TKS Entregas</span>
+    <a href="/privacidade">Privacidade</a>
+  </div>
+</footer>

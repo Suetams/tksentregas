@@ -7,9 +7,9 @@ const { type = 'utilitario', hero = false } = Astro.props;
 // Positioning preserves the complete vehicle without modifying the source artwork.
 const frames: Record<string, { start: number; width: number }> = {
   moto: { start: 0, width: 500 },
-  utilitario: { start: 500, width: 500 },
-  'van-furgao': { start: 1000, width: 535 },
-  'caminhao-3-4': { start: 1535, width: 637 },
+  utilitario: { start: 520, width: 540 },
+  'van-furgao': { start: 1060, width: 550 },
+  'caminhao-3-4': { start: 1620, width: 552 },
 };
 const frame = frames[type] ?? frames.utilitario;
 const scale = (catalog.width / frame.width) * 100;
