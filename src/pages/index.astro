@@ -1,128 +1,68 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Arrow from '../components/Arrow.astro';
-import HomeFleet from '../components/HomeFleet.astro';
 import { Image, getImage } from 'astro:assets';
-import { homeMedia, homePhotoCrops } from '../data/home-media';
-import { homeNeeds, homeContentReview } from '../data/home';
-import '../styles/home.css';
-const heroMobile = homeMedia.heroMobile
-  ? await getImage({ src: homeMedia.heroMobile, width: 960, format: 'webp', quality: 82 })
-  : undefined;
-const operationMobile = homeMedia.operationMobile
-  ? await getImage({ src: homeMedia.operationMobile, width: 960, format: 'webp', quality: 80 })
-  : undefined;
+import HomeExperience from '../layouts/HomeExperience.astro';
+import { experienceNeeds, homeExperienceMedia as media, fleetEditorialPhotos, fleetWindowScales, homeContactHref } from '../data/home-experience';
+import { homeFleet } from '../data/home-fleet';
+import { homeContentReview } from '../data/home';
+const mobileHero = await getImage({src: media.street, width: 960, format: 'webp', quality: 82});
+const yearPhoto = await getImage({src: media.city, width: 1440, format: 'webp', quality: 80});
+const kg = (value: number) => value.toLocaleString('pt-BR');
 ---
-
-<Layout title="Do documento à carga" home>
-  <section class="home-hero" aria-labelledby="hero-title" style={`--hero-photo-position: ${homePhotoCrops.hero.desktop}; --hero-photo-position-mobile: ${homePhotoCrops.hero.mobile};`}>
-    <div class="container home-hero-inner">
-      <p class="home-hero-origin">Desde {homeContentReview.companySince.value} <span>·</span> {homeContentReview.companyLocation.value}</p>
-      <div class="home-hero-title">
-        <h1 id="hero-title"><span>Do documento</span><span>à carga.</span><span class="home-hero-signature">A TKS entrega.</span></h1>
+<HomeExperience title="Do documento à carga">
+  <section class="h6-hero" aria-labelledby="home-title">
+    <picture class="h6-hero-photo"><source media="(max-width: 700px)" srcset={mobileHero.src}/><Image src={media.city} alt="" widths={[960,1440,1920,2400]} sizes="100vw" format="webp" quality={82} loading="eager" fetchpriority="high"/></picture>
+    <div class="h6-container h6-hero-content">
+      <div class="h6-eyebrow h6-hero-kicker"><span>TKS Entregas · Desde {homeContentReview.companySince.value}</span><span>{homeContentReview.companyLocation.value}</span></div>
+      <h1 id="home-title"><span class="h6-hero-line h6-hero-intro"><span>Do</span> documento</span><span class="h6-hero-line h6-hero-cargo">à carga.</span><span class="h6-hero-line h6-hero-signature">A TKS <span>entrega.</span></span></h1>
+      <div class="h6-hero-bottom">
+        <div class="h6-hero-actions"><a class="h6-primary h6-safe-action" href="/orcamento">Solicitar orçamento <span aria-hidden="true">↗</span></a><a class="h6-text-link h6-safe-action" href={homeContactHref}>Fale com a TKS <span aria-hidden="true">↗</span></a></div>
+        <p class="h6-hero-copy">Cada entrega começa com uma necessidade.<br/> Vamos encontrar a solução para a sua.</p>
       </div>
-      <div class="home-hero-copy">
-        <p class="home-hero-description">Soluções de transporte para necessidades pontuais ou operações recorrentes.</p>
-        <div class="home-hero-actions">
-          <a class="button" href="/orcamento">Solicitar orçamento <Arrow diagonal size={20} /></a>
-          <a class="home-link" href="/contato">Falar com a TKS <Arrow diagonal size={18} /></a>
+      <a class="h6-discover" href="#sua-entrega">Explore as possibilidades</a>
+    </div>
+  </section>
+
+  <section id="sua-entrega" class="h6-needs" aria-labelledby="needs-title">
+    <div class="h6-container">
+      <div class="h6-section-heading"><p class="h6-eyebrow">01 / Sua entrega</p><h2 id="needs-title">O que você precisa<br/>transportar?</h2><p class="h6-heading-note">Escolha uma necessidade.<br/> O próximo passo começa por ela.</p></div>
+      <div class="h6-needs-composition">
+        <div class="h6-needs-list">
+          {experienceNeeds.map((need, i) => <div class="h6-need-row"><button type="button" data-need-select={need.id} aria-pressed={i === 0} aria-controls="need-photo-window"><span class="h6-need-index" aria-hidden="true">{String(i+1).padStart(2,'0')}</span><span class="h6-need-title">{need.title}</span></button><a class="h6-need-quote h6-safe-action" href={`/orcamento?necessidade=${need.id}`} aria-label={`Solicitar orçamento: ${need.title}`}><span aria-hidden="true">↗</span></a></div>)}
+          <p class="h6-needs-note">Não sabe qual opção escolher?<br/><a class="h6-text-link h6-safe-action" href="/orcamento?necessidade=orientacao">Conte o que precisa <span aria-hidden="true">↗</span></a></p>
+        </div>
+        <div class="h6-needs-window" id="need-photo-window" aria-live="polite" aria-atomic="true">
+          {experienceNeeds.map((need, i) => <figure data-need-photo={need.id} hidden={i !== 0} style={`--photo-position:${need.position}`}><Image src={need.photo} alt={need.alt} widths={[480,800,1200]} sizes="(max-width: 700px) calc(100vw - 44px), 46vw" format="webp" quality={82} loading="lazy"/><figcaption><span aria-hidden="true">{String(i+1).padStart(2,'0')}</span><span>{need.caption}</span></figcaption></figure>)}
         </div>
       </div>
     </div>
-    <div class="home-hero-image" aria-hidden="true">
-      <picture>
-        {heroMobile && <source media="(max-width: 900px)" srcset={heroMobile.src} />}
-        <Image src={homeMedia.hero} widths={[430, 640, 960, 1280, 1672]} sizes="(max-width: 900px) 100vw, 52vw" format="webp" quality={82} alt="" loading="eager" fetchpriority="high" />
-      </picture>
+  </section>
+
+  <section class="h6-fleet" aria-labelledby="fleet-title" data-fleet-experience data-active-scale="0">
+    <div class="h6-container">
+      <div class="h6-section-heading"><p class="h6-eyebrow">02 / A escala muda. O cuidado continua.</p><h2 id="fleet-title">Do pequeno volume.<span>À carga maior.</span></h2><a class="h6-text-link" href="/frota">Conheça as categorias <span aria-hidden="true">↗</span></a></div>
+      <div class="h6-scale-tabs" role="tablist" aria-label="Categorias de transporte">
+        {homeFleet.map((category, i) => <button type="button" role="tab" id={`scale-tab-${category.id}`} aria-controls={`scale-panel-${category.id}`} aria-selected={i === 0} tabindex={i === 0 ? 0 : -1} data-scale-tab={category.id}><span class="h6-scale-label">{category.label}</span><span class="h6-scale-capacity">{kg(category.capacityKg)} <small>kg</small></span></button>)}
+      </div>
+      <div class="h6-scale-stage">
+        {homeFleet.map((category, i) => <div class="h6-scale-panel" id={`scale-panel-${category.id}`} role="tabpanel" aria-labelledby={`scale-tab-${category.id}`} data-scale-panel={category.id} hidden={i !== 0} style={`--window-scale:${fleetWindowScales[i]}`}><div class="h6-scale-copy"><div class="h6-scale-weight">{kg(category.capacityKg)}<small>kg</small></div><h3>{category.label}</h3><p>{category.description}</p></div><figure class="h6-scale-window"><Image src={fleetEditorialPhotos[i]} alt={experienceNeeds[i].alt} widths={[480,800,1200]} sizes="(max-width: 700px) calc(100vw - 44px), 55vw" format="webp" quality={82} loading="lazy"/></figure></div>)}
+      </div>
+      <div hidden>{homeFleet.map(category => <span data-scale-quote-value={`/orcamento?necessidade=${category.need}`}></span>)}</div>
+      <noscript><div class="h6-noscript-fleet">{homeFleet.map(category => <a href={`/orcamento?necessidade=${category.need}`}>{category.label} · {kg(category.capacityKg)} kg</a>)}</div></noscript>
+      <div class="h6-fleet-action"><p>Capacidades de referência. Peso, volume, acondicionamento e trajeto ajudam a definir a categoria para cada transporte.</p><a class="h6-primary h6-safe-action" href={`/orcamento?necessidade=${homeFleet[0].need}`} data-scale-quote>Encontrar a solução para minha entrega <span aria-hidden="true">↗</span></a></div>
     </div>
   </section>
 
-  <section class="home-needs" aria-labelledby="needs-title">
-    <div class="container home-needs-layout" data-reveal>
-      <div class="home-needs-intro">
-        <h2 id="needs-title">O que vai daqui<br/>até lá?</h2>
-        <p>Conte sua necessidade. A TKS ajuda a encontrar a solução adequada.</p>
-      </div>
-      <div class="home-paths">
-        {homeNeeds.map((need, index) => (
-          <a class="home-path" href={'/orcamento?necessidade=' + need.id} data-need-path={need.id}>
-            <span class="home-path-index" aria-hidden="true">0{index + 1}</span>
-            <h3>{need.title}</h3>
-            <span class="home-path-arrow"><Arrow diagonal size={24} /></span>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <HomeFleet />
-
-  <section class="home-business" aria-labelledby="business-title" style={`--operation-photo-position: ${homePhotoCrops.operation.desktop}; --operation-photo-position-mobile: ${homePhotoCrops.operation.mobile};`}>
-    <div class="container home-business-layout">
-      <div class="home-business-heading" data-reveal>
-        <p class="home-label">Para empresas</p>
-        <h2 id="business-title">Sua operação<br/>não precisa parar.</h2>
-      </div>
-      <div class="home-business-image" aria-hidden="true">
-        <picture>
-          {operationMobile && <source media="(max-width: 700px)" srcset={operationMobile.src} />}
-          <Image src={homeMedia.operation} widths={[430, 640, 960, 1440]} sizes="(max-width: 700px) 100vw, 64vw" format="webp" quality={80} alt="" loading="lazy" decoding="async" />
-        </picture>
-      </div>
-      <div class="home-business-copy" data-reveal>
-        <p>Soluções de transporte que acompanham as necessidades da rotina da sua empresa.</p>
-        <ul class="home-business-topics" aria-label="Soluções empresariais">
-          <li>Distribuição</li><li>Rotas programadas</li><li>E-commerce</li><li>Operações recorrentes</li>
-        </ul>
-        <a class="home-link home-link-light" href="/para-empresas">Conhecer soluções para empresas <Arrow diagonal size={20} /></a>
+  <section class="h6-company" aria-labelledby="company-title">
+    <div class="h6-container">
+      <div class="h6-since-line"><p class="h6-eyebrow">03 / Uma história em movimento</p><span>Desde</span></div>
+      <h2 id="company-title" class="h6-year" style={`--year-photo:url('${yearPhoto.src}')`}>{homeContentReview.companySince.value}</h2>
+      <div class="h6-year-caption"><p>Conectando caminhos.<br/>Movendo entregas.</p><a class="h6-text-link" href="/sobre">Sobre a TKS <span aria-hidden="true">↗</span></a></div>
+      <div class="h6-business">
+        <figure class="h6-business-window"><Image src={media.warehouse} alt="Pessoa com prancheta em um armazém, em fotografia editorial de operação logística." widths={[480,800,1200]} sizes="(max-width: 700px) calc(100vw - 44px), 45vw" format="webp" quality={82} loading="lazy"/></figure>
+        <div class="h6-business-copy"><p class="h6-eyebrow">Para empresas</p><h2>Sua operação<br/>tem uma rotina.<br/>A entrega também.</h2><p>Conte com a TKS para avaliar o transporte que faz parte do dia a dia da sua empresa.</p><dl><div><dt>Distribuição</dt><dd>Mercadorias com vários destinos.</dd></div><div><dt>Rotas programadas</dt><dd>Coletas e entregas planejadas.</dd></div><div><dt>E-commerce</dt><dd>Produtos a caminho de quem comprou.</dd></div><div><dt>Operações recorrentes</dt><dd>Transporte que acompanha sua rotina.</dd></div></dl><a class="h6-text-link h6-safe-action" href="/para-empresas">Conheça as soluções para empresas <span aria-hidden="true">↗</span></a></div>
       </div>
     </div>
   </section>
 
-  <section class="home-history" aria-labelledby="history-title">
-    <div class="container home-history-layout" data-reveal>
-      <p class="home-history-year"><span class="home-label">Desde</span><span>{homeContentReview.companySince.value}</span></p>
-      <div class="home-history-copy">
-        <h2 id="history-title">É desde lá que a TKS<br/>está na estrada.</h2>
-        <p>Soluções de transporte para pessoas e empresas.</p>
-        <ul class="home-history-points">
-          <li>Atendimento próximo</li><li>Diferentes soluções</li><li>Pontual ou recorrente</li>
-        </ul>
-      </div>
-      {homeMedia.history && (
-        <figure class="home-history-photo" style={`--history-photo-position: ${homeMedia.history.position ?? 'center'}; --history-photo-position-mobile: ${homeMedia.history.mobilePosition ?? homeMedia.history.position ?? 'center'};`}>
-          <Image src={homeMedia.history.src} alt={homeMedia.history.alt} widths={[640, 960, 1440]} sizes="(max-width: 700px) calc(100vw - 48px), 90vw" format="webp" loading="lazy" decoding="async" />
-        </figure>
-      )}
-    </div>
-  </section>
-
-  <section class="home-closing" aria-labelledby="closing-title">
-    <div class="container home-closing-inner" data-reveal>
-      <h2 id="closing-title">Tem algo para<br/>transportar?</h2>
-      <a class="button home-closing-action" href="/orcamento">Solicitar orçamento <Arrow diagonal size={24}/></a>
-    </div>
-  </section>
-</Layout>
-
-<script>
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if (!reducedMotion.matches && 'IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        entry.target.classList.add('is-revealed');
-        observer.unobserve(entry.target);
-      }
-    }, { threshold: 0.06 });
-    for (const element of document.querySelectorAll<HTMLElement>('[data-reveal]')) {
-      element.classList.add('reveal-ready');
-      observer.observe(element);
-    }
-    reducedMotion.addEventListener('change', event => {
-      if (!event.matches) return;
-      observer.disconnect();
-      document.querySelectorAll('.reveal-ready').forEach(element => element.classList.add('is-revealed'));
-    });
-  }
-</script>
+  <section class="h6-closing" aria-labelledby="closing-title"><div class="h6-container"><p class="h6-eyebrow">O próximo movimento começa aqui.</p><h2 id="closing-title"><span>Conte para a TKS</span><span>o que precisa</span><span>transportar.</span></h2><div class="h6-closing-actions"><a class="h6-primary h6-safe-action" href="/orcamento">Solicitar orçamento <span aria-hidden="true">↗</span></a><a class="h6-text-link h6-safe-action" href={homeContactHref}>Fale com a TKS <span aria-hidden="true">↗</span></a></div></div></section>
+</HomeExperience>

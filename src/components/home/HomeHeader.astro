@@ -1,0 +1,27 @@
+---
+const links = [
+  ['Soluções', '/servicos'], ['Frota', '/frota'], ['Para empresas', '/para-empresas'],
+  ['Sobre a TKS', '/sobre'], ['Blog', '/blog'], ['Contato', '/contato'],
+];
+---
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="h6-header" data-home-header>
+  <div class="h6-container h6-header-inner">
+    <a class="h6-logo" href="/" aria-label="TKS Entregas — início">
+      <img class="h6-logo-white" src="/brand/TKS_compacto_branco.svg" alt="" width="125" height="57"/>
+      <img class="h6-logo-blue" src="/brand/TKS_compacto_azul.svg" alt="" width="125" height="57"/>
+    </a>
+    <nav class="h6-desktop-nav" aria-label="Navegação principal">
+      {links.map(([label, href]) => <a href={href}>{label}</a>)}
+    </nav>
+    <a class="h6-header-quote h6-safe-action" href="/orcamento"><span class="h6-quote-long">Solicitar orçamento</span><span class="h6-quote-short">Orçamento</span><span aria-hidden="true"> ↗</span></a>
+    <details class="h6-menu" data-home-menu>
+      <summary aria-label="Abrir menu" aria-controls="home-mobile-menu"><span></span><span></span></summary>
+      <nav id="home-mobile-menu" class="h6-mobile-nav" aria-label="Navegação principal no celular">
+        <div class="h6-eyebrow">Do documento à carga.</div>
+        {links.map(([label, href], index) => <a href={href}><span>{String(index + 1).padStart(2, '0')}</span>{label}</a>)}
+        <a class="h6-mobile-quote" href="/orcamento">Solicitar orçamento <span aria-hidden="true">↗</span></a>
+      </nav>
+    </details>
+  </div>
+</header>

@@ -1,0 +1,228 @@
+{
+  "selection": [
+    {
+      "name": "city-blue-brazil",
+      "role": "hero candidate A",
+      "author": "Lucas Pezeta",
+      "source_url": "https://www.pexels.com/photo/modern-city-street-with-road-at-night-time-5981771/",
+      "direct_url": "https://images.pexels.com/photos/5981771/pexels-photo-5981771.jpeg?cs=srgb&dl=pexels-lucaspezeta-5981771.jpg&fm=jpg",
+      "source_ref": "turn22view0",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "location": "São Paulo, Brasil (conforme página do autor)",
+      "alt": "Avenida urbana em São Paulo à noite, com veículos em circulação e prédios iluminados.",
+      "crop": "Desktop 16:9 ou 21:9, object-position: 50% 62%; mobile 4:5 com a avenida ao centro. Evitar cortar excessivamente a pista.",
+      "assessment": "Horizontal, ótima base full-bleed. Ambiente navy real, sem pôr do sol. Fachadas ao fundo; nenhuma marca comercial dominante.",
+      "original_dimensions": [
+        5538,
+        3692
+      ],
+      "original_file": "originals/city-blue-brazil.jpg",
+      "file": "city-blue-brazil.webp",
+      "dimensions": [
+        2400,
+        1600
+      ],
+      "bytes": 394518,
+      "small_file": "city-blue-brazil-small.webp",
+      "placeholder": true,
+      "is_generated": false,
+      "license_verified_at": "2026-10-07",
+      "purpose": "Imagem editorial temporária; substituir por fotografia real da TKS quando disponível."
+    },
+    {
+      "name": "street-trails-brazil",
+      "role": "hero candidate B",
+      "author": "Luiz Fernando",
+      "source_url": "https://www.pexels.com/photo/a-car-on-road-at-night-time-9023984/",
+      "direct_url": "https://images.pexels.com/photos/9023984/pexels-photo-9023984.jpeg?cs=srgb&dl=pexels-forgottenluix-9023984.jpg&fm=jpg",
+      "source_ref": "turn22view1",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "location": "São Paulo, SP, Brasil (conforme página do autor)",
+      "alt": "Vista superior de rua paulistana à noite, faixas no asfalto e luzes de veículos em movimento.",
+      "crop": "Original vertical. Desktop 16:9 corte da faixa média/baixa; object-position: 50% 63%. Mobile manter 4:5 e pista diagonal.",
+      "assessment": "Mais próximo de asfalto, movimento e linhas de velocidade. Dark navy discreto. Espaço visual escuro útil para tipografia. Sem marcas evidentes.",
+      "original_dimensions": [
+        3823,
+        5734
+      ],
+      "original_file": "originals/street-trails-brazil.jpg",
+      "file": "street-trails-brazil.webp",
+      "dimensions": [
+        1600,
+        2400
+      ],
+      "bytes": 99220,
+      "small_file": "street-trails-brazil-small.webp",
+      "placeholder": true,
+      "is_generated": false,
+      "license_verified_at": "2026-10-07",
+      "purpose": "Imagem editorial temporária; substituir por fotografia real da TKS quando disponível."
+    },
+    {
+      "name": "fog-street-brazil",
+      "role": "hero candidate C / alternative mood",
+      "author": "Eduardo Soares",
+      "source_url": "https://unsplash.com/photos/white-car-on-road-during-night-time-0s-ErDeRQBw",
+      "direct_url": "https://images.unsplash.com/photo-1601418445907-06ac8eb824e0?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+      "source_ref": "turn23view1",
+      "license": "Unsplash License (gratuita; não Unsplash+)",
+      "license_url": "https://unsplash.com/license",
+      "location": "Brasil (conforme página do autor)",
+      "alt": "Faróis de um veículo atravessando rua brasileira à noite, com névoa e reflexos azuis no asfalto.",
+      "crop": "Original vertical. Desktop 16:9 com object-position: 50% 72% para preservar faróis e chão; mobile 4:5 mantém poste/luz e veículo.",
+      "assessment": "Muito cinematográfica, navy e ciano de iluminação real; sem logo aparente nem caminhão inteiro. Evitar overlay excessivo para faróis permanecerem legíveis.",
+      "original_dimensions": [
+        3000,
+        3750
+      ],
+      "original_file": "originals/fog-street-brazil.jpg",
+      "file": "fog-street-brazil.webp",
+      "dimensions": [
+        1920,
+        2400
+      ],
+      "bytes": 385758,
+      "small_file": "fog-street-brazil-small.webp",
+      "placeholder": true,
+      "is_generated": false,
+      "license_verified_at": "2026-10-07",
+      "purpose": "Imagem editorial temporária; substituir por fotografia real da TKS quando disponível."
+    },
+    {
+      "name": "parcel-handoff",
+      "role": "documents / small volumes",
+      "author": "Kindel Media",
+      "source_url": "https://www.pexels.com/photo/a-person-handing-over-delivery-packages-6994138/",
+      "direct_url": "https://images.pexels.com/photos/6994138/pexels-photo-6994138.jpeg?cs=srgb&dl=pexels-kindelmedia-6994138.jpg&fm=jpg",
+      "source_ref": "turn16view1",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "location": null,
+      "alt": "Mãos entregando envelopes e um pequeno volume embalado.",
+      "crop": "16:9 natural; 4:3 centrado em 50% 55%. Manter as duas mãos e pacote como gesto principal.",
+      "assessment": "Fotografia real com mãos e envelopes, rostos fora de quadro e sem marcas comerciais evidentes.",
+      "original_dimensions": [
+        5061,
+        2851
+      ],
+      "original_file": "originals/parcel-handoff.jpg",
+      "file": "parcel-handoff.webp",
+      "dimensions": [
+        2400,
+        1352
+      ],
+      "bytes": 130306,
+      "small_file": "parcel-handoff-small.webp",
+      "placeholder": true,
+      "is_generated": false,
+      "license_verified_at": "2026-10-07",
+      "purpose": "Imagem editorial temporária; substituir por fotografia real da TKS quando disponível."
+    },
+    {
+      "name": "parcel-detail",
+      "role": "delivery / handling detail",
+      "author": "RDNE Stock project",
+      "source_url": "https://www.pexels.com/photo/close-up-photo-of-a-parcel-7362924/",
+      "direct_url": "https://images.pexels.com/photos/7362924/pexels-photo-7362924.jpeg?cs=srgb&dl=pexels-rdne-7362924.jpg&fm=jpg",
+      "source_ref": "turn16view3",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "location": null,
+      "alt": "Detalhe de mãos segurando o carrinho de transporte de uma caixa.",
+      "crop": "3:2 ou 4:3 com object-position: 50% 42%; valorizar mãos e caixa. Evitar usar como foto minúscula que deixe etiqueta como ruído.",
+      "assessment": "Detalhe operacional, roupas escuras e embalagem neutra. Etiquetas de transporte sem marca comercial dominante.",
+      "original_dimensions": [
+        5740,
+        3827
+      ],
+      "original_file": "originals/parcel-detail.jpg",
+      "file": "parcel-detail.webp",
+      "dimensions": [
+        2400,
+        1600
+      ],
+      "bytes": 142378,
+      "small_file": "parcel-detail-small.webp",
+      "placeholder": true,
+      "is_generated": false,
+      "license_verified_at": "2026-10-07",
+      "purpose": "Imagem editorial temporária; substituir por fotografia real da TKS quando disponível."
+    },
+    {
+      "name": "warehouse-operation",
+      "role": "business operations / recurring logistics",
+      "author": "Daniel Andraski",
+      "source_url": "https://www.pexels.com/photo/person-with-clipboard-in-warehouse-12234108/",
+      "direct_url": "https://images.pexels.com/photos/12234108/pexels-photo-12234108.jpeg?cs=srgb&dl=pexels-daniel-andraski-197681005-12234108.jpg&fm=jpg",
+      "source_ref": "turn16view2",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "location": "Curitiba, PR, Brasil (conforme página do autor)",
+      "alt": "Silhueta de profissional consultando prancheta entre estantes de um depósito.",
+      "crop": "16:9: object-position: 50% 62%; retrato 4:5 manter pessoa e corredor ao centro.",
+      "assessment": "Bom B2B editorial. Silhueta sem rosto identificável, luz natural e nenhum logo evidente. Não identificar local/pessoa como pertencente à TKS.",
+      "original_dimensions": [
+        5794,
+        3863
+      ],
+      "original_file": "originals/warehouse-operation.jpg",
+      "file": "warehouse-operation.webp",
+      "dimensions": [
+        2400,
+        1600
+      ],
+      "bytes": 154620,
+      "small_file": "warehouse-operation-small.webp",
+      "placeholder": true,
+      "is_generated": false,
+      "license_verified_at": "2026-10-07",
+      "purpose": "Imagem editorial temporária; substituir por fotografia real da TKS quando disponível."
+    },
+    {
+      "name": "pallet-warehouse",
+      "role": "cargo / distribution",
+      "author": "Freek Wolsink",
+      "source_url": "https://www.pexels.com/photo/industrial-warehouse-with-stacked-cardboard-boxes-34221998/",
+      "direct_url": "https://images.pexels.com/photos/34221998/pexels-photo-34221998.jpeg?cs=srgb&dl=pexels-freek-wolsink-508219-34221998.jpg&fm=jpg",
+      "source_ref": "turn28view0",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "location": null,
+      "alt": "Paletes com caixas embaladas em filme plástico dentro de um galpão.",
+      "crop": "4:3 ou 16:9: object-position: 72% 55%, preferir metade direita com caixas neutras; à esquerda há uma etiqueta incidental pequena.",
+      "assessment": "Carga paletizada real. Tom natural kraft/neutro; corte na direita evita etiqueta com marca incidental.",
+      "original_dimensions": [
+        6000,
+        4000
+      ],
+      "original_file": "originals/pallet-warehouse.jpg",
+      "file": "pallet-warehouse.webp",
+      "dimensions": [
+        2400,
+        1600
+      ],
+      "bytes": 399290,
+      "small_file": "pallet-warehouse-small.webp",
+      "placeholder": true,
+      "is_generated": false,
+      "license_verified_at": "2026-10-07",
+      "purpose": "Imagem editorial temporária; substituir por fotografia real da TKS quando disponível."
+    }
+  ],
+  "license_sources": [
+    {
+      "url": "https://www.pexels.com/license/",
+      "ref": "turn12view0",
+      "verified": "2026-10-07",
+      "summary": "Uso gratuito em websites e marketing; edição permitida; atribuição não obrigatória. Não insinuar endosso por pessoas ou marcas."
+    },
+    {
+      "url": "https://unsplash.com/license",
+      "ref": "turn12view1",
+      "verified": "2026-10-07",
+      "summary": "Licença gratuita para uso comercial e não comercial; permissão e atribuição não obrigatórias; exclusões para venda inalterada e serviço concorrente."
+    }
+  ]
+}
