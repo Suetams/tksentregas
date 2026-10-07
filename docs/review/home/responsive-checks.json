@@ -1,0 +1,236 @@
+[
+  {
+    "width": 1440,
+    "height": 4994,
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 104,
+      "width": 1440,
+      "height": 850
+    },
+    "fleet": {
+      "x": 0,
+      "y": 1692.578125,
+      "width": 1440,
+      "height": 868.21875
+    },
+    "businessOverlap": false,
+    "broken": [],
+    "panelHeights": [
+      {
+        "name": "Moto",
+        "height": 533.140625
+      },
+      {
+        "name": "Utilitário",
+        "height": 533.140625
+      },
+      {
+        "name": "Van / Furgão",
+        "height": 533.140625
+      },
+      {
+        "name": "Caminhão 3/4",
+        "height": 533.140625
+      }
+    ],
+    "errors": [],
+    "badResponses": []
+  },
+  {
+    "width": 1024,
+    "height": 4205,
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 80,
+      "width": 1024,
+      "height": 800
+    },
+    "fleet": {
+      "x": 0,
+      "y": 1549.09375,
+      "width": 1024,
+      "height": 689.78125
+    },
+    "businessOverlap": false,
+    "broken": [],
+    "panelHeights": [
+      {
+        "name": "Moto",
+        "height": 378.875
+      },
+      {
+        "name": "Utilitário",
+        "height": 378.875
+      },
+      {
+        "name": "Van / Furgão",
+        "height": 378.875
+      },
+      {
+        "name": "Caminhão 3/4",
+        "height": 378.875
+      }
+    ],
+    "errors": [],
+    "badResponses": []
+  },
+  {
+    "width": 768,
+    "height": 4117,
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 80,
+      "width": 768,
+      "height": 762.125
+    },
+    "fleet": {
+      "x": 0,
+      "y": 1470.625,
+      "width": 768,
+      "height": 643.671875
+    },
+    "businessOverlap": false,
+    "broken": [],
+    "panelHeights": [
+      {
+        "name": "Moto",
+        "height": 320
+      },
+      {
+        "name": "Utilitário",
+        "height": 320
+      },
+      {
+        "name": "Van / Furgão",
+        "height": 320
+      },
+      {
+        "name": "Caminhão 3/4",
+        "height": 320
+      }
+    ],
+    "errors": [],
+    "badResponses": []
+  },
+  {
+    "width": 430,
+    "height": 4335,
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 80,
+      "width": 430,
+      "height": 649.53125
+    },
+    "fleet": {
+      "x": 0,
+      "y": 1361.90625,
+      "width": 430,
+      "height": 834.21875
+    },
+    "businessOverlap": false,
+    "broken": [],
+    "panelHeights": [
+      {
+        "name": "Moto",
+        "height": 470.65625
+      },
+      {
+        "name": "Utilitário",
+        "height": 470.65625
+      },
+      {
+        "name": "Van / Furgão",
+        "height": 470.65625
+      },
+      {
+        "name": "Caminhão 3/4",
+        "height": 470.65625
+      }
+    ],
+    "errors": [],
+    "badResponses": []
+  },
+  {
+    "width": 390,
+    "height": 4229,
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 80,
+      "width": 390,
+      "height": 618.625
+    },
+    "fleet": {
+      "x": 0,
+      "y": 1323.8125,
+      "width": 390,
+      "height": 802.53125
+    },
+    "businessOverlap": false,
+    "broken": [],
+    "panelHeights": [
+      {
+        "name": "Moto",
+        "height": 444
+      },
+      {
+        "name": "Utilitário",
+        "height": 444
+      },
+      {
+        "name": "Van / Furgão",
+        "height": 444
+      },
+      {
+        "name": "Caminhão 3/4",
+        "height": 444
+      }
+    ],
+    "errors": [],
+    "badResponses": []
+  },
+  {
+    "width": 360,
+    "height": 4231,
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 80,
+      "width": 360,
+      "height": 668.828125
+    },
+    "fleet": {
+      "x": 0,
+      "y": 1374.015625,
+      "width": 360,
+      "height": 787.859375
+    },
+    "businessOverlap": false,
+    "broken": [],
+    "panelHeights": [
+      {
+        "name": "Moto",
+        "height": 429.328125
+      },
+      {
+        "name": "Utilitário",
+        "height": 429.328125
+      },
+      {
+        "name": "Van / Furgão",
+        "height": 429.328125
+      },
+      {
+        "name": "Caminhão 3/4",
+        "height": 429.328125
+      }
+    ],
+    "errors": [],
+    "badResponses": []
+  }
+]

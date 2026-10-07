@@ -8,19 +8,24 @@
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview --host 0.0.0.0",
     "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
-    "test": "playwright test"
+    "lint": "eslint src --max-warnings 0",
+    "test": "playwright test",
+    "test:home-contract": "node --experimental-strip-types --test tests/home-contract.test.mjs"
   },
   "dependencies": {
-    "@fontsource/dm-sans": "^5.3.0",
-    "@fontsource/manrope": "^5.3.0",
     "astro": "^5.14.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@axe-core/playwright": "^4.13.0",
+    "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.55.0",
     "@types/node": "^26.6.4",
-    "typescript": "^5.9.0"
+    "eslint": "^10.12.0",
+    "eslint-plugin-astro": "^3.2.1",
+    "globals": "^17.13.0",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.71.1"
   },
   "engines": {
     "node": "^22.12.0 || ^24.0.0"

@@ -1,0 +1,9 @@
+{
+  "source": "Netlify bot comment on GitHub PR 4, HTTP 200",
+  "commit": "e61985da00c28bf38962d9cc7c0f958b88e91954",
+  "status": "ready",
+  "preview_url": "https://deploy-preview-4--resilient-baklava-3561ee.netlify.app/",
+  "deploy_log_url": "https://app.netlify.com/projects/resilient-baklava-3561ee/deploys/6ac5a724d5006e000887f8c6",
+  "direct_preview_http_checked": false,
+  "production_deploy": false
+}

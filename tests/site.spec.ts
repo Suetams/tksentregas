@@ -20,7 +20,7 @@ test('fleet selection supports click and keyboard',async({page})=>{
  await page.getByRole('tab',{name:'Van e furgão'}).press('ArrowRight');await expect(page.getByRole('tab',{name:'Caminhão 3/4'})).toHaveAttribute('aria-selected','true');
 });
 test('menu returns focus on Escape',async({page},info)=>{
- await page.goto('/');const button=page.locator('.menu-button');if(info.project.name!=='mobile'){await expect(button).toBeHidden();await expect(page.locator('.desktop-nav')).toBeVisible();return;}await button.click();await expect(button).toHaveAttribute('aria-expanded','true');await page.keyboard.press('Escape');await expect(button).toBeFocused();await expect(button).toHaveAttribute('aria-expanded','false');
+ await page.goto('/');const button=page.locator('[data-home-menu] summary');if(info.project.name!=='mobile'){await expect(button).toBeHidden();await expect(page.locator('.h6-desktop-nav')).toBeVisible();return;}await button.click();await expect(button).toHaveAttribute('aria-expanded','true');await page.keyboard.press('Escape');await expect(button).toBeFocused();await expect(button).toHaveAttribute('aria-expanded','false');
 });
 test('preselection ignores unknown categories and recurring mode is selected',async({page})=>{
  await page.goto('/orcamento?necessidade=recorrente');await expect(page.locator('#need')).toHaveValue('recorrente');await expect(page.locator('input[name="operation"][value="recorrente"]')).toBeChecked();
