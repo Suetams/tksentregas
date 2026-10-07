@@ -1,0 +1,21 @@
+{
+  "name": "TKS Entregas",
+  "short_name": "TKS",
+  "icons": [
+    {
+      "src": "icone_T_192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icone_T_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#011E3E",
+  "background_color": "#FFFFFF",
+  "display": "standalone"
+}
