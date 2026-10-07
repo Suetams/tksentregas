@@ -38,6 +38,8 @@ Inspeção e capturas em 1440, 1280, 1024, 768, 430, 390 e 360 px, incluindo ide
 
 Capturas e medições de laboratório ficam fora do código publicado, em `/workspace/artifacts/tks-home-v4`. Métricas locais não certificam Core Web Vitals de campo, especialmente INP.
 
+Laboratório final: seis rodadas frias, CPU 4×, rede 1,6 Mbps e latência 150 ms. LCP mediano 1,552 s mobile e 1,532 s desktop; CLS máximo 0,001753; Event Timing do seletor entre 16–48 ms. Rubik Bold no H1 e Regular no texto comprovadas via CDP nas seis amostras. Transferência inicial aproximada de 401 KB; nenhum erro HTTP, request falho ou overflow. Event Timing não equivale a INP de campo.
+
 ## Arquivos principais
 
 - `src/pages/index.astro`, `src/layouts/Layout.astro`

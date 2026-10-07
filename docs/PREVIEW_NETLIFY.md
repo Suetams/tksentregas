@@ -1,6 +1,6 @@
 # Prévia HOME V4 na Netlify
 
-O usuário informou que conectou `Suetams/tksentregas` à Netlify. A HOME V4 deve ser entregue pela branch `preview/home-v4`. Essa conexão permite à Netlify buscar os commits e executar o build, sem um token Netlify no ambiente de desenvolvimento.
+O usuário forneceu o projeto Netlify `endearing-pie-27937b`. Durante a configuração, confirmou que a interface ainda apresenta **Link repository**, portanto a vinculação Git não foi concluída. A HOME V4 já está enviada na branch `preview/home-v4`. Depois de conectar `Suetams/tksentregas`, a integração pode buscar os commits e executar o build sem um token Netlify no ambiente de desenvolvimento.
 
 O usuário forneceu o endereço base do projeto Netlify: <https://endearing-pie-27937b.netlify.app/>. Esse endereço ainda não foi verificado neste ambiente e não confirma que a HOME V4 está publicada; pode corresponder à branch de produção configurada na Netlify.
 
@@ -8,7 +8,7 @@ A consulta somente de leitura recebeu `CONNECT tunnel failed, response 403` do p
 
 ## Caminho recomendado: branch deploy
 
-1. No projeto Netlify conectado a `Suetams/tksentregas`, abrir a configuração de builds, branches e contextos de deploy.
+1. Se aparecer **Link repository**, conectar GitHub e selecionar `Suetams/tksentregas`. Comando de build `npm run build`, pasta publicada `dist`, diretório base vazio (raiz do repositório). Depois abrir a configuração de builds, branches e contextos de deploy.
 2. Manter a branch de produção atual. Na configuração de **branch deploys**, se estiver selecionado **None**, editar, escolher **Let me add individual branches** (ou a opção equivalente de branches específicas), adicionar o nome completo `preview/home-v4` e salvar. Se já houver branches específicas, acrescentar essa branch preservando as existentes.
 3. Enviar a versão validada para `preview/home-v4`. Um novo commit nessa branch deve acionar o build, desde que a integração e os builds estejam ativos.
 4. Na lista de deploys, conferir o nome da branch, o commit e o contexto **branch-deploy**. Aguardar o build terminar com sucesso.

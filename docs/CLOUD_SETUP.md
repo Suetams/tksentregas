@@ -25,4 +25,4 @@ Para validar, executar `npm run check`, `npm run lint --if-present`, `npm run bu
 
 Prévia de revisão foi autorizada, mas depende de hospedagem conectada e acesso de rede. Não publicar em produção nem conectar o domínio comercial. Não enviar mensagens de teste ao comercial. Não solicitar senhas ou valores de tokens no chat.
 
-WhatsApp permanece desativado enquanto `PUBLIC_TKS_WHATSAPP` estiver vazio. Configurá-lo apenas após confirmação explícita do número público internacional da TKS. Rebuild necessário. Preservar controles internos de dados, fotografias e marca pendentes; não inventar informações. `noindex` e robots continuam ativos. Publicar o ambiente cloud não equivale a publicar o site da TKS.
+WhatsApp permanece desativado enquanto `PUBLIC_TKS_WHATSAPP` estiver vazio. Configurá-lo apenas após confirmação explícita do número público internacional da TKS. Rebuild necessário. Preservar controles internos de dados e fotografias pendentes; não inventar informações. Logo SVG, azul #011E3E e fontes Rubik agora vêm do pacote oficial recebido para a V4. `noindex` e robots continuam ativos. Publicar o ambiente cloud não equivale a publicar o site da TKS.
