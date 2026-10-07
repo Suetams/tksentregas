@@ -9,8 +9,8 @@ export const homeContentReview = {
 } as const;
 
 export const homeNeeds = [
-  { id: 'documentos', title: 'Documentos' },
-  { id: 'mercadorias', title: 'Mercadorias' },
+  { id: 'documentos', title: 'Documentos e pequenos volumes' },
+  { id: 'mercadorias', title: 'Mercadorias e peças' },
   { id: 'carga', title: 'Cargas maiores' },
-  { id: 'recorrente', title: 'Operação empresarial' },
+  { id: 'recorrente', title: 'Operação para empresas' },
 ] as const;

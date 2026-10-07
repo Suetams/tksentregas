@@ -1,6 +1,8 @@
 import hero from '../assets/home-v3-hero.png';
 import vehicles from '../assets/home-v3-vehicles.png';
 import operation from '../assets/warehouse.png';
+import type { ImageMetadata } from 'astro';
+import type { HomeFleetCategory } from './home-fleet';
 
 /**
  * Internal media register. These generated development placeholders depict
@@ -8,7 +10,22 @@ import operation from '../assets/warehouse.png';
  * Replace each source with approved company photography before publication.
  * Keep the original company logo outside this conceptual image pipeline.
  */
-export const homeMedia = { hero, fleet: vehicles, operation } as const;
+interface HomeMedia {
+  hero: ImageMetadata;
+  fleet: ImageMetadata;
+  operation: ImageMetadata;
+  history?: { src: ImageMetadata; alt: string; position?: string; mobilePosition?: string };
+}
+export const homeMedia: HomeMedia = { hero, fleet: vehicles, operation };
+
+/** Add approved individual photographs here; the showcase uses the conceptual
+ * category board only when a category has no individual photo configured. */
+export const homeFleetPhotos: Partial<Record<HomeFleetCategory['id'], {
+  src: ImageMetadata;
+  alt: string;
+  position?: string;
+  mobilePosition?: string;
+}>> = {};
 
 export const homeMediaReview = {
   status: 'conceptual-development-placeholder',

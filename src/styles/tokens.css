@@ -1,30 +1,31 @@
-/* TKS foundations. Local variable fonts, restrained geometry and shared rhythm. */
+/* TKS V4: official identity package, local Rubik Regular/Bold.
+ * Hover: institutional blue mixed with 16% black (#011934).
+ * Focus: original institutional blue. No decorative blue palette. */
 @font-face {
-  font-family: 'Manrope';
+  font-family: 'Rubik';
   font-style: normal;
-  font-weight: 200 800;
+  font-weight: 400;
   font-display: swap;
-  src: url('@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2') format('woff2');
+  src: url('../assets/fonts/Rubik-Regular.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'DM Sans';
+  font-family: 'Rubik';
   font-style: normal;
-  font-weight: 100 1000;
+  font-weight: 700;
   font-display: swap;
-  src: url('@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2') format('woff2');
+  src: url('../assets/fonts/Rubik-Bold.woff2') format('woff2');
 }
 :root {
-  --color-brand: #0066ff;
-  --color-brand-hover: #0054d6;
-  --color-brand-on-dark: #398eff;
-  --color-navy: #071723;
-  --color-text: #101820;
-  --color-muted: #637080;
-  --color-surface: #f3f4f3;
-  --color-border: #dce3e0;
-  --color-on-dark: #f7f8fa;
-  --font-display: 'Manrope', Arial, sans-serif;
-  --font-body: 'DM Sans', Arial, sans-serif;
+  --color-brand: #011E3E;
+  --color-brand-hover: #011934;
+  --color-navy: var(--color-brand);
+  --color-text: #111111;
+  --color-muted: #626262;
+  --color-surface: #ffffff;
+  --color-border: #dedede;
+  --color-on-dark: #ffffff;
+  --font-display: 'Rubik', Arial, sans-serif;
+  --font-body: 'Rubik', Arial, sans-serif;
   --space-1: .25rem;
   --space-2: .5rem;
   --space-3: .75rem;
@@ -34,49 +35,48 @@
   --space-12: 3rem;
   --space-16: 4rem;
   --space-24: 6rem;
-  --space-section: clamp(4rem, 7.5vw, 7rem);
-  --space-section-mobile: var(--space-section);
-  --radius-small: 3px;
-  --radius-medium: 7px;
-  --radius-large: 12px;
-  --shadow-subtle: 0 4px 16px #07172305;
-  --shadow-nav: 0 1px 0 #07172312;
-  --container-max: 1280px;
-  --container-gutter: max(4.5vw, calc((100vw - var(--container-max)) / 2));
+  --space-32: 8rem;
+  --space-40: 10rem;
+  --space-section: clamp(4rem, 8vw, 8rem);
+  --space-section-mobile: 4rem;
+  --radius-small: 2px;
+  --radius-medium: 4px;
+  --radius-large: 8px;
+  --shadow-subtle: 0 2px 8px #00000005;
+  --shadow-nav: 0 1px 0 #00000014;
+  --container-max: 1440px;
+  --container-gutter: clamp(24px, 5vw, 80px);
   --container-reading: 42rem;
-  --transition-fast: 220ms cubic-bezier(.2,.65,.3,1);
-  --transition-base: var(--transition-fast);
-  --transition-image: 420ms cubic-bezier(.2,.65,.3,1);
-  /* Existing pages retain their original variable names and layouts. */
+  --transition-easing: cubic-bezier(.2,.65,.3,1);
+  --transition-fast: 180ms var(--transition-easing);
+  --transition-base: 280ms var(--transition-easing);
+  --transition-slow: 480ms var(--transition-easing);
+  --transition-image: var(--transition-slow);
+  /* Legacy names preserve the existing page layouts. */
   --blue: var(--color-brand);
   --blue-dark: var(--color-brand-hover);
   --navy: var(--color-navy);
   --ink: var(--color-text);
   --muted: var(--color-muted);
 }
-.home-v3 .container {
+body { font-family: var(--font-body); }
+h1, h2, h3 { font-family: var(--font-display); }
+.home-v4 .container {
   width: calc(100% - var(--container-gutter) * 2);
   max-width: var(--container-max);
 }
-.home-v3 {
-  font-family: var(--font-body);
-}
-.home-v3 h1, .home-v3 h2, .home-v3 h3 {
-  font-family: var(--font-display);
-}
-.home-v3 .button {
+.home-v4 .button {
   border-radius: var(--radius-small);
+  font-weight: 700;
 }
-.home-v3 a {
-  transition: color var(--transition-fast);
+.home-v4 a { transition: color var(--transition-fast); }
+.home-v4 :focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 6px;
 }
-@media (max-width: 700px) {
-  :root {
-    --container-gutter: 24px;
-  }
-}
+.home-v4 .home-business :focus-visible,
+.home-v4 .home-closing :focus-visible,
+.home-v4 .site-footer :focus-visible { outline-color: white; }
 @media (max-width: 370px) {
-  :root {
-    --container-gutter: 20px;
-  }
+  :root { --container-gutter: 20px; }
 }

@@ -3,8 +3,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import '../styles/tokens.css';
-import displayFont from '@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2?url';
+import displayFont from '../assets/fonts/Rubik-Bold.woff2?url';
 interface Props { title: string; description?: string; home?: boolean; }
 const {title,home = false,description='Do documento à carga. Encontre uma solução e prepare sua solicitação de orçamento para a TKS Entregas.'}=Astro.props;
 ---
-<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><meta name="robots" content="noindex,nofollow"/><meta name="theme-color" content="#0066ff"/><title>{title} | TKS Entregas</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin/></head><body class:list={{ "home-v3": home }}><Header/><main id="conteudo" tabindex="-1"><slot/></main><Footer/></body></html>
+<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><meta name="robots" content="noindex,nofollow"/><meta name="theme-color" content="#011E3E"/><title>{title} | TKS Entregas</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><link rel="icon" href="/favicon.ico" sizes="any"/><link rel="apple-touch-icon" href="/icone_T_180.png"/><link rel="manifest" href="/site.webmanifest"/><link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin/></head><body class:list={{ "home-v4": home }}><Header/><main id="conteudo" tabindex="-1"><slot/></main><Footer/></body></html>

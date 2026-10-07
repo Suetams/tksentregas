@@ -2,10 +2,10 @@ import { expect, test } from '@playwright/test';
 
 test('four transport paths prefill the existing quote flow', async ({ page }) => {
   const paths = [
-    { title: 'Documentos', need: 'documentos' },
-    { title: 'Mercadorias', need: 'mercadorias' },
+    { title: 'Documentos e pequenos volumes', need: 'documentos' },
+    { title: 'Mercadorias e peças', need: 'mercadorias' },
     { title: 'Cargas maiores', need: 'carga' },
-    { title: 'Operação empresarial', need: 'recorrente' },
+    { title: 'Operação para empresas', need: 'recorrente' },
   ];
 
   for (const path of paths) {
@@ -120,18 +120,59 @@ test('reduced motion keeps editorial content visible and removes selector animat
   expect(await fleet.getByRole('tabpanel').locator('[data-hf-image]').evaluate(element => getComputedStyle(element).animationName)).toBe('none');
 });
 
-test('navigation remains reachable and touch-friendly across the required viewport widths', async ({ page }) => {
-  for (const width of [1440, 1024, 768, 430, 360]) {
+test('official identity and accessible navigation survive all required viewport widths', async ({ page }) => {
+  for (const width of [1440, 1280, 1024, 768, 430, 390, 360]) {
     await page.setViewportSize({ width, height: 900 });
     await page.goto('/');
     await page.evaluate(() => document.fonts.ready);
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
 
+    const fonts = await page.evaluate(() => {
+      const loaded = [...document.fonts]
+        .filter(font => font.family.replaceAll('"', '').replaceAll("'", '') === 'Rubik')
+        .map(font => ({ weight: font.weight, status: font.status }));
+      return {
+        loaded,
+        body: getComputedStyle(document.body).fontFamily,
+        heading: getComputedStyle(document.querySelector('h1')!).fontFamily,
+      };
+    });
+    expect(fonts.body, `body typography at ${width}px`).toContain('Rubik');
+    expect(fonts.heading, `headline typography at ${width}px`).toContain('Rubik');
+    expect(fonts.loaded, `official local font weights at ${width}px`).toEqual(expect.arrayContaining([
+      { weight: '400', status: 'loaded' },
+      { weight: '700', status: 'loaded' },
+    ]));
+
     const header = page.getByRole('banner');
+    const footer = page.getByRole('contentinfo');
+    const signatures = [
+      { location: header, compact: width <= 700, color: 'azul' },
+      { location: footer, compact: width <= 700, color: 'branco' },
+    ];
+    for (const signature of signatures) {
+      const brand = signature.location.getByRole('link', { name: 'TKS Entregas — início', exact: true });
+      await brand.scrollIntoViewIfNeeded();
+      const logo = brand.getByRole('img', { name: 'TKS Entregas', exact: true });
+      await expect.poll(() => logo.evaluate((element: HTMLImageElement) => element.complete && element.naturalWidth > 0)).toBe(true);
+      const rendered = await logo.evaluate((element: HTMLImageElement) => {
+        const box = element.getBoundingClientRect();
+        const style = getComputedStyle(element);
+        return { src: new URL(element.currentSrc).pathname, width: box.width, ratio: box.width / box.height, filter: style.filter, shadow: style.boxShadow };
+      });
+      const variant = signature.compact ? 'compacto' : 'horizontal';
+      expect(rendered.src, `official ${variant} ${signature.color} at ${width}px`).toBe(`/brand/TKS_${variant}_${signature.color}.svg`);
+      expect(rendered.width, `manual minimum logo width at ${width}px`).toBeGreaterThanOrEqual(signature.compact ? 64 : 320);
+      expect(rendered.ratio, `unaltered official proportions at ${width}px`).toBeCloseTo((signature.compact ? 309.5 : 613) / 109.5, 1);
+      expect(rendered.filter).toBe('none');
+      expect(rendered.shadow).toBe('none');
+      expect((await brand.textContent())!.trim(), 'the signature is an original asset, never replacement text').toBe('');
+    }
+    await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
     const quote = header.getByRole('link', { name: 'Solicitar orçamento', exact: true });
     await expect(quote).toBeInViewport();
     const menu = header.getByRole('button', { name: 'Abrir menu', exact: true });
-    if (width <= 1100) {
+    if (width < 1200) {
       await expect(menu).toBeVisible();
       const target = await menu.boundingBox();
       expect(target!.width, `menu width at ${width}px`).toBeGreaterThanOrEqual(44);
@@ -140,9 +181,25 @@ test('navigation remains reachable and touch-friendly across the required viewpo
       await menu.press('Enter');
       const navigation = page.getByRole('navigation', { name: 'Navegação mobile', exact: true });
       await expect(navigation.getByRole('link', { name: 'Soluções', exact: true })).toBeFocused();
+      await expect(page.locator('main')).toHaveAttribute('inert', '');
+      await expect(page.locator('.site-footer')).toHaveAttribute('inert', '');
+      const menuQuote = navigation.getByRole('link', { name: 'Solicitar orçamento', exact: true });
+      await menuQuote.focus();
+      await page.keyboard.press('Tab');
+      await expect(header.getByRole('link', { name: 'TKS Entregas — início', exact: true })).toBeFocused();
+      const focusStyle = await page.locator(':focus').evaluate(element => {
+        const style = getComputedStyle(element);
+        return { style: style.outlineStyle, width: parseFloat(style.outlineWidth) };
+      });
+      expect(focusStyle.style).not.toBe('none');
+      expect(focusStyle.width).toBeGreaterThanOrEqual(2);
+      await page.keyboard.press('Shift+Tab');
+      await expect(menuQuote).toBeFocused();
       await page.keyboard.press('Escape');
       await expect(navigation).toBeHidden();
       await expect(menu).toBeFocused();
+      await expect(page.locator('main')).not.toHaveAttribute('inert', '');
+      await expect(page.locator('.site-footer')).not.toHaveAttribute('inert', '');
     } else {
       await expect(menu).toBeHidden();
       await expect(header.getByRole('navigation', { name: 'Navegação principal' })).toBeVisible();

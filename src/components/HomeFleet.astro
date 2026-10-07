@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Arrow from './Arrow.astro';
 import { homeFleet } from '../data/home-fleet';
-import { homeMedia, homeFleetMediaFrames } from '../data/home-media';
+import { homeMedia, homeFleetMediaFrames, homeFleetPhotos } from '../data/home-media';
 import '../styles/home-fleet.css';
 ---
 
@@ -33,7 +33,10 @@ import '../styles/home-fleet.css';
       </div>
 
       <div class="hf-panels">
-        {homeFleet.map((category, index) => (
+        {homeFleet.map((category, index) => {
+          const photo = homeFleetPhotos[category.id];
+          const frame = homeFleetMediaFrames[category.id];
+          return (
           <div
             class="hf-panel"
             id={`hf-panel-${category.id}`}
@@ -42,8 +45,18 @@ import '../styles/home-fleet.css';
             tabindex="0"
             hidden={index !== 0}
           >
-            <div class="hf-visual" role="img" aria-label={`Representação da categoria ${category.label}`} data-hf-image style={`--hf-image-left: ${homeFleetMediaFrames[category.id].left}; --hf-image-top: ${homeFleetMediaFrames[category.id].top};`}>
-              <Image src={homeMedia.fleet} width={1536} format="webp" quality={82} alt="" loading="lazy" decoding="async" />
+            <div
+              class:list={['hf-visual', { 'hf-visual-direct': Boolean(photo) }]}
+              role="img"
+              aria-label={photo?.alt ?? `Representação da categoria ${category.label}`}
+              data-hf-image
+              style={photo
+                ? `--hf-photo-position: ${photo.position ?? 'center'}; --hf-photo-position-mobile: ${photo.mobilePosition ?? photo.position ?? 'center'};`
+                : `--hf-image-left: ${frame.left}; --hf-image-top: ${frame.top};`}
+            >
+              {photo
+                ? <Image src={photo.src} widths={[640, 960, 1280]} sizes="(max-width: 900px) calc(100vw - 48px), 70vw" format="webp" quality={82} alt="" loading="lazy" decoding="async" />
+                : <Image src={homeMedia.fleet} widths={[960, 1536]} sizes="(max-width: 900px) 200vw, 150vw" format="webp" quality={82} alt="" loading="lazy" decoding="async" />}
             </div>
             <div class="hf-detail">
               <div class="hf-title">
@@ -51,7 +64,6 @@ import '../styles/home-fleet.css';
                 <p class="hf-capacity" data-hf-capacity><span>Até</span> {category.capacityKg.toLocaleString('pt-BR')} <span>kg</span></p>
               </div>
               <div class="hf-copy">
-                <p class="hf-description">{category.description}</p>
                 <ul class="hf-applications" aria-label="Aplicações típicas">
                   {category.applications.map(application => <li>{application}</li>)}
                 </ul>
@@ -61,7 +73,8 @@ import '../styles/home-fleet.css';
               </div>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
 
