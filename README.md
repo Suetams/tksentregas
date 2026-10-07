@@ -61,7 +61,7 @@ A direção visual, os arquivos e os controles internos atuais estão em `docs/H
 
 O arquivo netlify.toml prepara um deploy estático de desenvolvimento: npm run build, saída dist, Node 24.19.0 e X-Robots-Tag noindex/nofollow. Não há regras de fallback que transformem rotas inexistentes em 200.
 
-O código da rodada atual está enviado na branch `preview/home-v4`. O usuário forneceu `https://endearing-pie-27937b.netlify.app/`, mas a interface ainda mostra **Link repository**: a vinculação Git precisa ser concluída. Essa URL base não confirma um deploy V4. A prévia deve usar um branch deploy específico, mantendo a branch de produção. Passos e critérios em `docs/PREVIEW_NETLIFY.md`. O acesso externo do ambiente retornou bloqueio do proxy; o endereço final deve vir do deploy concluído, sem presumir sua URL. Não configure o domínio tksentregas.com.br para esta prévia.
+O código da rodada atual está enviado na branch `preview/home-v4`. O usuário forneceu `https://endearing-pie-27937b.netlify.app/` e confirmou a conexão Git e habilitação dessa branch nos branch deploys. A atualização seguinte aciona o build de revisão. Essa URL base, isoladamente, não confirma um deploy V4; status e endereço final precisam vir do deploy concluído. Passos e critérios em `docs/PREVIEW_NETLIFY.md`. A verificação externa pelo ambiente retornou bloqueio do proxy. Não configure o domínio tksentregas.com.br para esta prévia.
 
 As instruções propostas para a configuração cloud estão em `docs/CLOUD_SETUP.md`. A tentativa de atualizar o rascunho de configuração retornou `draft_not_editable`; sua persistência no painel não foi confirmada. A instalação e a validação locais foram concluídas independentemente disso.
 

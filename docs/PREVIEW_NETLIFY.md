@@ -1,6 +1,8 @@
 # Prévia HOME V4 na Netlify
 
-O usuário forneceu o projeto Netlify `endearing-pie-27937b`. Durante a configuração, confirmou que a interface ainda apresenta **Link repository**, portanto a vinculação Git não foi concluída. A HOME V4 já está enviada na branch `preview/home-v4`. Depois de conectar `Suetams/tksentregas`, a integração pode buscar os commits e executar o build sem um token Netlify no ambiente de desenvolvimento.
+O usuário forneceu o projeto Netlify `endearing-pie-27937b` e confirmou na conversa que conectou `Suetams/tksentregas` ao GitHub e habilitou a branch `preview/home-v4` em Branch deploys. A HOME V4 está enviada nessa branch. Esta atualização aciona um novo build de revisão pela integração, sem token Netlify no ambiente de desenvolvimento.
+
+O status final e a URL do deploy precisam ser confirmados no painel Netlify. O acesso externo deste ambiente continua bloqueado; não foi recebido um resultado HTTP válido da prévia.
 
 O usuário forneceu o endereço base do projeto Netlify: <https://endearing-pie-27937b.netlify.app/>. Esse endereço ainda não foi verificado neste ambiente e não confirma que a HOME V4 está publicada; pode corresponder à branch de produção configurada na Netlify.
 
