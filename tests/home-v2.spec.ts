@@ -46,12 +46,11 @@ test('home fleet changes its content and quote category with pointer or keyboard
 
   const truck = fleet.getByRole('tab', { name: 'Caminhão 3/4', exact: true });
   const moto = fleet.getByRole('tab', { name: 'Moto', exact: true });
-  const vertical = page.viewportSize()!.width > 900;
-  await expect(fleet.getByRole('tablist')).toHaveAttribute('aria-orientation', vertical ? 'vertical' : 'horizontal');
-  await truck.press(vertical ? 'ArrowDown' : 'ArrowRight');
+  await expect(fleet.getByRole('tablist')).toHaveAttribute('aria-orientation', 'horizontal');
+  await truck.press('ArrowRight');
   await expect(moto).toBeFocused();
   await expect(moto).toHaveAttribute('aria-selected', 'true');
-  await moto.press(vertical ? 'ArrowUp' : 'ArrowLeft');
+  await moto.press('ArrowLeft');
   await expect(truck).toBeFocused();
   await truck.press('Home');
   await expect(moto).toBeFocused();
@@ -220,6 +219,18 @@ test('official identity and accessible navigation survive all required viewport 
     }
 
     const fleet = page.getByRole('region', { name: 'Uma solução para cada entrega.' });
+    if (width <= 430) {
+      const tablist = fleet.getByRole('tablist');
+      await tablist.scrollIntoViewIfNeeded();
+      await expect(tablist.getByRole('tab')).toHaveCount(4);
+      for (const tab of await tablist.getByRole('tab').all()) {
+        await expect(tab, `all categories are immediately discoverable at ${width}px`).toBeInViewport({ ratio: 1 });
+        const box = await tab.boundingBox();
+        expect(box!.width, `fleet touch width at ${width}px`).toBeGreaterThanOrEqual(44);
+        expect(box!.height, `fleet touch height at ${width}px`).toBeGreaterThanOrEqual(44);
+      }
+      expect(await tablist.evaluate(element => element.scrollWidth <= element.clientWidth), `no swipe is needed to discover categories at ${width}px`).toBe(true);
+    }
     const moto = fleet.getByRole('tab', { name: 'Moto', exact: true });
     await moto.focus();
     await moto.press('End');

@@ -12,11 +12,20 @@ import type { HomeFleetCategory } from './home-fleet';
  */
 interface HomeMedia {
   hero: ImageMetadata;
+  heroMobile?: ImageMetadata;
   fleet: ImageMetadata;
   operation: ImageMetadata;
+  operationMobile?: ImageMetadata;
   history?: { src: ImageMetadata; alt: string; position?: string; mobilePosition?: string };
 }
 export const homeMedia: HomeMedia = { hero, fleet: vehicles, operation };
+
+/** Art-directed crops stay beside the source register. Optional mobile sources
+ * accept approved portrait photographs without rebuilding the Home layout. */
+export const homePhotoCrops = {
+  hero: { desktop: '73% center', mobile: '73% 52%' },
+  operation: { desktop: '100% center', mobile: '100% center' },
+} as const;
 
 /** Add approved individual photographs here; the showcase uses the conceptual
  * category board only when a category has no individual photo configured. */

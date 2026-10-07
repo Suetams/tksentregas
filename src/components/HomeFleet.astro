@@ -9,12 +9,12 @@ import '../styles/home-fleet.css';
 <section class="hf-section" aria-labelledby="hf-heading" data-home-fleet>
   <div class="container">
     <div class="hf-heading">
-      <h2 id="hf-heading">Uma solução para<br class="hf-desktop-break" /> cada entrega.</h2>
+      <h2 id="hf-heading">Uma solução para cada entrega.</h2>
       <a class="hf-all-link" href="/servicos">Conhecer todas as soluções <Arrow diagonal /></a>
     </div>
 
     <div class="hf-showcase">
-      <div class="hf-tabs" role="tablist" aria-label="Escolha uma categoria de transporte" aria-orientation="vertical">
+      <div class="hf-tabs" role="tablist" aria-label="Escolha uma categoria de transporte" aria-orientation="horizontal">
         {homeFleet.map((category, index) => (
           <button
             type="button"
@@ -25,9 +25,7 @@ import '../styles/home-fleet.css';
             tabindex={index === 0 ? 0 : -1}
             data-hf-tab={category.id}
           >
-            <span class="hf-tab-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
             <span class="hf-tab-name">{category.label}</span>
-            <span class="hf-tab-arrow"><Arrow diagonal /></span>
           </button>
         ))}
       </div>
@@ -55,8 +53,8 @@ import '../styles/home-fleet.css';
                 : `--hf-image-left: ${frame.left}; --hf-image-top: ${frame.top};`}
             >
               {photo
-                ? <Image src={photo.src} widths={[640, 960, 1280]} sizes="(max-width: 900px) calc(100vw - 48px), 70vw" format="webp" quality={82} alt="" loading="lazy" decoding="async" />
-                : <Image src={homeMedia.fleet} widths={[960, 1536]} sizes="(max-width: 900px) 200vw, 150vw" format="webp" quality={82} alt="" loading="lazy" decoding="async" />}
+                ? <Image src={photo.src} widths={[640, 960, 1280]} sizes="(max-width: 700px) calc(100vw - 48px), 60vw" format="webp" quality={82} alt="" loading="lazy" decoding="async" />
+                : <Image src={homeMedia.fleet} widths={[960, 1536]} sizes="(max-width: 700px) calc(200vw - 96px), 120vw" format="webp" quality={82} alt="" loading="lazy" decoding="async" />}
             </div>
             <div class="hf-detail">
               <div class="hf-title">
@@ -64,9 +62,7 @@ import '../styles/home-fleet.css';
                 <p class="hf-capacity" data-hf-capacity><span>Até</span> {category.capacityKg.toLocaleString('pt-BR')} <span>kg</span></p>
               </div>
               <div class="hf-copy">
-                <ul class="hf-applications" aria-label="Aplicações típicas">
-                  {category.applications.map(application => <li>{application}</li>)}
-                </ul>
+                <p class="hf-description">{category.description}</p>
                 <a class="hf-quote" href={`/orcamento?necessidade=${category.need}`}>
                   Solicitar orçamento <Arrow diagonal />
                 </a>
@@ -78,19 +74,13 @@ import '../styles/home-fleet.css';
       </div>
     </div>
 
-    <p class="hf-note">A escolha do veículo considera os detalhes de cada transporte.</p>
     <noscript><p class="hf-no-script">Conheça as categorias Moto, Utilitário, Van / Furgão e Caminhão 3/4 em <a href="/frota">nossa frota</a>.</p></noscript>
   </div>
 </section>
 
 <script>
   for (const section of document.querySelectorAll<HTMLElement>('[data-home-fleet]')) {
-    const tablist = section.querySelector<HTMLElement>('[role="tablist"]');
     const tabs = Array.from(section.querySelectorAll<HTMLButtonElement>('[data-hf-tab]'));
-    const desktop = window.matchMedia('(min-width: 901px)');
-    const updateOrientation = () => tablist?.setAttribute('aria-orientation', desktop.matches ? 'vertical' : 'horizontal');
-    updateOrientation();
-    desktop.addEventListener('change', updateOrientation);
 
     const select = (tab: HTMLButtonElement) => {
       for (const item of tabs) {
@@ -106,10 +96,8 @@ import '../styles/home-fleet.css';
       tab.addEventListener('click', () => select(tab));
       tab.addEventListener('keydown', event => {
         let next: number | undefined;
-        const forward = desktop.matches ? 'ArrowDown' : 'ArrowRight';
-        const backward = desktop.matches ? 'ArrowUp' : 'ArrowLeft';
-        if (event.key === forward) next = (index + 1) % tabs.length;
-        if (event.key === backward) next = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
         if (event.key === 'Home') next = 0;
         if (event.key === 'End') next = tabs.length - 1;
         if (next === undefined) return;
@@ -117,9 +105,6 @@ import '../styles/home-fleet.css';
         const selected = tabs[next];
         select(selected);
         selected.focus({ preventScroll: true });
-        if (!desktop.matches) {
-          selected.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' });
-        }
       });
     });
   }
